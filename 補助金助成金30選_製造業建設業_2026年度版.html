@@ -1,0 +1,712 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>知らないと損している 補助金・助成金 30選 ｜ 製造業・建設業の経営者へ｜2026年度版</title>
+<style>
+  :root{
+    --ink:#23211c;          /* 本文：黒に近い墨 */
+    --ink-soft:#5b554a;
+    --paper:#ece5d6;        /* 装丁の外側 */
+    --page:#fffdf6;         /* 紙のページ */
+    --page-edge:#efe9da;
+    --money:#0c7a47;
+    --money-deep:#075c36;
+    --danger:#b8332f;
+    --know:#1c3f6e;
+    --gold:#b1872f;
+    --line:#e2d9c4;
+    --serif:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
+    --sans:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--serif);color:var(--ink);background:var(--paper);
+    line-height:2;-webkit-font-smoothing:antialiased;
+  }
+  #progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:1200;
+    background:linear-gradient(90deg,var(--gold),var(--money));}
+
+  /* ===== レイアウト ===== */
+  .shell{display:flex;min-height:100vh}
+
+  /* ===== サイドバー（目次） ===== */
+  .sidebar{width:288px;min-width:288px;position:sticky;top:0;height:100vh;
+    background:#1f2a36;color:#dfe6ef;display:flex;flex-direction:column;
+    box-shadow:6px 0 24px rgba(0,0,0,.18);z-index:1000}
+  .sb-head{padding:28px 26px 20px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .sb-head .book{font-family:var(--serif);font-size:.74rem;letter-spacing:.28em;color:#c7a85f;font-weight:700}
+  .sb-head h1{font-family:var(--serif);font-size:1.18rem;font-weight:800;line-height:1.5;margin-top:10px;color:#fff}
+  .sb-head .ed{margin-top:10px;font-size:.72rem;color:#8896a8;letter-spacing:.06em}
+  .toc{flex:1;overflow-y:auto;padding:16px 0 26px}
+  .toc a{display:flex;gap:12px;align-items:baseline;text-decoration:none;color:#aeb9c7;
+    font-family:var(--sans);font-size:.9rem;padding:9px 26px;border-left:3px solid transparent;transition:all .2s;line-height:1.4}
+  .toc a .ch{font-size:.7rem;color:#6f7d90;min-width:30px;letter-spacing:.04em}
+  .toc a:hover{background:rgba(255,255,255,.05);color:#fff}
+  .toc a.active{color:#fff;border-left-color:var(--gold);background:rgba(177,135,47,.14)}
+  .toc a.active .ch{color:var(--gold)}
+  .toc .sub{padding-left:42px;font-size:.82rem;padding-top:6px;padding-bottom:6px}
+  .toc .grp{padding:16px 26px 6px;font-size:.68rem;letter-spacing:.2em;color:#67real;color:#6b7888;font-family:var(--sans)}
+  .sb-foot{padding:16px 26px;border-top:1px solid rgba(255,255,255,.1);font-family:var(--sans)}
+  .sb-foot .pct{font-size:.74rem;color:#8896a8;margin-bottom:7px;display:flex;justify-content:space-between}
+  .sb-foot .bar{height:5px;background:rgba(255,255,255,.12);border-radius:3px;overflow:hidden}
+  .sb-foot .bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),#e0c074)}
+
+  /* ハンバーガー（モバイル） */
+  .hb{display:none;position:fixed;top:14px;left:14px;z-index:1300;width:46px;height:46px;border-radius:12px;
+    background:#1f2a36;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+  .hb span{display:block;width:20px;height:2px;background:#fff;margin:4px auto;border-radius:2px;transition:.3s}
+  .hb.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .hb.open span:nth-child(2){opacity:0}
+  .hb.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  .overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:900}
+
+  /* ===== 本文（紙） ===== */
+  .reader{flex:1;display:flex;justify-content:center;padding:56px 40px 90px;background:
+    repeating-linear-gradient(180deg,var(--paper),var(--paper));}
+  .page{background:var(--page);max-width:760px;width:100%;
+    box-shadow:0 1px 0 var(--page-edge),0 30px 70px rgba(40,33,20,.16),
+      -10px 0 0 -4px #f7f2e6,-18px 0 0 -8px #efe7d4;
+    border-radius:4px;padding:clamp(34px,6vw,76px) clamp(26px,7vw,86px);position:relative}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.on{opacity:1;transform:none}
+
+  /* 章扉 */
+  .chapter{padding-top:40px;margin-top:30px;border-top:1px solid var(--line)}
+  .chapter:first-of-type{border-top:none;margin-top:0;padding-top:0}
+  .ch-label{font-family:var(--sans);font-size:.78rem;letter-spacing:.3em;color:var(--gold);font-weight:800;margin-bottom:14px}
+  .ch-title{font-size:clamp(1.6rem,4.6vw,2.5rem);font-weight:800;line-height:1.42;letter-spacing:.02em;margin-bottom:26px}
+  .ch-title.danger{color:var(--danger)}
+  .ch-title.know{color:var(--know)}
+  .ch-title.money{color:var(--money-deep)}
+
+  p.body{font-size:1.06rem;margin:0 0 1.4em;text-align:justify}
+  p.body.lead{font-size:1.14rem}
+  .dropcap::first-letter{font-size:3.2em;float:left;line-height:.8;padding:.05em .12em 0 0;color:var(--gold);font-weight:800}
+  .talk{font-size:clamp(1.15rem,2.8vw,1.5rem);font-weight:700;line-height:1.7;margin:1em 0;font-family:var(--sans)}
+  .talk em{font-style:normal;color:var(--danger)}
+  .pull{border-left:4px solid var(--gold);background:#fbf6ea;padding:18px 22px;margin:1.6em 0;
+    font-size:1.08rem;color:var(--ink);font-weight:600;border-radius:0 8px 8px 0}
+
+  /* 表紙 */
+  .cover{text-align:left;padding:30px 0 50px;border-bottom:2px solid var(--line);margin-bottom:14px}
+  .cover .for{font-family:var(--sans);font-size:.84rem;letter-spacing:.2em;color:var(--ink-soft)}
+  .cover .ttl{font-size:clamp(2rem,6vw,3.2rem);font-weight:800;line-height:1.34;margin:24px 0 6px}
+  .cover .ttl .n{color:var(--money-deep)}
+  .cover .ttl .em{color:var(--gold)}
+  .cover .sub{font-family:var(--sans);font-size:1rem;color:var(--ink-soft);margin-top:18px;line-height:1.8}
+  .cover .src{font-family:var(--sans);font-size:.78rem;color:#9a9079;margin-top:22px;letter-spacing:.04em}
+  .cover .seal{width:74px;height:74px;margin:26px 0 0}
+
+  /* この本の読み方ボックス */
+  .howto{background:#fbf6ea;border:1px solid var(--line);border-radius:12px;padding:24px 26px;margin:1.4em 0;font-family:var(--sans)}
+  .howto h4{color:var(--know);font-size:1.04rem;margin-bottom:10px;font-weight:800}
+  .howto p{font-size:.96rem;color:var(--ink-soft);margin-bottom:8px;line-height:1.8}
+  .rules3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+  .rules3 .r{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px}
+  .rules3 b{color:var(--danger);font-size:.92rem}
+  .rules3 span{font-size:.84rem;color:var(--ink-soft);font-family:var(--sans)}
+  @media(max-width:560px){.rules3{grid-template-columns:1fr}}
+
+  /* 共通の敵 */
+  .enemy{display:flex;gap:18px;align-items:flex-start;background:#fdf3f2;border:1px solid #eccfcd;
+    border-radius:12px;padding:22px 24px;margin:1.1em 0}
+  .enemy .ico{width:44px;height:44px;min-width:44px;margin-top:4px}
+  .enemy h3{font-family:var(--sans);font-size:1.1rem;color:var(--danger);font-weight:800;margin-bottom:8px;line-height:1.4}
+  .enemy p{font-size:.98rem;color:var(--ink-soft);font-family:var(--sans);line-height:1.8}
+
+  /* 著者より */
+  .author{display:flex;gap:26px;align-items:center;background:#fbf6ea;border:1px solid var(--line);border-radius:16px;padding:28px 30px;margin:1.6em 0}
+  .author .photo{width:128px;min-width:128px;height:162px;border-radius:12px;overflow:hidden;
+    background:linear-gradient(135deg,#1f2a36,#33414f);display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 24px rgba(0,0,0,.2);position:relative}
+  .author .photo img{width:100%;height:100%;object-fit:cover}
+  .author .photo .mon{font-family:var(--serif);font-size:3.6rem;color:#d9c79a;font-weight:800}
+  .author .photo::after{content:"";position:absolute;inset:6px;border:1px solid rgba(217,199,154,.4);border-radius:8px}
+  .author .who{font-family:var(--sans)}
+  .author .who .role{font-size:.82rem;color:var(--ink-soft);letter-spacing:.12em}
+  .author .who .name{font-family:var(--serif);font-size:1.5rem;font-weight:800;margin:4px 0;color:var(--ink)}
+  .author .who .name .en{font-size:.78rem;color:#9a9079;font-weight:500;margin-left:8px;font-family:var(--sans);letter-spacing:.04em}
+  .author .who .pol{font-size:.92rem;color:var(--money-deep);font-weight:700;margin-top:10px;line-height:1.7}
+  @media(max-width:620px){.author{flex-direction:column;text-align:center}}
+
+  /* 制度カード */
+  .grp-head{margin:34px 0 10px;display:flex;align-items:center;gap:16px}
+  .grp-head .letter{font-family:var(--sans);font-size:1.6rem;font-weight:900;color:#fff;width:58px;height:58px;min-width:58px;
+    border-radius:14px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--know),#102b4c)}
+  .grp-head.b .letter{background:linear-gradient(135deg,#1f6f4a,#0c7a47)}
+  .grp-head.c .letter{background:linear-gradient(135deg,#9a6b1f,#b1872f)}
+  .grp-head.d .letter{background:linear-gradient(135deg,#7a2540,#b8324f)}
+  .grp-head h3{font-size:1.22rem;font-weight:800;line-height:1.4}
+  .grp-head p{font-family:var(--sans);font-size:.86rem;color:var(--ink-soft);margin-top:3px}
+
+  .card{border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin:16px 0;background:#fffefa;
+    transition:box-shadow .3s,transform .3s}
+  .card:hover{box-shadow:0 14px 34px rgba(40,33,20,.1);transform:translateY(-3px)}
+  .card .topline{display:flex;gap:14px;align-items:flex-start}
+  .card .no{font-family:var(--sans);font-size:1rem;font-weight:900;color:#fff;min-width:42px;height:42px;border-radius:11px;
+    display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--ink),#4a4438)}
+  .card.money .no{background:linear-gradient(135deg,var(--money),var(--money-deep))}
+  .card .ttl{font-size:1.12rem;font-weight:800;line-height:1.45}
+  .row{display:flex;gap:12px;padding:8px 0;border-top:1px dashed var(--line);font-size:.97rem;font-family:var(--sans)}
+  .row:first-child{border-top:none}
+  .row .k{min-width:118px;font-weight:800;color:var(--know)}
+  .row .v{color:var(--ink-soft);flex:1;line-height:1.7}
+  .amount{display:block;margin-top:13px;background:rgba(12,122,71,.09);border:1px solid rgba(12,122,71,.22);
+    color:var(--money-deep);font-weight:800;border-radius:11px;padding:12px 16px;font-size:1.02rem;font-family:var(--sans);line-height:1.5}
+  .amount .lbl{display:block;font-size:.72rem;letter-spacing:.14em;color:var(--money);margin-bottom:3px}
+  .amount .note{font-weight:500;font-size:.86rem}
+  .blind{margin-top:13px;background:#fff8ef;border:1px solid #f0dcb6;border-radius:11px;padding:13px 15px;
+    font-size:.93rem;color:#7a5a18;display:flex;gap:9px;align-items:flex-start;font-family:var(--sans);line-height:1.7}
+  .blind b{color:#a9741a}
+  .blind .ico{width:20px;height:20px;min-width:20px;margin-top:3px}
+
+  .interlude{margin:30px 0;padding:22px 24px;background:#fbf6ea;border-radius:12px;border-left:4px solid var(--gold);text-align:left;font-family:var(--sans)}
+  .interlude p{font-size:1.04rem;font-weight:700;line-height:1.7}
+  .interlude .accent{color:var(--money-deep)}
+
+  /* 診断 */
+  .verdict-box{text-align:left;background:#fbf6ea;border:2px solid var(--gold);border-radius:18px;padding:34px 28px;margin:1.2em 0}
+  .verdict-box .q{font-size:clamp(1.4rem,4vw,2rem);font-weight:800;line-height:1.45}
+  .verdict-box .hint{font-family:var(--sans);margin-top:14px;color:var(--ink-soft)}
+  .verdict-box .v{font-family:var(--sans);margin-top:18px;background:rgba(184,51,47,.08);border-radius:12px;padding:16px;color:var(--danger);font-weight:800}
+
+  /* むすび CTA */
+  .closing{background:#1f2a36;color:#eef2f8;border-radius:18px;padding:clamp(30px,6vw,52px);margin-top:30px;text-align:left}
+  .closing .lbl{font-family:var(--sans);font-size:.78rem;letter-spacing:.3em;color:#c7a85f;font-weight:800}
+  .closing h3{font-size:clamp(1.5rem,4.4vw,2.3rem);font-weight:800;line-height:1.4;margin:16px 0}
+  .closing h3 .hl{color:#6fe0a4}
+  .closing p{font-family:var(--sans);color:#c2cdda;font-size:1.02rem;line-height:1.9;max-width:600px;margin:0 auto}
+  .closing .talkline{font-family:var(--serif);margin-top:24px;font-size:clamp(1.25rem,3.4vw,1.8rem);font-weight:800;color:#ffd86b;line-height:1.5}
+  .btn{display:inline-block;margin-top:30px;background:linear-gradient(135deg,#0c7a47,#0a6b3d);color:#fff;font-family:var(--sans);
+    font-size:1.12rem;font-weight:800;padding:18px 44px;border-radius:999px;text-decoration:none;
+    box-shadow:0 12px 30px rgba(12,122,71,.4);transition:transform .25s,box-shadow .25s}
+  .btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 18px 42px rgba(12,122,71,.55)}
+  .closing .free{display:inline-block;background:rgba(111,224,164,.15);color:#6fe0a4;font-family:var(--sans);font-weight:800;
+    padding:7px 18px;border-radius:999px;letter-spacing:.14em;font-size:.8rem;margin-bottom:14px}
+  .closing .reassure{font-size:.88rem;color:#8896a8;margin-top:20px}
+
+  /* 奥付 */
+  .colophon{margin-top:40px;padding-top:24px;border-top:1px solid var(--line);font-family:var(--sans);font-size:.82rem;color:#8a8068;line-height:1.8}
+  .colophon h4{color:var(--ink);font-size:.9rem;margin-bottom:8px;letter-spacing:.08em}
+
+  /* ページ番号 */
+  .folio{text-align:center;font-family:var(--sans);font-size:.78rem;color:#a99f86;margin-top:40px;letter-spacing:.1em}
+
+  @media(max-width:920px){
+    .sidebar{position:fixed;left:0;top:0;transform:translateX(-100%);transition:transform .32s ease}
+    .sidebar.open{transform:none}
+    .hb{display:block}
+    .overlay.show{display:block}
+    .reader{padding:64px 14px 70px}
+    .page{box-shadow:0 16px 40px rgba(40,33,20,.14)}
+    .row{flex-direction:column;gap:1px}
+    .row .k{min-width:0}
+  }
+</style>
+</head>
+<body><div style="max-width:820px;margin:0 auto;padding:12px 22px"><a href="index.html" style="font-size:14px;color:#9E6F1C;text-decoration:none;font-weight:600">← ファネルハブへ戻る</a> ｜ <a href="脱・情弱経営_ファネルハブ.html" style="font-size:14px;color:#1A2A4F;text-decoration:none">脱・情弱経営を読む</a> ｜ <a href="セルフ診断_補助金もらい損ねチェック.html" style="font-size:14px;color:#1A2A4F;text-decoration:none">セルフ診断を受ける</a></div>
+<div id="progress"></div>
+
+<button class="hb" id="hb" aria-label="目次"><span></span><span></span><span></span></button>
+<div class="overlay" id="overlay"></div>
+
+<div class="shell">
+  <!-- ===== サイドバー目次 ===== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sb-head">
+      <div class="book">BUSINESS GUIDE</div>
+      <h1>知らないと損している<br>補助金・助成金 30選</h1>
+      <div class="ed">製造業・建設業の経営者へ ｜ 2026年度（令和8年度）版</div>
+    </div>
+    <nav class="toc" id="toc">
+      <a href="#cover" data-target="cover"><span class="ch">表紙</span>はじめに</a>
+      <a href="#intro" data-target="intro"><span class="ch">序</span>この本の読み方</a>
+      <a href="#ch1" data-target="ch1"><span class="ch">1章</span>なぜ取りこぼすのか</a>
+      <a href="#ch2" data-target="ch2"><span class="ch">2章</span>あなたを動けなくする正体</a>
+      <a href="#author" data-target="author"><span class="ch">著者</span>なぜ私が伝えるのか</a>
+      <div class="grp">第3章 ｜ 30の制度</div>
+      <a href="#catA" data-target="catA" class="sub"><span class="ch">A</span>設備投資・成長投資</a>
+      <a href="#catB" data-target="catB" class="sub"><span class="ch">B</span>建設業の見落とし枠</a>
+      <a href="#catC" data-target="catC" class="sub"><span class="ch">C</span>製造業の見落とし枠</a>
+      <a href="#catD" data-target="catD" class="sub"><span class="ch">D</span>賃上げ・働き方・人材</a>
+      <a href="#ch4" data-target="ch4"><span class="ch">4章</span>いくつ損していたか</a>
+      <a href="#proof" data-target="proof"><span class="ch">実績</span>採択された会社たち</a>
+      <a href="#closing" data-target="closing"><span class="ch">結</span>むすびに</a>
+    </nav>
+    <div class="sb-foot">
+      <div class="pct"><span>読み進み</span><span id="pctnum">0%</span></div>
+      <div class="bar"><span id="sbbar"></span></div>
+    </div>
+  </aside>
+
+  <!-- ===== 本文 ===== -->
+  <main class="reader">
+   <article class="page">
+
+    <!-- 表紙 -->
+    <section id="cover" class="cover reveal">
+      <div class="for">製造業・建設業の経営者へ</div>
+      <h1 class="ttl">知らないだけで、<br><span class="em">毎年もらい損ねている</span><br>お金があります。</h1>
+      <p class="sub">あなたの会社が使える 補助金・助成金 <span style="color:var(--money-deep);font-weight:800">30</span> 制度。<br>掲載した金額・要件は、省庁・自治体・公的機関の<b style="color:var(--ink)">公式情報のみ</b>を出典としています。</p>
+      <svg class="seal" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="37" stroke="#b1872f" stroke-width="2"/><circle cx="40" cy="40" r="30" stroke="#b1872f" stroke-width="1"/><path d="M26 41l9 9 19-20" stroke="#0c7a47" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="src">経済産業省／中小企業庁／中小機構／厚生労働省／神戸市 ほか 公式情報に基づく</div>
+    </section>
+
+    <!-- 序：この本の読み方 -->
+    <section id="intro" class="chapter reveal">
+      <div class="ch-label">序章</div>
+      <h2 class="ch-title">「うちは関係ない」――<br>その一言が、毎年お金を捨てています。</h2>
+      <p class="body lead dropcap">「補助金なんて、うちみたいな会社には関係ない」。そう思って申請すらしていない――それだけで、本来もらえたはずのお金を、何年も取りこぼし続けている会社が、驚くほど多くあります。</p>
+      <p class="body">この本は、製造業・建設業が"本当に使える"支援制度だけを30本に絞ってまとめたものです。難しい言葉はできるだけ削りました。読み終わるころには、きっと「これ、うちで使えるじゃないか」が3つは見つかります。</p>
+
+      <div class="howto">
+        <h4>金額は「2つの数字」で、ごまかさずに示します</h4>
+        <p><b style="color:var(--ink)">① 公式の上限・補助率</b>：公募要領・省庁/自治体ページに明記された数字。</p>
+        <p><b style="color:var(--ink)">② 獲得イメージ</b>：実際にだいたいいくら手元に入るかの目安。採択結果概要の申請額分布があるものはその公式データから算出、なければ補助率と一般的な投資額からの試算（その旨を明記）。</p>
+        <div class="pull" style="font-family:var(--sans);font-size:.95rem;font-weight:500;margin:14px 0 0">
+          <b>公式データの一例：</b>新事業進出補助金 第2回公募の採択結果概要（中小機構）では、申請2,350者中、申請額が最も多い価格帯は2,500万〜3,000万円（480件）、中央値は2,000万〜2,500万円の層。補助率1/2のため、交付額は概ね1,000万〜1,250万円が目安です。
+        </div>
+        <div class="rules3">
+          <div class="r"><b>① 多くは後払い</b><br><span>先に自社で支払い、完了後の申請で数か月後に入金。</span></div>
+          <div class="r"><b>② GビズID</b><br><span>申請には原則GビズIDプライムが必要。取得に時間がかかります。</span></div>
+          <div class="r"><b>③ 早い者勝ち</b><br><span>自治体・厚労省系は予算枠に達し次第終了。早く動いた会社が得をします。</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 第1章 問題 -->
+    <section id="ch1" class="chapter reveal">
+      <div class="ch-label">第1章</div>
+      <h2 class="ch-title danger">なぜ、もらえるお金を取りこぼすのか？</h2>
+      <p class="talk">答えはシンプルです。<em>「自分の会社が、いくら・どう使えるのか」がイメージできない</em>から、動けないんです。</p>
+      <p class="body">「制度がある」のは知っている。でも――補助率？ 上限？ 要件？ 公募時期？ 役所の言葉が並ぶだけで、結局「うちはいくらもらえて、何に使えるのか」がさっぱり頭に浮かばない。人は、イメージできないものには動けません。だから、申請の前に諦めてしまう。</p>
+      <p class="talk"><em>制度のせいではなく、「分かるように示されていないこと」が問題</em>なんです。</p>
+    </section>
+
+    <!-- 第2章 共通の敵 -->
+    <section id="ch2" class="chapter reveal">
+      <div class="ch-label">第2章</div>
+      <h2 class="ch-title">あなたを動けなくしている、<br>2つの"正体"。</h2>
+      <p class="body">悪気はないのかもしれません。でも結果として、経営者から「自分で判断する力」を奪っているものが2つあります。</p>
+      <div class="enemy">
+        <svg class="ico" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#b8332f" stroke-width="2.5"/><path d="M16 19c0-4 3.5-7 8-7s8 2.6 8 6.5c0 4-3.5 5-6 7-1.3 1-2 2-2 4" stroke="#b8332f" stroke-width="2.8" stroke-linecap="round"/><circle cx="24" cy="37" r="1.8" fill="#b8332f"/></svg>
+        <div><h3>① "丸投げ前提"になりやすい高額な代行</h3>
+        <p>「お任せください」と手数料は高めで、中身は見えにくいことがあります。"何が・なぜ・いくら使えるのか"が分からないまま任せきりになると、自分で判断する力が育ちにくくなってしまいます。</p></div>
+      </div>
+      <div class="enemy">
+        <svg class="ico" viewBox="0 0 48 48" fill="none"><rect x="11" y="7" width="26" height="34" rx="2.5" stroke="#b8332f" stroke-width="2.5"/><path d="M16 15h16M16 21h16M16 27h11" stroke="#b8332f" stroke-width="2.4" stroke-linecap="round"/><path d="M8 8l32 32" stroke="#b8332f" stroke-width="2.8" stroke-linecap="round"/></svg>
+        <div><h3>② 読み解くのが難しい、公式の制度資料</h3>
+        <p>専門用語と注釈が多く、「結局、自分はいくらもらえるのか」がなかなか頭に入ってきません。その分かりにくさが、「補助金は難しい・自分には縁がない」という思い込みにつながりがちです。</p></div>
+      </div>
+      <p class="talk">問題は補助金そのものではなく、<em>「分かりにくいまま、放置されていること」</em>です。だから、ここから先は逆をいきます。</p>
+      <p class="body">これから30の制度を、4つのグループに分けてお見せします。それぞれに「公式の金額」「だいたい手元に入るイメージ」「ここが盲点」を添えました。読みながら、自分の工場・現場・社員の顔を思い浮かべてください。「あ、これウチのあの設備だ」が見つかった瞬間が、お金が動き出す合図です。</p>
+    </section>
+
+    <!-- 著者より：なぜ私がこれを伝えるのか -->
+    <section id="author" class="chapter reveal">
+      <div class="ch-label">著者より</div>
+      <h2 class="ch-title">なぜ、私がこれを<br>お伝えするのか。</h2>
+      <p class="body dropcap">私が大切にしているのは、「わかりやすい正確さと論理」です。行政書士の仕事は、単なる書類作成ではありません。お客様のビジネスや暮らしの課題を整理し、法的な解決策を用いて「あるべき未来」を実現することだと考えています。</p>
+      <p class="body">特に資金調達や許認可では、曖昧な推測を排除し、事実と根拠に基づいた戦略をご提案します。だからこの資料も、どこかへ丸ごとお任せいただくためではなく、<b>あなた自身が「分かって、選べる」</b>ようにとまとめました。個人事業主の方から企業経営者の方まで、生涯のパートナーとして頼っていただける――そんな事務所を目指しています。</p>
+      <div class="author">
+        <div class="photo"><span class="mon">山</span></div>
+        <div class="who">
+          <div class="role">代表行政書士</div>
+          <div class="name">山本 利安<span class="en">Toshiyasu Yamamoto</span></div>
+          <div class="pol">「わかりやすい正確さと論理」を行動指針に、<br>お客様のビジネスや暮らしの課題を解決し、あるべき未来を実現します。</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第3章 A ===== -->
+    <section id="catA" class="chapter reveal">
+      <div class="ch-label">第3章 ｜ 30の制度</div>
+      <div class="grp-head a"><div class="letter">A</div><div><h3>設備投資・成長投資で取りこぼしが多い</h3><p>製造業・建設業 共通 ｜「うちの設備は対象外」が一番の取りこぼし</p></div></div>
+
+      <div class="card money"><div class="topline"><div class="no">1</div><div class="ttl">新事業進出・ものづくり補助金<br><span style="font-size:.8rem;font-weight:500;color:var(--ink-soft)">（旧ものづくり補助金＋旧新事業進出補助金が統合）</span></div></div>
+        <div class="row"><div class="k">対象</div><div class="v">革新的な製品・サービス開発、生産プロセス改善、新市場・新分野進出を行う中小企業（製造業の工作機械・塗装設備等、建設業のICT建機・ドローン測量等が対象になりやすい）</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">令和8年度より両制度を統合。革新的新製品・サービス枠とグローバル枠を継承、予算規模約2,960億円。補助率は原則1/2（小規模事業者2/3）。公募開始は令和8年6月予定。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>1,000万〜1,250万円が中心ゾーン<span class="note">（公式：旧新事業進出 第2回の申請額中央値2,000万〜2,500万円×補助率1/2）。賃上げ特例で上振れも</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>「うちの設備は対象外」と思い込みがち。実は塗装・バリ取り・搬送など現場設備も広く対象。</div></div>
+      </div>
+
+      <div class="card money"><div class="topline"><div class="no">2</div><div class="ttl">中小企業省力化投資補助金（一般型）</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">人手不足の解消・省力化に取り組む中小企業（製造業の自動化設備・搬送ロボット等）</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">省力化・生産性向上のための設備投資を支援。一般型として複数回公募。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>数百万〜1,000万円超<span class="note">（補助率からの試算）。人手不足対策の自動化と相性がよい</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>「カタログ型」しか知らず、オーダーメイド設備が使える一般型を見落とすケースが多い。</div></div>
+      </div>
+
+      <div class="card money"><div class="topline"><div class="no">3</div><div class="ttl">大規模成長投資補助金</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">大型の工場建設・物流センター整備など、大規模投資を行う中小企業</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">地域経済への波及効果が大きい大規模投資を支援。建物費が使える数少ない制度で、補助上限が非常に大きい。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>数億円規模も<span class="note">（補助率からの試算）。工場新設で建物費を計上できるのが強み</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>「補助金で建物は無理」と諦めがちだが、本制度は建物費が対象になる。</div></div>
+      </div>
+
+      <div class="card money"><div class="topline"><div class="no">4</div><div class="ttl">中小企業成長加速化補助金</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">売上高100億円を目指す成長志向型の中小企業（工場新設・業務自動化）</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">大胆な設備投資を支援。「売上高100億円を目指す宣言」をポータルに公表することが要件。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>数千万〜数億円規模<span class="note">（補助率からの試算）。成長宣言企業向けの大型枠</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>「宣言」のハードルで敬遠されがちだが、成長意欲のある会社には有力。</div></div>
+      </div>
+
+      <div class="card money"><div class="topline"><div class="no">5</div><div class="ttl">デジタル化・AI導入補助金（旧IT導入補助金）</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">業務効率化・DXのためのソフトウェア／AIツールを導入する中小企業</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">通常枠・インボイス枠・セキュリティ対策推進枠等。年複数回の締切。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>数十万〜数百万円<span class="note">（補助率からの試算）。生産管理・図面管理・勤怠など現場DXに</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>「ITは専門外」で放置されがち。実は見積・工程・在庫管理ソフトが対象。</div></div>
+      </div>
+
+      <div class="card money"><div class="topline"><div class="no">6</div><div class="ttl">小規模事業者持続化補助金</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">従業員数の少ない小規模な町工場・工務店等の販路開拓・生産性向上</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">販路開拓等の取り組みを支援。商工会・商工会議所の支援を受けて申請。ITツール・PC等も対象になり得る。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>数十万〜200万円規模<span class="note">（補助率からの試算）。小規模事業者の入口に最適</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>「金額が小さいから」と申請しない小規模事業者が多いが、採択しやすい定番。</div></div>
+      </div>
+
+      <div class="interlude"><p>ここで、もう手が止まった人がいるはずです。<span class="accent">「3番、ウチの工場の増設に使えるんじゃないか」</span>――その感覚で正解です。</p></div>
+    </section>
+
+    <!-- ===== B ===== -->
+    <section id="catB" class="chapter reveal">
+      <div class="grp-head b"><div class="letter">B</div><div><h3>建設業に特化した「見落とし枠」</h3><p>採用・育成・安全――現場の"自腹"が、実は補助対象</p></div></div>
+
+      <div class="card"><div class="topline"><div class="no">7</div><div class="ttl">人材確保等支援助成金（建設キャリアアップシステム等活用促進コース）</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">CCUSを活用し雇用管理改善に取り組む中小建設事業主</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">昇格評定を受けた技能者の賃金を5%以上増加させた場合、建設技能者1人あたり16万円。上限は一事業年度あたり160万円。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>1人16万円〜年160万円<span class="note">（公式：助成額そのもの）</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>CCUS登録だけして助成金の存在を知らない会社が非常に多い。</div></div>
+      </div>
+
+      <div class="card"><div class="topline"><div class="no">8</div><div class="ttl">人材確保等支援助成金（若年者及び女性に魅力ある職場づくり事業コース・建設分野）</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">若年者・女性の入職・定着に取り組む建設事業主／団体</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">令和8年4月改正で定着助成を新設。新規入職者が6か月定着した場合に1人あたり42万円を上乗せ、上限126万円（年度あたり3名まで）。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>1人42万円〜年126万円の上乗せ<span class="note">（公式：助成額そのもの）</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>「採用にお金が出る」と知らず、求人広告費を自腹で払い続けている。</div></div>
+      </div>
+
+      <div class="card"><div class="topline"><div class="no">9</div><div class="ttl">人材開発支援助成金（建設労働者技能実習コース）</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">技能講習・特別教育を受けさせる建設事業主</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">1技能実習につき1人あたり10万円が上限（経費助成）。年間で最大500万円まで活用可能。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>1人10万円〜年500万円<span class="note">（公式：助成額そのもの）</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>資格取得を「会社の経費」で済ませ、助成金申請を忘れる現場が多い。</div></div>
+      </div>
+
+      <div class="card"><div class="topline"><div class="no">10</div><div class="ttl">人材開発支援助成金（建設労働者認定訓練コース）</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">認定職業訓練校に通わせ体系的な技術習得を行う建設事業主</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">認定職業訓練に係る賃金・経費を助成。中長期の多能工・現場責任者育成に。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>経費・賃金の一部<span class="note">（補助率からの試算）。育成と助成を同時に</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>「外部に通わせるとお金がかかる」だけで判断し、助成の存在を知らない。</div></div>
+      </div>
+
+      <div class="card"><div class="topline"><div class="no">11</div><div class="ttl">建設機械の安全装置・買い替え助成（建災防系）</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">建設業許可を持つ中小企業の安全対策</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">移動式クレーン等への後方確認カメラ・接触防止装置の追加や安全性の高い最新機械への買い替え費用の一部を助成。補助率は経費の50%、上限100〜200万円程度。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>上限100万〜200万円程度<span class="note">（公式：補助率50%）</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>安全装置の追加に補助が出ること自体が知られていない。</div></div>
+      </div>
+
+      <div class="card"><div class="topline"><div class="no">12</div><div class="ttl">建設ディレクター育成講座 受講補助（都道府県の制度／例：大分県・鹿児島県 ほか）</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">女性活躍・人手不足解消に取り組む県内建設業者</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">建設ディレクター育成講座の受講に係る経費の一部を補助。大分県・鹿児島県などが県の建設産業担い手確保・女性活躍推進事業として実施（実施有無・内容・上限は自治体ごとに異なる）。お住まいの都道府県の建設業協会・県HPをご確認ください。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>受講料の一部<span class="note">（実施自治体ごとに設定）。事務・施工管理の効率化に</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>自治体独自のため存在に気づかれにくい。「県名＋建設ディレクター＋補助」で要検索。</div></div>
+      </div>
+
+      <div class="card"><div class="topline"><div class="no">13</div><div class="ttl">建設業 若手人材確保・定着支援補助（市区町村の制度）</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">市内建設業等の若手人材確保・定着</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">若手人材の技術習得・確保のための研修・職場体験等の費用を支援する市区町村独自の制度（例：上限15万円程度）。実施有無・内容・上限は自治体ごとに異なるため、お住まいの市区町村の産業・建設担当課のHPをご確認ください。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>数万〜15万円程度<span class="note">（実施自治体ごとに設定）</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>市区町村レベルの制度で、地元の会社ほど見落としやすい。「市区町村名＋建設業＋人材確保＋補助」で要検索。</div></div>
+      </div>
+
+      <div class="card"><div class="topline"><div class="no">14</div><div class="ttl">建設業 熱中症対策器具導入補助（市区町村の制度／例：佐賀市・島田市・横須賀市 ほか）</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">市内建設業等の労働環境整備（ファン付きウェア・スポットクーラー等）</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">夏季の熱中症対策器具等の導入費用を一部補助。佐賀市（職場の熱中症対策支援補助金）、島田市（中小企業者向け支援／従業員1人1万円上限）、横須賀市などが実施。多くは購入前申請が必須で、内容・上限は自治体ごとに異なります。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>器具費の一部<span class="note">（例：従業員1人1万円〜・実施自治体ごとに設定）。空調服・送風機等に</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>「自分で買うもの」と思い込み、購入前申請が必要な補助制度を確認していない。</div></div>
+      </div>
+
+      <div class="card"><div class="topline"><div class="no">15</div><div class="ttl">新分野展開向け 事業再構築系の補助（建設業の業態転換）</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">土木工事企業のリサイクル・再生エネルギー事業参入等</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">大型プラント・特殊車両購入など、新分野展開に必要な投資を支援（賃上げ要件あり）。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>数百万〜数千万円規模<span class="note">（補助率からの試算）。業態転換の設備投資に</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>「補助金は設備更新だけ」と思い、新事業への活用を検討していない。</div></div>
+      </div>
+
+      <div class="interlude"><p>建設業の社長へ。<span class="accent">採用・資格・安全・暑さ対策――今まで"自腹"だと思っていた費用</span>のほとんどに、お金が出る制度がありました。</p></div>
+    </section>
+
+    <!-- ===== C ===== -->
+    <section id="catC" class="chapter reveal">
+      <div class="grp-head c"><div class="letter">C</div><div><h3>製造業に特化した「見落とし枠」</h3><p>国の補助金ばかり見て、地元自治体の手厚い制度を見逃していませんか</p></div></div>
+
+      <div class="card money"><div class="topline"><div class="no">16</div><div class="ttl">市区町村の製造業設備投資補助（IoT・AI・ロボット／例：神戸市 ほか）</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">市内の製造事業者の生産性向上・デジタル化</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">IoT・AI・ロボット等の先端技術活用のための機械設備・装置・システム費用を補助。神戸市（中小企業投資促進等助成制度）など、多くの市区町村が独自に実施（内容・上限は自治体ごとに異なる）。お住まいの市区町村の産業振興担当課のHPをご確認ください。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>数十万〜数千万円規模<span class="note">（実施自治体ごとに設定）</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>国の補助金ばかり見て、地元自治体の制度を確認していない。</div></div>
+      </div>
+
+      <div class="card money"><div class="topline"><div class="no">17</div><div class="ttl">神戸市 中小企業投資促進等助成制度</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">神戸市内で1年以上事業を営む中小企業者（新増設は中小製造業）</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">設備投資・新増設、国際的品質規格(JISQ9100等)の認証取得、ロボット導入シミュレーション、ロボットSIer育成設備等が対象。設備投資・新増設の助成限度額は500万〜3,000万円。CO2を15%以上削減する設備は助成率を引き上げ。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>500万〜3,000万円<span class="note">（公式：神戸市の助成限度額）</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>地元・神戸の手厚い制度を、国の補助金しか見ずに見逃している。</div></div>
+      </div>
+
+      <div class="card money"><div class="topline"><div class="no">18</div><div class="ttl">神戸市 戦略産業分野・品質認証取得補助（同制度内）</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">航空・宇宙、医療・健康・福祉、農業・食糧、環境・エネルギー分野に参入する神戸市内中小企業</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">国際的品質マネジメントシステム規格の認証取得は助成率1/3以内・助成限度100万円。成長分野参入に必要な認証費用等を支援。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>上限100万円<span class="note">（公式：神戸市の助成限度額）</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>成長分野参入時の「認証取得費」に補助が出ることが知られていない。</div></div>
+      </div>
+
+      <div class="card money"><div class="topline"><div class="no">19</div><div class="ttl">省エネ設備更新・断熱補助（市区町村の制度／例：神戸市・燕市 ほか）</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">エネルギー価格高騰の影響を受ける市内事業者</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">省エネ設備への更新や工場の遮熱・断熱工事の費用を補助。神戸市（省エネ設備更新補助金／省エネ診断に基づく更新）、燕市（工場等遮熱断熱促進補助金）などが実施（内容・上限は自治体ごとに異なる）。お住まいの市区町村のHPをご確認ください。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>設備費の一部<span class="note">（実施自治体ごとに設定）。電気代対策と一石二鳥</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>「電気代は固定費」と諦め、地元自治体の設備更新・断熱補助を検討していない。</div></div>
+      </div>
+
+      <div class="card money"><div class="topline"><div class="no">20</div><div class="ttl">倉庫・工場の増設向け補助（新事業進出系の活用）</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">工場の増設・生産能力拡大を図る製造業</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">工場の増設など、建物費を含む設備投資を新事業進出系の枠で申請できる可能性がある（要件確認が必要）。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>数百万〜数千万円規模<span class="note">（補助率からの試算）</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>「建物は補助対象外」という思い込みで申請を諦めている。</div></div>
+      </div>
+
+      <div class="interlude"><p>そして最後が、<span class="accent">一番「申請忘れ」が多いゾーン</span>。賃上げ・採用・働き方――やればどうせ払う給料や制度整備に、お金が乗ってくる10制度です。</p></div>
+    </section>
+
+    <!-- ===== D ===== -->
+    <section id="catD" class="chapter reveal">
+      <div class="grp-head d"><div class="letter">D</div><div><h3>賃上げ・働き方・人材系 ―「申請忘れ」が最も多いゾーン</h3><p>両業種共通 ｜ どうせやることに、お金が乗る</p></div></div>
+
+      <div class="card"><div class="topline"><div class="no">21</div><div class="ttl">業務改善助成金</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">事業場内最低賃金を一定額以上引き上げる中小企業</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">賃金引上げを条件に、生産性向上のための設備投資費用の一部を助成。特例事業者は最大600万円。通常は対象外のトラックやパソコンが対象になる場合あり。令和8年度は予算を大幅増額。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>上限600万円まで<span class="note">（公式：助成上限／特例事業者）</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>「賃上げはコスト」としか見ず、設備投資に補助が付くことを知らない。</div></div>
+      </div>
+
+      <div class="card"><div class="topline"><div class="no">22</div><div class="ttl">キャリアアップ助成金（正社員化コース）</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">非正規雇用労働者を正社員転換する中小企業</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">非正規の正社員転換を支援。令和8年度は554億円の大規模予算。令和8年4月新設の情報公表加算で1事業所あたり20万円を追加。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>1人あたり数十万円＋加算<span class="note">（公式：コース支給額）</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>現場に有期雇用が多い両業種で、転換しても申請していない会社が多い。</div></div>
+      </div>
+
+      <div class="card"><div class="topline"><div class="no">23</div><div class="ttl">キャリアアップ助成金（賃金規定等改定・共通化コース）</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">有期雇用労働者等の賃金規定を新設・改定する中小企業</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">正社員と有期雇用に共通の賃金規定を新設し6か月以上継続適用した事業主等を支援。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>1人あたり数万〜数十万円<span class="note">（公式：コース支給額）</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>就業規則を整えるついでに取れる助成金を取りこぼしている。</div></div>
+      </div>
+
+      <div class="card"><div class="topline"><div class="no">24</div><div class="ttl">キャリアアップ助成金（賞与・退職金制度導入コース）</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">有期雇用労働者等に賞与・退職金制度を新設する中小企業</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">就業規則等に基づき新たに賞与・退職金制度を設け、実際に支給・積立てを行った事業主を支援。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>1事業所あたり数十万円規模<span class="note">（公式：コース支給額）</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>制度を作るなら助成対象に――の発想がなく、自腹で整備している。</div></div>
+      </div>
+
+      <div class="card"><div class="topline"><div class="no">25</div><div class="ttl">働き方改革推進支援助成金（業種別課題対応コース）</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">建設業など長時間労働が認められる業種の中小企業</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">時間外労働の削減や休日増加など、業種特有の課題に対応した取り組みを支援。令和8年度概算要求101億円。賃上げ加算あり。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>取組経費の一部＋賃上げ加算<span class="note">（公式：助成上限）。建設業の2024年問題対応に直結</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>「残業規制は守るしかない」と対策費を自腹で出している。</div></div>
+      </div>
+
+      <div class="card"><div class="topline"><div class="no">26</div><div class="ttl">両立支援等助成金（育児休業・代替要員確保）</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">育児休業の取得促進・代替要員確保に取り組む中小企業</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">令和8年度から育児休業中の代替要員雇用への助成を拡充、最大受給額81万円に引き上げ予定（期間要件は1年以上に変更）。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>最大81万円<span class="note">（公式：拡充後の上限）</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>「人が抜ける＝損」とだけ考え、代替要員確保の助成を使っていない。</div></div>
+      </div>
+
+      <div class="card"><div class="topline"><div class="no">27</div><div class="ttl">65歳超雇用推進支援助成金</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">高年齢者の継続雇用・無期転換に取り組む事業主</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">令和8年度に拡充。高年齢者評価制度等雇用管理改善コースは上限30万円→60万円に倍増。高年齢者無期雇用転換コースは1人30万円→40万円に引き上げ予定。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>1人40万円／制度整備で最大60万円<span class="note">（公式：拡充後の額）</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>熟練技能者の継続雇用が課題なのに、その制度整備に助成が出ると知らない。</div></div>
+      </div>
+
+      <div class="card"><div class="topline"><div class="no">28</div><div class="ttl">人材開発支援助成金（設備投資助成の新設分）</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">人材育成と設備投資を同時に行う中小企業</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">令和8年度に人材開発支援助成金で設備投資助成が新設。教育＋設備を一体で支援。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>訓練経費・賃金＋設備の一部<span class="note">（公式：新設助成）</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>教育訓練の助成しか知らず、新設の設備投資助成を見落としている。</div></div>
+      </div>
+
+      <div class="card"><div class="topline"><div class="no">29</div><div class="ttl">エイジフレンドリー補助金（高年齢労働者の安全衛生確保対策補助金）</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">60歳以上の労働者が働く中小企業（製造業・建設業の現場に直結）</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">厚生労働省所管。専門家総合対策コース・熱中症対策コースは上限100万円、コラボヘルスコースは上限30万円。補助率はコースにより1/2・3/4・4/5。令和8年4月の改正労働安全衛生法で高年齢者の労災防止措置が努力義務化、予算も約25%増。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>上限100万円<span class="note">（公式：コース上限／補助率最大4/5）</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>段差解消・防滑床・アシストスーツ・空調服が補助対象と知られていない。</div></div>
+      </div>
+
+      <div class="card"><div class="topline"><div class="no">30</div><div class="ttl">事業承継・M&A補助金</div></div>
+        <div class="row"><div class="k">対象</div><div class="v">承継・M&A・統合フェーズにある中小企業（製造業・建設業で実績多数）</div></div>
+        <div class="row"><div class="k">公式の上限・補助率</div><div class="v">承継・M&Aのタイミングに合わせた設備投資や専門家活用費を幅広く支援。業種を問わず活用できる代表的制度。</div></div>
+        <div class="amount"><span class="lbl">獲得イメージ</span>数百万〜数千万円規模<span class="note">（補助率からの試算）。承継時の設備更新・専門家費に</span></div>
+        <div class="blind"><svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#a9741a" stroke-width="1.8"/><path d="M12 7v6M12 16.5h.01" stroke="#a9741a" stroke-width="2" stroke-linecap="round"/></svg><div><b>ここが盲点 → </b>「承継＝税金の話」と思い、承継時に使える設備・専門家補助を知らない。</div></div>
+      </div>
+    </section>
+
+    <!-- 第4章 診断 -->
+    <section id="ch4" class="chapter reveal">
+      <div class="ch-label">第4章</div>
+      <h2 class="ch-title money">あなたの会社は、<br>いくつ「損」していましたか？</h2>
+      <div class="verdict-box">
+        <p class="q">30本のうち、3つ以上<br>「これ知らなかった」が<br>あったとしたら――</p>
+        <p class="hint">毎年、もらえるはずのお金を取りこぼしている可能性があります。</p>
+        <div class="v">でも、ここまで読んだあなたはもう違います。</div>
+      </div>
+      <p class="body">頭の中に、もう<b>「ウチはこれとこれが使える」</b>が浮かんでいるはずです。その感覚こそ、補助金で得をする経営者の入口です。あとは、それを「自社の正解」に落とし込むだけ。</p>
+    </section>
+
+    <!-- 実績 -->
+    <section id="proof" class="chapter reveal">
+      <div class="ch-label">採択 実績</div>
+      <h2 class="ch-title money">これは、机上の空論ではありません。<br>実際に、勝ち取った会社があります。</h2>
+      <p class="body">「うちみたいな会社が本当にもらえるのか？」――その疑いは、もっともです。だから、実例をお見せします。下は、実際に採択された案件の一部。業種も、規模も、設備もバラバラ。共通点はただひとつ、<b>「動いたこと」</b>です。</p>
+
+      <div class="proof-banner">
+        <div class="pb"><div class="n" data-count="8"><span class="u">社</span></div><div class="l">掲載した採択事例</div></div>
+        <div class="pb"><div class="n" data-count="17550"><span class="u">万円</span></div><div class="l">8社の採択額 合計（約1.7億円超）</div></div>
+        <div class="pb"><div class="n" data-count="4000"><span class="u">万円</span></div><div class="l">最高採択額（建設業・ICT建機）</div></div>
+      </div>
+
+      <div class="proof-item kensetsu"><div class="pico"><svg viewBox="0 0 32 32" fill="none"><path d="M6 22a10 10 0 0120 0" stroke="#0c7a47" stroke-width="2.4"/><path d="M4 22h24" stroke="#0c7a47" stroke-width="2.4" stroke-linecap="round"/><path d="M16 6v4M16 6a8 8 0 00-8 8" stroke="#0c7a47" stroke-width="2.4" stroke-linecap="round"/></svg></div>
+        <div class="pmid"><span class="pbadge">建設業</span><div class="pdev">ICT建機の導入</div><div class="ptheme">地域資源を有効活用するワンストップ中間処理事業の構築</div></div>
+        <div class="pamt"><div class="v">4,000<span class="man">万円</span></div><div class="c">採択</div></div></div>
+
+      <div class="proof-item"><div class="pico"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="5" stroke="#1c3f6e" stroke-width="2.4"/><path d="M16 3v4M16 25v4M3 16h4M25 16h4M7 7l3 3M22 22l3 3M25 7l-3 3M10 22l-3 3" stroke="#1c3f6e" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+        <div class="pmid"><span class="pbadge">製造業</span><div class="pdev">横形マシニングセンタの導入</div><div class="ptheme">環境事業・焼入炉等向け 特殊耐熱捲揚機構部品の製造取り組み</div></div>
+        <div class="pamt"><div class="v">3,500<span class="man">万円</span></div><div class="c">採択</div></div></div>
+
+      <div class="proof-item"><div class="pico"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="5" stroke="#1c3f6e" stroke-width="2.4"/><path d="M16 3v4M16 25v4M3 16h4M25 16h4M7 7l3 3M22 22l3 3M25 7l-3 3M10 22l-3 3" stroke="#1c3f6e" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+        <div class="pmid"><span class="pbadge">製造業</span><div class="pdev">高性能CNC旋盤（複合加工機）の導入</div><div class="ptheme">高精度・高効率 中小型スピンドル加工事業への新規参入</div></div>
+        <div class="pamt"><div class="v">3,000<span class="man">万円</span></div><div class="c">採択</div></div></div>
+
+      <div class="proof-item biyo"><div class="pico"><svg viewBox="0 0 32 32" fill="none"><path d="M7 12h16v6a7 7 0 01-7 7h-2a7 7 0 01-7-7v-6z" stroke="#b8324f" stroke-width="2.4" stroke-linejoin="round"/><path d="M23 14h2a3 3 0 010 6h-2" stroke="#b8324f" stroke-width="2.4"/><path d="M12 4c-1 1.5 0 3 0 3M16 4c-1 1.5 0 3 0 3" stroke="#b8324f" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+        <div class="pmid"><span class="pbadge">美容業</span><div class="pdev">新規カフェの立ち上げ</div><div class="ptheme">カフェ事業への新分野展開による売上回復・経営革新を通じた地域振興</div></div>
+        <div class="pamt"><div class="v">2,500<span class="man">万円</span></div><div class="c">獲得</div></div></div>
+
+      <div class="proof-item oroshi"><div class="pico"><svg viewBox="0 0 32 32" fill="none"><path d="M16 4l11 6v12l-11 6L5 22V10l11-6z" stroke="#b1872f" stroke-width="2.2" stroke-linejoin="round"/><path d="M5 10l11 6 11-6M16 16v12" stroke="#b1872f" stroke-width="2.2" stroke-linejoin="round"/></svg></div>
+        <div class="pmid"><span class="pbadge">卸売業</span><div class="pdev">テント倉庫・ホイストクレーンの導入</div><div class="ptheme">循環型社会の確立と、前例のない農業ネットワークの設立</div></div>
+        <div class="pamt"><div class="v">2,000<span class="man">万円</span></div><div class="c">採択</div></div></div>
+
+      <div class="proof-item"><div class="pico"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="5" stroke="#1c3f6e" stroke-width="2.4"/><path d="M16 3v4M16 25v4M3 16h4M25 16h4M7 7l3 3M22 22l3 3M25 7l-3 3M10 22l-3 3" stroke="#1c3f6e" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+        <div class="pmid"><span class="pbadge">製造業</span><div class="pdev">IoT対応 液圧プレスブレーキの導入</div><div class="ptheme">産業廃棄物処理機 油圧ユニットの一括受注生産</div></div>
+        <div class="pamt"><div class="v">1,700<span class="man">万円</span></div><div class="c">採択</div></div></div>
+
+      <div class="proof-item toso"><div class="pico"><svg viewBox="0 0 32 32" fill="none"><rect x="5" y="7" width="16" height="7" rx="1.5" stroke="#a9741a" stroke-width="2.2"/><path d="M21 10h4v5h-9v4M16 19v9" stroke="#a9741a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="pmid"><span class="pbadge">塗装業</span><div class="pdev">自動裁断機の導入</div><div class="ptheme">繰り返し使える養生製品による省力化・環境改善計画</div></div>
+        <div class="pamt"><div class="v">650<span class="man">万円</span></div><div class="c">取得</div></div></div>
+
+      <div class="proof-item"><div class="pico"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="5" stroke="#1c3f6e" stroke-width="2.4"/><path d="M16 3v4M16 25v4M3 16h4M25 16h4M7 7l3 3M22 22l3 3M25 7l-3 3M10 22l-3 3" stroke="#1c3f6e" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+        <div class="pmid"><span class="pbadge">製造業</span><div class="pdev">屋外野球練習場の新規設立</div><div class="ptheme">脱・一本足打法！ 屋外野球練習場の整備と収益の多角化</div></div>
+        <div class="pamt"><div class="v">200<span class="man">万円</span></div><div class="c">獲得</div></div></div>
+
+      <div class="pull" style="margin-top:26px;font-size:1.12rem">200万円の小さな一歩から、4,000万円の大勝負まで。違いは「規模」ではなく、<b>「やるか、やらないか」</b>だけでした。<br>では――次は、あなたの番です。<b>あなたは、どうしますか？</b></div>
+    </section>
+
+    <!-- むすび CTA -->
+    <section id="closing" class="reveal">
+      <div class="closing">
+        <div class="lbl">むすびに</div>
+        <span class="free">完全無料</span>
+        <h3>イメージは、できましたか？<br>あとは<span class="hl">「自社の正解」</span>に<br>落とし込むだけです。</h3>
+        <p>「自社が使える制度はどれか」「いくら狙えるか」「いつ動くべきか」を、御社の状況に合わせて一緒に整理します。どこかに丸ごとお任せにする前に、まず自分事として把握しませんか。難しい言葉は使いません。あなたの工場・現場の話に置き換えて、お見せします。</p>
+        <p class="talkline">どうですか。やってみませんか。<br>――よかったら、一緒にやりましょう。</p>
+        <a class="btn" href="mailto:sougyousoudan512@gmail.com?subject=補助金・助成金%20取りこぼし診断の申し込み" target="_blank" rel="noopener">無料・取りこぼし診断を申し込む →</a>
+        <p class="reassure">メール／お問い合わせフォームから。御社の状況をうかがい、使える制度と狙える金額・動くべき時期を整理してお返しします。</p>
+      </div>
+
+      <div class="colophon">
+        <h4>■ 出典・ご注意</h4>
+        本資料の金額・要件は、経済産業省・中小企業庁・中小企業基盤整備機構、厚生労働省、神戸市等の公式情報（公募要領・採択結果概要・各制度ページ）に基づきます。「獲得イメージ」は、公式の採択結果概要の申請額分布、または公式の補助率・上限額からの試算であり、交付を保証するものではありません。制度内容・公募時期・予算は変更され、予算枠に達し次第終了する場合があります。申請前には必ず各事務局の最新の公募要領をご確認ください。<br><br>
+        製造業・建設業の経営者へ ｜ 知らないと損している 補助金・助成金 30選 ｜ 2026年度（令和8年度）版
+      </div>
+
+      <div class="folio">― 巻末 ―</div>
+    </section>
+
+   </article>
+  </main>
+</div>
+
+<script>
+  // 読了プログレス
+  const prog=document.getElementById('progress');
+  const sbbar=document.getElementById('sbbar');
+  const pctnum=document.getElementById('pctnum');
+  function onScroll(){
+    const h=document.documentElement;
+    const max=h.scrollHeight-h.clientHeight;
+    const p=max>0?(h.scrollTop/max*100):0;
+    prog.style.width=p+'%';sbbar.style.width=p+'%';pctnum.textContent=Math.round(p)+'%';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // reveal
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // スクロールスパイ（サイドバー現在地）
+  const links=[...document.querySelectorAll('.toc a')];
+  const sections=links.map(a=>document.getElementById(a.dataset.target)).filter(Boolean);
+  const spy=new IntersectionObserver((es)=>{
+    es.forEach(e=>{
+      if(e.isIntersecting){
+        links.forEach(l=>l.classList.remove('active'));
+        const active=links.find(l=>l.dataset.target===e.target.id);
+        if(active)active.classList.add('active');
+      }
+    });
+  },{rootMargin:'-20% 0px -70% 0px'});
+  sections.forEach(s=>spy.observe(s));
+
+  // モバイル：サイドバー開閉
+  const hb=document.getElementById('hb');
+  const sidebar=document.getElementById('sidebar');
+  const overlay=document.getElementById('overlay');
+  function toggle(open){
+    sidebar.classList.toggle('open',open);
+    overlay.classList.toggle('show',open);
+    hb.classList.toggle('open',open);
+  }
+  hb.addEventListener('click',()=>toggle(!sidebar.classList.contains('open')));
+  overlay.addEventListener('click',()=>toggle(false));
+  document.querySelectorAll('.toc a').forEach(a=>a.addEventListener('click',()=>{if(window.innerWidth<=920)toggle(false);}));
+
+  // 数字カウントアップ（実績バナー）
+  const fmt=n=>n.toLocaleString('ja-JP');
+  const counted=new WeakSet();
+  const co=new IntersectionObserver((es)=>{
+    es.forEach(e=>{
+      if(!e.isIntersecting||counted.has(e.target))return;
+      counted.add(e.target);
+      const el=e.target;const target=+el.dataset.count;
+      const unitEl=el.querySelector('.u');const unit=unitEl?unitEl.outerHTML:'';
+      const dur=1500;const start=performance.now();
+      const tick=(now)=>{
+        const p=Math.min((now-start)/dur,1);
+        const eased=1-Math.pow(1-p,3);
+        el.innerHTML=fmt(Math.round(target*eased))+unit;
+        if(p<1)requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  },{threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
+</script>
+</body>
+</html>

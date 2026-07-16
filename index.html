@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>脱・情弱経営 | 行政書士 山本利安（兵庫県加古川市）</title>
+<meta name="description" content="補助金・助成金・融資——経営が動くその瞬間を、利益に変える。中小企業・小規模事業者のための経営者支援。行政書士 山本利安（兵庫県加古川市）。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== Reset & Variables ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#1A2A4F;
+  --brass:#9E6F1C;
+  --paper:#FBFAF7;
+  --ink:#23272F;
+  --line:#E4E0D6;
+  --sans:'Noto Sans JP',sans-serif;
+  --serif:'Noto Serif JP',serif;
+  --max:1080px;
+  --gutter:clamp(1rem,4vw,2.5rem);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.8;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button,input{font-family:inherit;font-size:inherit;border:none;outline:none;background:none}
+
+/* ===== Utility ===== */
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.eyebrow{font-family:var(--sans);font-size:.8125rem;font-weight:700;letter-spacing:.12em;color:var(--brass);text-transform:uppercase;margin-bottom:.75rem}
+.section-title{font-family:var(--serif);font-size:clamp(1.5rem,3.5vw,2.25rem);font-weight:700;line-height:1.45;color:var(--navy);margin-bottom:1.25rem}
+.section-body{font-size:1rem;color:#555;max-width:680px;line-height:1.9}
+section{padding:clamp(2.25rem,5vw,3.5rem) 0}
+
+/* ===== Buttons ===== */
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:.9375rem;border-radius:6px;padding:.875rem 1.75rem;transition:all .25s ease;cursor:pointer}
+.btn-primary{background:var(--brass);color:#fff}
+.btn-primary:hover{background:#7d5816;transform:translateY(-1px)}
+.btn-secondary{border:2px solid var(--brass);color:var(--brass);background:transparent}
+.btn-secondary:hover{background:var(--brass);color:#fff}
+.btn-ghost{color:var(--brass);font-weight:700;font-size:.9375rem;padding:0;background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem;transition:color .2s}
+.btn-ghost:hover{color:#7d5816}
+.btn-ghost svg{transition:transform .2s;display:inline-block}
+.btn-ghost:hover svg{transform:translateX(3px)}
+
+/* ===== Navigation ===== */
+.nav{position:sticky;top:0;z-index:1000;background:rgba(251,250,247,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.nav-brand{font-family:var(--serif);font-weight:700;font-size:1.05rem;color:var(--navy);line-height:1.3}
+.nav-brand small{display:block;font-family:var(--sans);font-size:.7rem;font-weight:500;color:var(--brass);letter-spacing:.06em}
+.nav-links{display:flex;gap:1.75rem;align-items:center}
+.nav-links a{font-size:.8125rem;font-weight:500;color:var(--ink);transition:color .2s;white-space:nowrap}
+.nav-links a:hover{color:var(--brass)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .3s}
+.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+@media(max-width:768px){
+  .nav-links{position:fixed;top:64px;left:0;right:0;background:var(--paper);flex-direction:column;gap:0;border-bottom:1px solid var(--line);transform:translateY(-120%);transition:transform .35s ease;opacity:0;pointer-events:none}
+  .nav-links.open{transform:translateY(0);opacity:1;pointer-events:auto}
+  .nav-links a{padding:1rem var(--gutter);border-top:1px solid var(--line);font-size:.9rem;width:100%;display:block}
+  .hamburger{display:flex}
+}
+
+/* ===== Hero ===== */
+.hero{padding:clamp(3rem,8vw,5.5rem) 0 clamp(2rem,5vw,3.5rem)}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:2rem;align-items:start;max-width:720px;margin:0 auto;text-align:center}
+.hero-grid .hero-buttons,.hero-grid .hero-badges{justify-content:center}
+.hero-sub{margin-left:auto;margin-right:auto}
+.hero h1{font-family:var(--serif);font-size:clamp(1.625rem,4vw,2.5rem);font-weight:700;line-height:1.5;color:var(--navy);margin-bottom:1rem}
+.hero-sub{font-size:.9375rem;color:#555;line-height:1.9;margin-bottom:2rem;max-width:540px}
+.hero-buttons{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.hero-badges{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.badge{display:inline-flex;align-items:center;gap:.4rem;background:#fff;border:1px solid var(--line);border-radius:100px;padding:.45rem 1rem;font-size:.75rem;font-weight:500;color:var(--ink)}
+.badge svg{flex-shrink:0;display:inline-block}
+
+/* Opt-in box */
+.optin-box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:2rem;max-width:440px}
+.optin-box h3{font-family:var(--serif);font-size:1.125rem;font-weight:600;color:var(--navy);margin-bottom:.5rem;line-height:1.5}
+.optin-box p{font-size:.85rem;color:#666;margin-bottom:1.25rem;line-height:1.7}
+.optin-row{display:flex;gap:.5rem}
+.optin-row input[type="email"]{flex:1;border:1px solid var(--line);border-radius:6px;padding:.75rem 1rem;font-size:.875rem;background:var(--paper);transition:border-color .2s}
+.optin-row input[type="email"]:focus{border-color:var(--brass)}
+.optin-row button{white-space:nowrap}
+.optin-note{font-size:.75rem;color:#999;margin-top:.75rem;line-height:1.6}
+.optin-fields{display:flex;flex-direction:column;gap:.6rem}
+.optin-fields input{width:100%;border:1px solid var(--line);border-radius:6px;padding:.75rem 1rem;font-size:.875rem;background:var(--paper);transition:border-color .2s}
+.optin-fields input:focus{border-color:var(--brass);outline:none}
+.optin-submit{width:100%;justify-content:center;padding:.9rem 1.25rem !important;font-size:.9rem !important;margin-top:.25rem;gap:.4rem}
+.hero-worry{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.5rem 1.75rem;max-width:440px;margin-top:1.25rem}
+.hero-worry strong{display:block;font-family:var(--serif);color:var(--navy);font-size:.95rem;margin-bottom:.9rem}
+.hero-worry ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.65rem}
+.hero-worry li{display:flex;gap:.6rem;align-items:flex-start;font-size:.85rem;color:#444;line-height:1.6}
+.hero-worry li svg{flex-shrink:0;margin-top:2px;color:var(--brass)}
+.traingo-embed{max-width:560px;margin:0 auto;background:#fff;border:3px solid var(--brass);border-radius:18px;padding:.6rem;box-shadow:0 14px 40px rgba(0,0,0,.28)}
+.traingo-embed iframe{width:100%;height:700px;border:0;border-radius:12px;background:#fff;display:block}
+@media(max-width:768px){.traingo-embed{max-width:100%}.traingo-embed iframe{height:760px}}
+.hero-svg-bg{display:none!important}
+.optin-success{display:none;padding:1.25rem;background:#f0f7f0;border-radius:8px;text-align:center;font-weight:500;color:#2d6a2d;font-size:.9rem}
+.optin-success.show{display:block}
+.optin-form.hidden{display:none}
+
+@media(max-width:768px){
+  .hero-grid{grid-template-columns:1fr;gap:2rem}
+  .optin-box{max-width:100%}
+  .optin-row{flex-direction:column}
+}
+
+/* ===== Core Offer ===== */
+.offer{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.offer-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:center}
+.offer-side{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:1.75rem;font-size:.875rem;color:#666;line-height:1.8}
+.offer-side strong{color:var(--navy);font-weight:600}
+@media(max-width:768px){.offer-grid{grid-template-columns:1fr}}
+
+/* ===== About ===== */
+.about-grid{display:grid;grid-template-columns:1fr;gap:2rem;max-width:760px;margin:0 auto}
+.about-story p{font-size:.9375rem;color:#555;line-height:2;margin-bottom:1.25rem}
+.value-cards{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;justify-content:center}
+.value-card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:1rem 1.25rem;font-size:.875rem;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:.5rem}
+.value-card svg{flex-shrink:0;color:var(--brass);display:inline-block}
+
+/* ===== Movement ===== */
+.movement{background:var(--navy);color:#fff}
+.movement .eyebrow{color:rgba(255,255,255,.5)}
+.movement .section-title{color:#fff}
+.manifesto{font-family:var(--serif);font-size:clamp(1rem,2.2vw,1.1875rem);line-height:2;color:rgba(255,255,255,.85);max-width:680px;margin-bottom:2.5rem}
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:2.5rem}
+.vs-card{border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:1.5rem}
+.vs-card h4{font-size:.8125rem;font-weight:700;letter-spacing:.1em;margin-bottom:.75rem}
+.vs-card.us{border-color:var(--brass)}
+.vs-card.us h4{color:var(--brass)}
+.vs-card.them h4{color:rgba(255,255,255,.4)}
+.vs-card p{font-size:.9rem;line-height:1.8;color:rgba(255,255,255,.75)}
+.pull-quote{border-left:3px solid var(--brass);padding-left:1.25rem;font-family:var(--serif);font-size:1.125rem;font-weight:600;color:#fff;line-height:1.7;margin-top:2rem}
+@media(max-width:768px){.vs-grid{grid-template-columns:1fr}}
+
+/* ===== Ladder ===== */
+.ladder-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
+.ladder-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:2rem 1.75rem;display:flex;flex-direction:column;transition:box-shadow .3s,transform .3s}
+.ladder-card:hover{box-shadow:0 8px 30px rgba(0,0,0,.06);transform:translateY(-3px)}
+.step-label{font-size:.7rem;font-weight:700;letter-spacing:.12em;color:var(--brass);margin-bottom:.75rem;text-transform:uppercase}
+.ladder-card h3{font-family:var(--serif);font-size:1.25rem;font-weight:700;color:var(--navy);margin-bottom:.35rem}
+.ladder-price{font-size:.875rem;font-weight:700;color:var(--brass);margin-bottom:1rem}
+.ladder-card p{font-size:.875rem;color:#666;line-height:1.8;flex:1;margin-bottom:1.25rem}
+@media(max-width:768px){.ladder-cards{grid-template-columns:1fr}}
+
+/* ===== Proof ===== */
+.proof{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:3rem;text-align:center}
+.stat-num{font-family:var(--serif);font-size:clamp(2rem,5vw,3rem);font-weight:700;color:var(--navy)}
+.stat-num .unit{font-size:.5em;font-weight:500}
+.stat-label{font-size:.8125rem;color:#888;margin-top:.25rem}
+.case-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.case-card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:1.5rem}
+.case-tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.06em;color:var(--brass);background:rgba(158,111,28,.08);padding:.25rem .65rem;border-radius:4px;margin-bottom:.75rem}
+.case-card h4{font-family:var(--serif);font-size:1rem;font-weight:600;color:var(--navy);margin-bottom:.5rem;line-height:1.5}
+.case-amount{font-size:1.25rem;font-weight:700;color:var(--brass)}
+@media(max-width:768px){.stats-row,.case-cards{grid-template-columns:1fr}}
+
+/* ===== Content Hub ===== */
+.content-cards{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}
+.content-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:2rem;transition:box-shadow .3s,transform .3s;position:relative}
+.content-card:hover{box-shadow:0 8px 30px rgba(0,0,0,.06);transform:translateY(-2px)}
+.content-card .card-icon{width:48px;height:48px;border-radius:10px;background:rgba(158,111,28,.08);display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
+.content-card .card-icon svg{color:var(--brass);display:inline-block}
+.content-card h3{font-family:var(--serif);font-size:1.125rem;font-weight:600;color:var(--navy);margin-bottom:.35rem}
+.content-card p{font-size:.85rem;color:#666;margin-bottom:1.25rem;line-height:1.7}
+.primary-badge{position:absolute;top:1rem;right:1rem;font-size:.65rem;font-weight:700;letter-spacing:.06em;color:var(--brass);background:rgba(158,111,28,.08);padding:.2rem .6rem;border-radius:4px}
+.content-note{font-size:.8125rem;color:#999;margin-top:1.5rem}
+@media(max-width:768px){.content-cards{grid-template-columns:1fr}}
+
+/* ===== Final CTA ===== */
+.final-cta{background:var(--navy);color:#fff;text-align:center}
+.final-cta .eyebrow{color:rgba(255,255,255,.5)}
+.final-cta .section-title{color:#fff}
+.final-cta .section-body{color:rgba(255,255,255,.75);margin:0 auto 2.5rem}
+.final-cta .optin-box{margin:0 auto;border-color:rgba(255,255,255,.15);background:rgba(255,255,255,.05)}
+.final-cta .optin-box h3{color:#fff}
+.final-cta .optin-box p{color:rgba(255,255,255,.6)}
+.final-cta .optin-row input[type="email"]{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2);color:#fff}
+.final-cta .optin-row input[type="email"]::placeholder{color:rgba(255,255,255,.4)}
+.final-cta .optin-note{color:rgba(255,255,255,.4)}
+.final-cta .pull-quote{text-align:left;max-width:540px;margin:2.5rem auto 0}
+.final-cta .optin-success{background:rgba(255,255,255,.1);color:rgba(255,255,255,.9)}
+
+/* ===== Footer ===== */
+.footer{border-top:1px solid var(--line);padding:3rem 0 2rem}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2rem;margin-bottom:2rem}
+.footer-brand{font-family:var(--serif);font-weight:700;font-size:1rem;color:var(--navy);margin-bottom:.5rem;line-height:1.3}
+.footer-brand small{display:block;font-family:var(--sans);font-size:.7rem;font-weight:500;color:var(--brass)}
+.footer-about{font-size:.8125rem;color:#888;line-height:1.8;margin-top:.5rem}
+.footer h5{font-size:.75rem;font-weight:700;letter-spacing:.1em;color:var(--brass);margin-bottom:.75rem;text-transform:uppercase}
+.footer ul li{margin-bottom:.4rem}
+.footer ul a{font-size:.8125rem;color:#666;transition:color .2s}
+.footer ul a:hover{color:var(--brass)}
+.footer-copy{font-size:.75rem;color:#aaa;text-align:center;padding-top:1.5rem;border-top:1px solid var(--line)}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr}}
+
+/* ===== Decorative Elements ===== */
+.img-placeholder{
+  background:var(--paper);border:2px dashed var(--line);border-radius:16px;
+  display:flex;align-items:center;justify-content:center;
+  color:#888;font-size:14px;text-align:center;padding:20px;font-weight:500;
+}
+.section-divider{
+  display:flex;align-items:center;justify-content:center;gap:16px;margin:48px auto;max-width:200px;
+}
+.section-divider::before,.section-divider::after{
+  content:'';flex:1;height:1px;background:var(--line);
+}
+.section-divider span{
+  width:8px;height:8px;background:var(--brass);border-radius:50%;flex-shrink:0;
+}
+.hero{position:relative;overflow:hidden}
+.hero::before{
+  content:'';position:absolute;top:0;left:0;right:0;bottom:0;
+  background:linear-gradient(135deg,rgba(26,42,79,.03) 0%,rgba(158,111,28,.04) 50%,transparent 100%);
+  pointer-events:none;z-index:0;
+}
+.hero .wrap{position:relative;z-index:1}
+.hero-svg-bg{
+  position:absolute;right:-60px;top:50%;transform:translateY(-50%);
+  opacity:.06;pointer-events:none;z-index:0;
+}
+.stat-box-icon{
+  width:44px;height:44px;border-radius:50%;background:rgba(158,111,28,.08);
+  display:flex;align-items:center;justify-content:center;margin:0 auto .75rem;
+}
+.stat-box-icon svg{color:var(--brass);display:inline-block}
+
+/* ===== Worries ===== */
+.worry-list{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem;max-width:860px}
+.worry-item{background:#fff;border:1px solid var(--line);border-radius:8px;padding:1rem 1.25rem;display:flex;gap:.7rem;align-items:flex-start;font-size:.9rem;color:#444;line-height:1.7}
+.worry-item svg{flex-shrink:0;margin-top:3px;color:var(--brass)}
+.worry-close{margin-top:2rem;font-size:.9375rem;color:#555;line-height:1.9;max-width:680px}
+@media(max-width:768px){.worry-list{grid-template-columns:1fr}}
+
+/* ===== Use Cases ===== */
+.usecase-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
+.usecase-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:1.5rem}
+.usecase-card h3{font-family:var(--serif);font-size:1.05rem;font-weight:600;color:var(--navy);margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem}
+.usecase-card h3 svg{color:var(--brass);flex-shrink:0}
+.usecase-card p{font-size:.85rem;color:#666;line-height:1.8}
+@media(max-width:768px){.usecase-cards{grid-template-columns:1fr}}
+
+/* ===== Features ===== */
+.feature-list{display:flex;flex-direction:column;gap:1.25rem;margin-top:2rem;max-width:760px}
+.feature-item{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.6rem 1.75rem}
+.feature-item h3{font-family:var(--serif);font-size:1.125rem;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:.6rem;margin-bottom:.6rem}
+.feature-item h3 svg{color:var(--brass);flex-shrink:0}
+.feature-item p{font-size:.9rem;color:#555;line-height:1.9}
+
+/* ===== FAQ ===== */
+.faq-list{max-width:760px;margin-top:2rem}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:.9rem;overflow:hidden}
+.faq-item summary{cursor:pointer;padding:1.1rem 1.4rem;font-weight:600;color:var(--navy);font-size:.95rem;line-height:1.6;list-style:none;display:flex;gap:.7rem;align-items:flex-start}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-q{color:var(--brass);font-family:var(--serif);font-weight:700;flex-shrink:0}
+.faq-a{padding:0 1.4rem 1.25rem 3.1rem;font-size:.9rem;color:#555;line-height:1.9}
+@media(max-width:768px){.faq-a{padding-left:1.4rem}}
+
+/* ===== Animations ===== */
+.fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+/* ===== 中央寄せ（右側の空白対策） ===== */
+.section-title,.eyebrow{text-align:center}
+.section-body{margin-left:auto;margin-right:auto;text-align:left}
+.feature-list,.faq-list,.secret-list,.check-list,.career-list,.other-results,.perspective,.flow-steps,.math-cards{margin-left:auto;margin-right:auto}
+.worry-close{margin-left:auto;margin-right:auto}
+.order-row{justify-content:center}
+.content-note{text-align:center}
+
+/* ===== Career timeline ===== */
+.career-list{margin-top:2rem;max-width:760px}
+.career-item{display:flex;gap:1.1rem;padding:1.1rem 0;border-bottom:1px solid var(--line);align-items:flex-start;text-align:left}
+.career-item:last-child{border-bottom:none}
+.career-role{flex-shrink:0;width:170px;font-family:var(--serif);font-weight:700;color:var(--navy);font-size:.95rem;line-height:1.6}
+.career-item p{font-size:.875rem;color:#555;line-height:1.8;margin:0}
+@media(max-width:640px){.career-item{flex-direction:column;gap:.3rem}.career-role{width:auto}}
+
+/* ===== Walls (三つの思い込み) ===== */
+.wall-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
+.wall-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.6rem}
+.wall-label{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.08em;color:var(--brass);border:1px solid var(--brass);border-radius:100px;padding:.2rem .8rem;margin-bottom:.8rem}
+.wall-card h3{font-family:var(--serif);font-size:1.02rem;font-weight:600;color:var(--navy);margin-bottom:.6rem;line-height:1.6}
+.wall-belief{background:var(--paper);border-left:3px solid var(--line);padding:.6rem .9rem;font-size:.85rem;color:#777;margin-bottom:.7rem;line-height:1.7}
+.wall-card p{font-size:.86rem;color:#555;line-height:1.85}
+.wall-answer{margin-top:.7rem;font-family:var(--serif);font-weight:700;color:var(--brass);font-size:.92rem}
+@media(max-width:768px){.wall-cards{grid-template-columns:1fr}}
+
+/* ===== Secrets / two questions ===== */
+.secret-list{margin-top:2rem;max-width:760px}
+.secret-item{display:flex;gap:1.2rem;background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.4rem 1.6rem;margin-bottom:1rem;align-items:flex-start}
+.secret-num{flex-shrink:0;width:38px;height:38px;border-radius:50%;background:var(--brass);color:#fff;font-family:var(--serif);font-weight:700;display:flex;align-items:center;justify-content:center}
+.secret-item h3{font-family:var(--serif);font-size:1.02rem;font-weight:600;color:var(--navy);margin-bottom:.35rem}
+.secret-item p{font-size:.875rem;color:#555;line-height:1.8;margin:0}
+
+/* ===== VS lists (movement) ===== */
+.vs-card ul{list-style:none;margin:.8rem 0 0;padding:0;text-align:left}
+.vs-card li{font-size:.85rem;line-height:1.8;padding:.35rem 0;border-bottom:1px dashed rgba(255,255,255,.15);display:flex;gap:.5rem;align-items:flex-start}
+.vs-card li:last-child{border-bottom:none}
+.nejire-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.2rem}
+.nejire-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:1.5rem;text-align:left}
+.nejire-num{font-family:var(--serif);font-size:1.6rem;font-weight:700;color:var(--brass)}
+.nejire-card h4{font-family:var(--serif);font-size:1rem;font-weight:600;color:#fff;margin:.4rem 0 .5rem}
+.nejire-card p{font-size:.84rem;color:rgba(255,255,255,.75);line-height:1.85;margin:0}
+@media(max-width:768px){.nejire-cards{grid-template-columns:1fr}}
+
+/* ===== Value math (利益率換算) ===== */
+.math-cards{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem;max-width:760px}
+.math-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.5rem;font-size:.92rem;color:#444;line-height:1.9}
+.math-card strong{color:var(--navy);font-family:var(--serif)}
+.math-em{color:var(--brass);font-weight:700}
+@media(max-width:640px){.math-cards{grid-template-columns:1fr}}
+
+/* ===== Check list / order steps ===== */
+.check-list{margin-top:2rem;max-width:680px}
+.check-item{display:flex;gap:.8rem;background:#fff;border:1px solid var(--line);border-radius:10px;padding:1.05rem 1.3rem;margin-bottom:.8rem;font-size:.95rem;color:var(--navy);font-weight:600;align-items:flex-start;line-height:1.7}
+.check-item svg{flex-shrink:0;margin-top:3px;color:var(--brass)}
+.order-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem;align-items:center}
+.order-step{background:#fff;border:1px solid var(--line);border-radius:10px;padding:.8rem 1.1rem;font-size:.85rem;font-weight:600;color:var(--navy);display:flex;gap:.5rem;align-items:center}
+.order-step em{font-style:normal;font-family:var(--serif);color:var(--brass);font-weight:700;font-size:.8rem}
+.order-step.hot{background:var(--navy);color:#fff;border-color:var(--navy)}
+.order-arrow{color:var(--brass);font-weight:700}
+
+/* ===== Lead magnets ===== */
+.lm-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
+.lm-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.6rem;display:flex;flex-direction:column}
+.lm-status{display:inline-block;align-self:flex-start;font-size:.7rem;font-weight:700;letter-spacing:.06em;color:#2d6a2d;background:#e6f4ea;border-radius:100px;padding:.2rem .7rem;margin-bottom:.8rem}
+.lm-status.prep{color:#8a6d1a;background:#faf3dd}
+.lm-card h3{font-family:var(--serif);font-size:1.02rem;font-weight:600;color:var(--navy);margin-bottom:.5rem;line-height:1.6}
+.lm-card p{font-size:.85rem;color:#555;line-height:1.8;flex:1}
+.lm-card .btn-ghost{margin-top:1rem}
+@media(max-width:768px){.lm-cards{grid-template-columns:1fr}}
+.lm-guide{background:#fff;border:2px solid var(--brass);border-radius:14px;padding:1.8rem 2rem;margin-top:2rem;max-width:760px}
+.lm-guide h3{font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:.6rem}
+.lm-guide p{font-size:.9rem;color:#555;line-height:1.9}
+
+/* ===== Blog topics ===== */
+.topic-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2rem}
+.topic-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:1.3rem 1.4rem}
+.topic-card h4{font-family:var(--serif);font-size:.98rem;font-weight:600;color:var(--navy);line-height:1.6;margin-bottom:.45rem}
+.topic-card p{font-size:.82rem;color:#666;line-height:1.75;margin:0}
+@media(max-width:768px){.topic-cards{grid-template-columns:1fr}}
+
+/* ===== Perspective / other results ===== */
+.other-results{margin-top:2.4rem;background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.6rem 1.8rem;max-width:760px}
+.other-results h3{font-family:var(--serif);font-size:1.05rem;font-weight:600;color:var(--navy);margin-bottom:.7rem}
+.other-results ul{list-style:none;margin:0 0 .7rem;padding:0}
+.other-results li{font-size:.9rem;color:#444;line-height:1.9;display:flex;gap:.6rem;align-items:flex-start}
+.other-results li svg{flex-shrink:0;margin-top:5px;color:var(--brass)}
+.other-results p{font-size:.85rem;color:#666;line-height:1.8;margin:0}
+.perspective{margin-top:2.4rem;max-width:760px}
+.perspective p{font-size:.95rem;color:#444;line-height:2;margin-bottom:.8rem}
+
+/* ===== 30選 大型バナー ===== */
+.guide-banner{background:linear-gradient(135deg,var(--navy) 0%,#22355f 100%);border:3px solid var(--brass);border-radius:18px;padding:clamp(1.8rem,4vw,2.8rem) clamp(1.4rem,4vw,3rem);margin:2.2rem auto 0;max-width:860px;text-align:center;box-shadow:0 14px 40px rgba(26,42,79,.25)}
+.guide-banner .gb-label{display:inline-block;background:var(--brass);color:#fff;font-size:.8rem;font-weight:700;letter-spacing:.14em;border-radius:100px;padding:.35rem 1.2rem;margin-bottom:1.1rem}
+.guide-banner h3{font-family:var(--serif);font-size:clamp(1.35rem,3.2vw,1.9rem);font-weight:700;color:#fff;line-height:1.6;margin-bottom:.9rem}
+.guide-banner h3 em{font-style:normal;color:#E8C87A}
+.guide-banner p{font-size:.95rem;color:rgba(255,255,255,.85);line-height:1.95;max-width:640px;margin:0 auto 1.5rem}
+.guide-banner .gb-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.guide-banner .btn-primary{font-size:1.05rem;padding:1.05rem 2.2rem;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.guide-banner .btn-white{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:.95rem;border-radius:6px;padding:1.05rem 1.8rem;background:#fff;color:var(--navy);transition:all .25s ease}
+.guide-banner .btn-white:hover{background:#efeade;transform:translateY(-1px)}
+</style>
+</head>
+<body>
+
+<!-- ===== Navigation ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">脱・情弱経営<small>行政書士 山本利安</small></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#offer">無料ガイド</a>
+      <a href="#about">わたしについて</a>
+      <a href="#strategy">やり方</a>
+      <a href="#movement">想い</a>
+      <a href="#ladder">サービス</a>
+      <a href="#proof">実績</a>
+      <a href="#leadmagnets">無料特典</a>
+      <a href="mailto:sougyousoudan512@gmail.com">お問い合わせ</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== Section 01: Hero ===== -->
+<section class="hero" id="optin">
+  <!-- Decorative SVG: ascending steps representing growth -->
+  <svg class="hero-svg-bg" width="420" height="400" viewBox="0 0 420 400" fill="none" aria-hidden="true">
+    <rect x="20" y="300" width="80" height="80" rx="8" fill="#1A2A4F"/>
+    <rect x="120" y="240" width="80" height="140" rx="8" fill="#1A2A4F"/>
+    <rect x="220" y="170" width="80" height="210" rx="8" fill="#9E6F1C"/>
+    <rect x="320" y="90" width="80" height="290" rx="8" fill="#1A2A4F"/>
+    <path d="M60 290 L160 230 L260 160 L360 80" stroke="#9E6F1C" stroke-width="3" stroke-dasharray="8 6" fill="none"/>
+    <circle cx="60" cy="290" r="6" fill="#9E6F1C"/>
+    <circle cx="160" cy="230" r="6" fill="#9E6F1C"/>
+    <circle cx="260" cy="160" r="6" fill="#9E6F1C"/>
+    <circle cx="360" cy="80" r="8" fill="#9E6F1C"/>
+  </svg>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <h1>資金調達の"次の一手"が見える<br>会社になる。</h1>
+        <p class="hero-sub">補助金・助成金・融資——経営が動くその瞬間を、利益に変える。<br>中小企業・小規模事業者のための経営者支援。<br>行政書士 山本利安（兵庫県加古川市）。</p>
+        <div class="hero-buttons">
+          <a href="#final-cta" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            無料ガイドを受け取る
+          </a>
+          <a href="#ladder" class="btn btn-secondary">まずサービスを見る</a>
+        </div>
+        <div class="hero-badges">
+          <span class="badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9E6F1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            支援実績300社以上
+          </span>
+          <span class="badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9E6F1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            採択率約8割
+          </span>
+          <span class="badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9E6F1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            申請の最終入力まで代行
+          </span>
+          <span class="badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9E6F1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            行政書士・非常勤講師
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== 30選 大型バナー（トップ） ===== -->
+<section style="padding:clamp(1.5rem,4vw,2.5rem) 0" id="guide30">
+  <div class="wrap">
+    <div class="guide-banner fade-in">
+      <span class="gb-label">無料の特別ガイド</span>
+      <h3>製造業・建設業のための<br><em>補助金助成金30選</em>（2026年度版）</h3>
+      <p>設備投資（A類）・建設業特化（B類）・製造業特化（C類）・賃上げ・人材（D類）の4カテゴリから、使える30の補助金・助成金を厳選。対象・上限・補助率から、見落としやすい注意点までこの一冊で分かります。</p>
+      <div class="gb-buttons">
+        <a href="#final-cta" class="btn btn-primary">無料で受け取る（書籍版）
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="補助金助成金30選_製造業建設業_2026年度版.html" class="btn-white">Web版を今すぐ読む</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section: Worries ===== -->
+<section id="worry">
+  <div class="wrap">
+    <div class="fade-in">
+      <p class="eyebrow">こんなお悩みありませんか</p>
+      <h2 class="section-title">補助金のことが、こんな状態のまま<br>止まっていませんか。</h2>
+      <div class="worry-list">
+        <div class="worry-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>補助金の種類が多すぎて、自社に合うものがどれか分からない</div>
+        <div class="worry-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>公募要領を読み始めたものの、途中で手が止まってしまった</div>
+        <div class="worry-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>本業が忙しく、申請書類をつくる時間がどうしても取れない</div>
+        <div class="worry-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>一度申請して不採択になり、それきりになっている</div>
+        <div class="worry-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>金融機関や商工会議所に相談したが、具体的な話まで進まなかった</div>
+        <div class="worry-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>設備投資や採用をしたいのに、資金面で踏み切れずにいる</div>
+      </div>
+      <p class="worry-close">どれか一つでも心当たりがあれば、一度立ち止まって整理する価値があります。わたし自身、身内の飲食店開業のときに、何も分からないまま補助金申請と事業計画書づくりで苦労しました。だからこそ、「どこで止まっているのか」を一緒に見つけるところからお手伝いしています。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section 02: Core Offer ===== -->
+<section class="offer" id="offer">
+  <div class="wrap">
+    <div class="offer-grid">
+      <div class="fade-in">
+        <p class="eyebrow">無料で受け取れるガイド</p>
+        <h2 class="section-title">知らないだけで、毎年こぼれ落ちている<br>お金があります。</h2>
+        <p class="section-body">最新の資金調達方法ガイドでは、補助金・助成金の活用ポイントから、融資との組み合わせ方まで、中小企業が「使える」制度を厳選してまとめています。まずはこの一冊から。</p>
+        <p style="margin-top:1.5rem">
+          <a href="#final-cta" class="btn-ghost">無料ガイドを受け取る（登録は1分ほどで完了します）
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </p>
+      </div>
+      <div class="offer-side fade-in">
+        <strong>定期更新のお知らせ</strong><br>
+        このガイドは定期的に更新しています。登録いただくと、最新版が届きます。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section: Use Cases ===== -->
+<section id="usecases">
+  <div class="wrap">
+    <p class="eyebrow">補助金・助成金活用でできること</p>
+    <h2 class="section-title">「いつかやりたい」を、前倒しできます。</h2>
+    <p class="section-body">補助金・助成金は、何か特別なことをするためのお金ではありません。設備の入れ替え、人の採用、ITの導入——もともと予定していた経営の動きに合わせて使うものです。たとえば、こんな場面で活用できる場合があります。</p>
+    <div class="usecase-cards">
+      <div class="usecase-card fade-in"><h3>設備投資・機械の更新</h3><p>老朽化した機械の入れ替えや、新しい加工設備の導入。ものづくり補助金などを活用できれば、自己資金だけでは先送りしがちな投資に踏み切れる場合があります。</p></div>
+      <div class="usecase-card fade-in"><h3>採用・人材確保</h3><p>人を雇うとき、雇用形態を見直すときは、助成金を確認するタイミングです。雇用関係の助成金は、要件を満たしていれば受給につながる場合があります。</p></div>
+      <div class="usecase-card fade-in"><h3>IT導入・業務のデジタル化</h3><p>会計ソフト・受発注システム・勤怠管理などの導入には、IT導入補助金という選択肢があります。紙とエクセルの管理から抜け出すきっかけになります。</p></div>
+      <div class="usecase-card fade-in"><h3>賃上げ・処遇改善</h3><p>賃上げを予定しているなら、その前に使える制度がないか確認する価値があります。賃上げを要件のひとつとする補助金・助成金は少なくありません。</p></div>
+      <div class="usecase-card fade-in"><h3>販路開拓・広告宣伝</h3><p>新しい客層に向けたチラシ・ホームページ・展示会出展など。小規模事業者持続化補助金は、こうした販路開拓の取り組みが対象になる場合があります。</p></div>
+      <div class="usecase-card fade-in"><h3>新事業・事業承継</h3><p>新しい事業の立ち上げや、代替わりのタイミングも制度活用の場面です。創業期に使える補助金や、事業承継に関する支援策も用意されています。</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"><span></span></div>
+
+<!-- ===== Section 03: About ===== -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid fade-in">
+      <p class="eyebrow">わたしについて</p>
+      <h2 class="section-title">「わからないまま進まない」。<br>それが、わたしの原点です。</h2>
+      <div style="max-width:260px;margin:24px auto;"><img src="images/hero_bridge.jpg" alt="行政書士 山本利安" style="width:100%;border-radius:14px;box-shadow:0 6px 20px rgba(26,42,79,.1);"></div>
+      <div class="about-story">
+        <p>身内の飲食店開業のとき、何も知らないまま補助金を申請し、政策金融公庫に出す事業計画書を作りました。意味も分からないまま書き、相談した商工会議所からは的外れな助言ばかり。こちらのコンセプトを理解してもらえず、金融機関からも具体的な助言はありませんでした。とても苦しみました。</p>
+        <p>「わからないまま進んでいくのが、いちばん怖い」。あのときの実感が、いまの仕事の原点です。逆に、何か役に立てるものがないか——そう思って伴走支援を始めました。だから、わたしの支援は「わからないを残さない」ことを何より大事にしています。</p>
+        <p>経営者の思いが入っていない計画は無意味です。あなた自身が腹落ちするまで一緒に考え、自分事で決められるように伴走する。それがわたしの支援のかたちです。</p>
+      </div>
+      <p class="eyebrow" style="margin-top:2.5rem">キャリアの道のり</p>
+      <h3 class="section-title" style="font-size:1.25rem">どの現場でも見てきたのは、「もったいない」でした。</h3>
+      <div class="career-list">
+        <div class="career-item"><span class="career-role">ホテルマン</span><p>ホテルの設備やサービスを、もっと使えばいいのに使わないお客様を見てきました。「そこにあるのに、知らないから使わない」。この光景が最初の気づきです。</p></div>
+        <div class="career-item"><span class="career-role">人材派遣の営業</span><p>同じ人が同じ仕事をしても、看板ひとつで単価がまるで変わる。高く売る会社が安く雇う現実を目の当たりにしました。</p></div>
+        <div class="career-item"><span class="career-role">保険の営業</span><p>本当に必要なものなのに、伝え方ひとつでまったく届かない。そのもどかしさを知りました。</p></div>
+        <div class="career-item"><span class="career-role">介護施設の事務長</span><p>制度を知っているかどうかで、受けられる支援がまるで変わる人たちを間近で見ました。</p></div>
+        <div class="career-item"><span class="career-role">司法書士事務所</span><p>法律の世界で、手続きの重みと正確さを叩き込まれました。</p></div>
+        <div class="career-item"><span class="career-role">行政書士として独立</span><p>すべての経験が「補助金」という一点で結ばれました。もらえるのに、もらわない。使えるのに、使わない。その「もったいない」を減らすために、いまの仕事をしています。</p></div>
+      </div>
+      <div class="value-cards">
+        <div class="value-card">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          自分事で考える
+        </div>
+        <div class="value-card">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          丸投げさせない
+        </div>
+        <div class="value-card">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          わからないを残さない
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section: Features ===== -->
+<section id="features">
+  <div class="wrap">
+    <div class="fade-in">
+      <p class="eyebrow">支援の特徴</p>
+      <h2 class="section-title">山本利安の支援は、ここが違います。</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <h3>自分事で考えるところから始める</h3>
+          <p>「どの補助金が取れますか」ではなく、「会社をこれからどうしたいか」から話を始めます。経営者の思いが入っていない計画は、たとえ書類が整っていても意味がないからです。ヒアリングに時間をかけるのは、計画をあなた自身の言葉にするためです。</p>
+        </div>
+        <div class="feature-item">
+          <h3>丸投げにさせない。でも、独りにもしない</h3>
+          <p>「全部お任せください」とは言いません。事業の中身をいちばん分かっているのは経営者ご本人だからです。その代わり、途中で分からなくなったら何度でも一緒に整理します。「わからないまま進まない」を残さないのが、わたしのやり方です。</p>
+        </div>
+        <div class="feature-item">
+          <h3>申請の最終入力まで代行する</h3>
+          <p>計画づくりは伴走型ですが、電子申請システムへの入力のような事務作業はこちらで引き受けます。経営者の時間は事業に使ってください。書類の体裁や添付の不備で審査に進めない、という事態を防ぐのもわたしの仕事です。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="section-divider"><span></span></div>
+
+<!-- ===== Section: Strategy（わたしたちのやり方） ===== -->
+<section id="strategy">
+  <div class="wrap">
+    <div class="fade-in">
+      <p class="eyebrow">わたしたちのやり方</p>
+      <h2 class="section-title">「誰が」「何を」実現するのを助けるか。</h2>
+      <p class="section-body">自分の判断・思い・タイミングで、資金調達の決断ができる経営者になる。それを助けることが、わたしたちの役割です。多くの経営者が補助金を見送る理由は、能力でもやる気でもありません。三つの「思い込み」です。わたしたちは、その壁を一つずつ壊します。</p>
+      <div class="wall-cards">
+        <div class="wall-card fade-in">
+          <span class="wall-label">壁 1：手段への疑い</span>
+          <h3>手段そのものを疑ってしまう</h3>
+          <div class="wall-belief">「めんどうで複雑で、わからない」</div>
+          <p>準備を仕組み化すれば、負担は大幅に減ります。見るべきは賃上げ・設備・採用の三点だけ。全部を理解しようとするから途方に暮れるのです。三点に絞れば、道はシンプルになります。</p>
+          <div class="wall-answer">見るのは三点だけでいい。</div>
+        </div>
+        <div class="wall-card fade-in">
+          <span class="wall-label">壁 2：自分への疑い</span>
+          <h3>自分の力を過小評価してしまう</h3>
+          <div class="wall-belief">「専門知識がない、時間がないから自分には無理」</div>
+          <p>伴走支援と仕組み化で、未経験から採択に至った事例は数多くあります。面倒な山場はまるごと任せてください。あなたがやるべきは「これからの予定」を教えてくれること、それだけです。</p>
+          <div class="wall-answer">面倒な山場は、まるごと任せていい場所。</div>
+        </div>
+        <div class="wall-card fade-in">
+          <span class="wall-label">壁 3：環境のせい</span>
+          <h3>外部の声に足を止められてしまう</h3>
+          <div class="wall-belief">「専門家に否定された」「うちは規模が足りない」</div>
+          <p>否定の理由を確かめると、実は的外れなことが少なくありません。制度は毎年広がっています。規模が小さいほど、補助金一回の重みは大きい。小さいことは、見送る理由になりません。</p>
+          <div class="wall-answer">小さいことは、使うべき理由になる。</div>
+        </div>
+      </div>
+
+      <p class="eyebrow" style="margin-top:3.2rem">三つの秘訣</p>
+      <h3 class="section-title" style="font-size:1.25rem">本業に専念しながら、資金を得続けるために。</h3>
+      <div class="secret-list">
+        <div class="secret-item fade-in"><span class="secret-num">1</span><div><h3>見るのは三点だけ</h3><p>賃上げ・設備・採用。この三つだけを見張ってください。制度を全部覚える必要はありません。</p></div></div>
+        <div class="secret-item fade-in"><span class="secret-num">2</span><div><h3>面倒な山場はまるごと任せる</h3><p>本業の手を止めずに、書類の山場だけ預けてください。電子申請の最終入力まで代行します。</p></div></div>
+        <div class="secret-item fade-in"><span class="secret-num">3</span><div><h3>タイミングを逃さない</h3><p>「決めてから」ではなく「決める前に」相談する。早すぎるくらいで、ちょうどいいのです。</p></div></div>
+      </div>
+
+      <p class="eyebrow" style="margin-top:3.2rem">ご相談の流れ</p>
+      <h3 class="section-title" style="font-size:1.25rem">相談のとき、わたしが聞くのは二つだけです。</h3>
+      <div class="secret-list">
+        <div class="secret-item fade-in"><span class="secret-num">Q1</span><div><h3>これから、何をしようとしていますか？</h3><p>あなたの予定の中に、補助金を使える瞬間が隠れています。</p></div></div>
+        <div class="secret-item fade-in"><span class="secret-num">Q2</span><div><h3>それは、いつ頃の予定ですか？</h3><p>相談のタイミングがすべてを決めます。まだ迷っている段階の相談が、いちばん価値があります。</p></div></div>
+      </div>
+      <p class="section-body" style="margin-top:1.2rem">準備するものは何もありません。あなたの「これからの予定」だけ聞かせてください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section 04: Movement ===== -->
+<section class="movement" id="movement">
+  <div class="wrap">
+    <div class="fade-in">
+      <p class="eyebrow">わたしたちの想い</p>
+      <h2 class="section-title">いわれるがまま「課金」する経営から、決別する。</h2>
+      <p class="manifesto">自分事で資金繰りを考え、自分の力で成長する中小企業を増やしていく。難しい仕組みと、それを作った側に振り回されるのではなく、自分の判断・思い・タイミングで動ける経営者を、一人でも多く。</p>
+      <div class="vs-grid">
+        <div class="vs-card us">
+          <h4>わたしたちが選ぶもの</h4>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>自分事として資金調達を考える</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>納得の上で、必要な投資をする</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>対象かどうかは、調べてから決める</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>補助金は「使うもの」として計画に組み込む</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>毎年変わる制度を、専門家と一緒に追いかける</li>
+          </ul>
+        </div>
+        <div class="vs-card them">
+          <h4>決別するもの</h4>
+          <ul>
+            <li>・いわれるがまま丸投げする</li>
+            <li>・意味のわからない「課金」を続ける</li>
+            <li>・「うちなんて対象外だろう」と自分で線を引く</li>
+            <li>・補助金は「もらえたらラッキー」で終わらせる</li>
+            <li>・情報を古いまま更新しない</li>
+          </ul>
+        </div>
+      </div>
+      <p class="manifesto" style="margin-top:2.4rem">「もらうな、使え」——施しを受けるのではなく、道具として堂々と手に取る姿勢のことです。補助金は弱者の救済ではなく、前に進もうとする会社への投資です。それなのに、なぜこんなにも多くの会社が「もったいない」を放置しているのか。理由は三つの「ねじれ」にあります。</p>
+      <div class="nejire-cards">
+        <div class="nejire-card fade-in"><span class="nejire-num">1</span><h4>情報のねじれ</h4><p>制度は毎年変わるのに、一度「対象外」と判断した知識をずっと持ち続けてしまう。古い知識を更新しないまま信じ続けてしまいます。</p></div>
+        <div class="nejire-card fade-in"><span class="nejire-num">2</span><h4>タイミングのねじれ</h4><p>補助金は「買ったあと」では間に合いません。経営者が思い出すのは、たいてい設備を買ったあと、賃上げを決めたあと。順番が逆になっています。</p></div>
+        <div class="nejire-card fade-in"><span class="nejire-num">3</span><h4>心のねじれ</h4><p>「うちみたいな小さい会社が手を出すものじゃない」。この後ろめたさが、最初の一歩を止めます。正しい手順で正しい目的に使う限り、後ろめたさを感じる理由はありません。</p></div>
+      </div>
+      <div class="pull-quote" style="margin-top:2.6rem">資金調達、会社経営は自分次第。——この一言が腹に落ちた瞬間から、あなたの経営は変わり始めます。</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"><span></span></div>
+
+<!-- ===== Section 05: Value Ladder ===== -->
+<section id="ladder">
+  <div class="wrap">
+    <p class="eyebrow">サービスの考え方</p>
+    <h2 class="section-title">なぜ「使う」だけで、同じ一手がまるで違う結果になるのか。</h2>
+    <p class="section-body">補助金は「もらえるお金」ではありません。経営の一手に組み込むことで、売上を伸ばすのと同じ——あるいはそれ以上の効果を生む手段です。新しい顧客を探すより、すでにやろうとしていることに紐づけて取りにいくほうが、ずっと現実的です。</p>
+    <div class="math-cards">
+      <div class="math-card fade-in"><strong>利益率10%の会社</strong>にとって、補助金100万円は<span class="math-em">売上1,000万円に匹敵</span>します。</div>
+      <div class="math-card fade-in"><strong>利益率5%の会社</strong>なら、補助金100万円は<span class="math-em">売上2,000万円に匹敵</span>します。</div>
+    </div>
+
+    <p class="eyebrow" style="margin-top:3.2rem">3つのチェックポイント</p>
+    <h3 class="section-title" style="font-size:1.25rem">一つでも「はい」なら、あなたの会社は補助金を「使える」会社です。</h3>
+    <div class="check-list">
+      <div class="check-item fade-in"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>来期、賃上げの予定はありますか？</div>
+      <div class="check-item fade-in"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>これから、人を採用しますか？</div>
+      <div class="check-item fade-in"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>設備や機械を、買う予定はありますか？</div>
+    </div>
+    <p class="section-body" style="margin-top:1rem">大事なのは「対象かどうか」ではなく、「買う前・上げる前に、気づけるかどうか」です。</p>
+
+    <p class="eyebrow" style="margin-top:3.2rem">相談するタイミング</p>
+    <h3 class="section-title" style="font-size:1.25rem">補助金は「種類」ではなく「順番」で決まります。</h3>
+    <p class="section-body">多くの方が「どの補助金が使えるか」を先に調べます。でも本当に大事なのは、正しい順番で動くことです。「決めてから相談する」のではなく「決める前に相談する」。早すぎるくらいで、ちょうどいいのです。</p>
+    <div class="order-row">
+      <span class="order-step"><em>01</em>予定が頭に浮かぶ</span><span class="order-arrow">→</span>
+      <span class="order-step hot"><em>02</em>相談する</span><span class="order-arrow">→</span>
+      <span class="order-step"><em>03</em>制度を探す</span><span class="order-arrow">→</span>
+      <span class="order-step"><em>04</em>計画を立てる</span><span class="order-arrow">→</span>
+      <span class="order-step"><em>05</em>申請</span><span class="order-arrow">→</span>
+      <span class="order-step"><em>06</em>発注</span>
+    </div>
+
+    <p class="eyebrow" style="margin-top:3.4rem">お手伝いの流れ</p>
+    <h2 class="section-title">いきなり依頼じゃなくて、いいんです。</h2>
+    <p class="section-body">信頼は、いきなり生まれません。だから軽い入口から、あなたのペースで進めてください。</p>
+    <div class="ladder-cards">
+      <div class="ladder-card fade-in">
+        <span class="step-label">STEP 1 / まず知る</span>
+        <h3>資金調達ガイド</h3>
+        <p class="ladder-price">無料</p>
+        <p>補助金・助成金の最新情報と活用法をまとめたPDFガイド。チャットワークでの相談窓口も。まずは情報を受け取るだけ。</p>
+        <a href="#final-cta" class="btn-ghost">無料で受け取る
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <div class="ladder-card fade-in">
+        <span class="step-label">STEP 2 / 試す</span>
+        <h3>オンライン講座</h3>
+        <p class="ladder-price">数万円〜</p>
+        <p>自走スキルを身につけるオンライン講座。チャットワークでの個別相談と、事業計画書の基本データ作成サポート付き。「この人に任せて大丈夫か」を小さく試したい方向けです。</p>
+        <a href="mailto:sougyousoudan512@gmail.com" class="btn-ghost">問い合わせる
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <div class="ladder-card fade-in">
+        <span class="step-label">STEP 3 / 任せる</span>
+        <h3>個別伴走コンサル</h3>
+        <p class="ladder-price">30万円〜</p>
+        <p>採択まで完全並走し、電子申請の最終入力まで代行。補助金を入口にした売上の仕組みづくりや、経営計画・資金繰りの相談まで。本業に専念しながら、面倒をまるごと預けたい方向けです。</p>
+        <a href="mailto:sougyousoudan512@gmail.com" class="btn-ghost">相談する
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section 06: Proof ===== -->
+<section class="proof" id="proof">
+  <div class="wrap">
+    <p class="eyebrow">採択実績</p>
+    <h2 class="section-title">「使う」を選んだ会社に、何が起きたか。</h2>
+    <div class="stats-row" id="statsRow">
+      <div>
+        <div class="stat-box-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div class="stat-num"><span class="count-up" data-target="19485">0</span><span class="unit">万円</span></div>
+        <div class="stat-label">累計採択額</div>
+      </div>
+      <div>
+        <div class="stat-box-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="stat-num"><span class="count-up" data-target="698">0</span><span class="unit">件</span></div>
+        <div class="stat-label">採択件数</div>
+      </div>
+      <div>
+        <div class="stat-box-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <div class="stat-num"><span class="count-up" data-target="8">0</span><span class="unit">業種</span></div>
+        <div class="stat-label">対応業種</div>
+      </div>
+    </div>
+    <p class="section-body" style="margin-top:1rem">数字は嘘をつきません。業種も規模もさまざまですが、共通しているのはたった一つ——「買う前に、相談した」ということです。</p>
+    <div class="case-cards">
+      <div class="case-card fade-in">
+        <span class="case-tag">製造業</span>
+        <h4>液圧プレスブレーキ導入</h4>
+        <p style="font-size:.85rem;color:#666;margin-bottom:.75rem;line-height:1.7">IoT対応設備による産業廃棄物処理機油圧ユニットの一括受注生産体制を構築。</p>
+        <div class="case-amount">1,700万円 + 助成金300万円</div>
+      </div>
+      <div class="case-card fade-in">
+        <span class="case-tag">建設業</span>
+        <h4>ICT建機の導入</h4>
+        <p style="font-size:.85rem;color:#666;margin-bottom:.75rem;line-height:1.7">ものづくり補助金を活用し、地域資源を有効活用するワンストップ中間処理事業を構築。</p>
+        <div class="case-amount">4,000万円</div>
+      </div>
+      <div class="case-card fade-in">
+        <span class="case-tag">製造業</span>
+        <h4>高性能CNC旋盤（複合加工機）導入</h4>
+        <p style="font-size:.85rem;color:#666;margin-bottom:.75rem;line-height:1.7">高精度・高効率な中小型スピンドル加工事業への新規参入。</p>
+        <div class="case-amount">3,000万円</div>
+      </div>
+      <div class="case-card fade-in">
+        <span class="case-tag">製造業</span>
+        <h4>横形マシニングセンタ導入</h4>
+        <p style="font-size:.85rem;color:#666;margin-bottom:.75rem;line-height:1.7">環境事業・焼入炉等向け特殊耐熱捲揚機構部品の製造に着手。</p>
+        <div class="case-amount">3,500万円</div>
+      </div>
+      <div class="case-card fade-in">
+        <span class="case-tag">卸売業</span>
+        <h4>テント倉庫・ホイストクレーン導入</h4>
+        <p style="font-size:.85rem;color:#666;margin-bottom:.75rem;line-height:1.7">循環型社会の確立と、前例のない農業ネットワークを設立。</p>
+        <div class="case-amount">2,000万円</div>
+      </div>
+      <div class="case-card fade-in">
+        <span class="case-tag">美容業</span>
+        <h4>新規カフェ事業の立ち上げ</h4>
+        <p style="font-size:.85rem;color:#666;margin-bottom:.75rem;line-height:1.7">カフェへの新分野展開による売上回復・経営革新を通じた地域振興。</p>
+        <div class="case-amount">2,500万円</div>
+      </div>
+      <div class="case-card fade-in">
+        <span class="case-tag">塗装業</span>
+        <h4>自動裁断機導入</h4>
+        <p style="font-size:.85rem;color:#666;margin-bottom:.75rem;line-height:1.7">繰り返し使える養生製品による省力化・環境改善計画を実現。</p>
+        <div class="case-amount">650万円</div>
+      </div>
+      <div class="case-card fade-in">
+        <span class="case-tag">製造業</span>
+        <h4>新規野球練習場の設立</h4>
+        <p style="font-size:.85rem;color:#666;margin-bottom:.75rem;line-height:1.7">屋外野球練習場の整備と収益の多角化。</p>
+        <div class="case-amount">200万円</div>
+      </div>
+      <div class="case-card fade-in">
+        <span class="case-tag">介護事業</span>
+        <h4>グループホーム等の防災改修</h4>
+        <p style="font-size:.85rem;color:#666;margin-bottom:.75rem;line-height:1.7">認知症高齢者グループホーム等防災改修等支援事業（小規模多機能型居宅介護事業所）。</p>
+        <div class="case-amount">770万円</div>
+      </div>
+      <div class="case-card fade-in">
+        <span class="case-tag">介護事業</span>
+        <h4>グループホーム等の防災改修</h4>
+        <p style="font-size:.85rem;color:#666;margin-bottom:.75rem;line-height:1.7">認知症高齢者グループホーム等防災改修等支援事業（認知症高齢者グループホーム）。</p>
+        <div class="case-amount">770万円</div>
+      </div>
+      <div class="case-card fade-in">
+        <span class="case-tag">製造業</span>
+        <h4>溶接ロボットアーム導入（リース利用）</h4>
+        <p style="font-size:.85rem;color:#666;margin-bottom:.75rem;line-height:1.7">自動化による生産性向上を実現。</p>
+        <div class="case-amount">665万円</div>
+      </div>
+      <div class="case-card fade-in">
+        <span class="case-tag">飲食業</span>
+        <h4>エスプレッソマシーン・グラインダ導入</h4>
+        <p style="font-size:.85rem;color:#666;margin-bottom:.75rem;line-height:1.7">専門性の高いコーヒー提供体制を構築。</p>
+        <div class="case-amount">200万円</div>
+      </div>
+      <div class="case-card fade-in">
+        <span class="case-tag">美容業</span>
+        <h4>アレルギー対応リフォーム</h4>
+        <p style="font-size:.85rem;color:#666;margin-bottom:.75rem;line-height:1.7">完全個室サロンのアレルゲンフリー次世代LEDマツエク。</p>
+        <div class="case-amount">200万円</div>
+      </div>
+      <div class="case-card fade-in">
+        <span class="case-tag">飲食業</span>
+        <h4>売り場リフォーム</h4>
+        <p style="font-size:.85rem;color:#666;margin-bottom:.75rem;line-height:1.7">販売スペースの拡張と商品力向上・販売効率化で、顧客満足と定着を実現。</p>
+        <div class="case-amount">100万円</div>
+      </div>
+    </div>
+    <div class="other-results fade-in">
+      <h3>その他の策定実績</h3>
+      <ul>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>経営力向上計画（製造業）</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>先端設備等導入計画（製造業）</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>経営革新計画（製造業）</li>
+      </ul>
+      <p>事業再構築補助金の実績もあります。業種・規模に応じた計画策定を一貫してサポートしています。</p>
+    </div>
+    <div class="perspective fade-in">
+      <p class="eyebrow" style="margin-top:1.5rem">視点</p>
+      <h3 class="section-title" style="font-size:1.25rem">「いくらもらえた」よりも、「何が買えた」。</h3>
+      <p>金額は記憶に残りにくいものです。でも、買えたものは毎日その場に残り続けます。新しい設備が入ると現場の空気が変わり、人が辞めにくくなり、新しい人も入りやすくなります。</p>
+      <p>お金は通り過ぎていきます。でも、買えたものは、会社に居続けます。</p>
+    </div>
+  </div>
+</section>
+
+
+<div class="section-divider"><span></span></div>
+
+<!-- ===== Section: Lead Magnets（無料特典） ===== -->
+<section id="leadmagnets">
+  <div class="wrap">
+    <div class="fade-in">
+      <p class="eyebrow">無料で受け取れる特典</p>
+      <h2 class="section-title">まずは、知ることから。すべて無料です。</h2>
+      <p class="section-body">補助金・助成金・資金調達について、入口となる特典を用意しています。どれも中小企業の経営者が「まず全体をつかむ」ためのものです。</p>
+      <div class="lm-cards">
+        <div class="lm-card fade-in">
+          <span class="lm-status">利用可能</span>
+          <h3>補助金・助成金 セルフ診断</h3>
+          <p>5つの質問に答えるだけで、あなたの会社に「使えるタイミング」があるかが分かります。所要時間は60秒ほど。診断のあとは、そのまま個別相談につながります。</p>
+          <a href="セルフ診断_補助金もらい損ねチェック.html" class="btn-ghost">診断を受ける
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+        <div class="lm-card fade-in">
+          <span class="lm-status">利用可能</span>
+          <h3>補助金助成金30選（書籍版）</h3>
+          <p>設備投資、建設業特化、製造業特化、賃上げ・人材の4カテゴリから30の補助金・助成金を厳選して解説。対象・上限・補助率まで一冊で分かります。</p>
+          <a href="#final-cta" class="btn-ghost">無料で受け取る
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+        <div class="lm-card fade-in">
+          <span class="lm-status prep">制作中（近日公開）</span>
+          <h3>BCP策定マニュアル（介護事業所向け）</h3>
+          <p>介護事業所向けのBCP（事業継続計画）策定をサポートするマニュアルです。公開までいましばらくお待ちください。</p>
+        </div>
+      </div>
+      <div class="guide-banner fade-in">
+      <span class="gb-label">無料の特別ガイド</span>
+      <h3>製造業・建設業のための<br><em>補助金助成金30選</em>（2026年度版）</h3>
+      <p>設備投資（A類）・建設業特化（B類）・製造業特化（C類）・賃上げ・人材（D類）の4カテゴリから、使える30の補助金・助成金を厳選。対象・上限・補助率から、見落としやすい注意点までこの一冊で分かります。</p>
+      <div class="gb-buttons">
+        <a href="#final-cta" class="btn btn-primary">無料で受け取る（書籍版）
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="補助金助成金30選_製造業建設業_2026年度版.html" class="btn-white">Web版を今すぐ読む</a>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section: FAQ ===== -->
+<section id="faq" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="fade-in">
+      <p class="eyebrow">よくあるご質問</p>
+      <h2 class="section-title">みなさん、同じところで迷われます。</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary><span class="faq-q">Q.</span>うちのような小さな会社でも、補助金は使えますか？</summary>
+          <div class="faq-a">規模が小さいことは、見送る理由になりません。むしろ会社の規模が小さいほど、補助金一回の重みは大きくなります。実績の中には従業員数名の会社も多くあります。まずは「これからの予定」を聞かせてください。</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Q.</span>何を準備すればいいですか？</summary>
+          <div class="faq-a">準備するものはありません。ご相談で伺うのは「これから何をしようとしているか」「それはいつ頃か」の二つだけです。決算書などが必要になるのは、実際に申請へ進むと決めてからです。</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Q.</span>もう設備を買ってしまったのですが、間に合いますか？</summary>
+          <div class="faq-a">多くの補助金は「発注前・購入前」の申請が原則のため、買ったあとでは対象外になる場合があります。だからこそ「決める前の相談」をお願いしています。次の投資の予定があれば、そこから一緒に組み立てましょう。</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Q.</span>申請すれば必ず採択されますか？</summary>
+          <div class="faq-a">補助金は審査があるため、必ず採択されるとは言い切れません。ただ、要件の確認・計画の質・タイミングで採択の可能性は大きく変わります。これまでの支援では約8割が採択に至っています（時期・制度により異なります）。</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Q.</span>費用はどのくらいかかりますか？</summary>
+          <div class="faq-a">入口は無料です（ガイド・セルフ診断・チャットワーク相談）。オンライン講座は数万円から、個別伴走コンサルティングは30万円からが目安です。内容と規模により変わりますので、まずは無料の入口からお試しください。</div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section 07: Content Hub ===== -->
+<section id="content">
+  <div class="wrap">
+    <p class="eyebrow">最新の発信</p>
+    <h2 class="section-title">知ることから、始まる。</h2>
+    <p class="section-body">補助金の最新情報、資金調達のポイント、経営に役立つ知識を発信しています。いま準備している話題の一部をご紹介します。気になるテーマがあれば、無料ガイドの登録で更新をお知らせします。</p>
+    <div class="topic-cards">
+      <div class="topic-card fade-in"><h4>2026年度 製造業が使える補助金まとめ</h4><p>設備投資を考えている製造業の経営者へ。今年度の主要な補助金を整理します。</p><p style="margin-top:.8rem"><a href="blog/2026年度製造業が使える補助金まとめ.html" class="btn-ghost">読む <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></p></div>
+      <div class="topic-card fade-in"><h4>賃上げと補助金——知っておくべき3つのポイント</h4><p>賃上げは補助金の追い風になります。その仕組みを解説します。</p><p style="margin-top:.8rem"><a href="blog/賃上げと補助金3つのポイント.html" class="btn-ghost">読む <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></p></div>
+      <div class="topic-card fade-in"><h4>補助金と融資、どう組み合わせるか</h4><p>補助金だけでなく、融資も視野に入れた資金調達の考え方。</p><p style="margin-top:.8rem"><a href="blog/補助金と融資の組み合わせ方.html" class="btn-ghost">読む <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></p></div>
+      <div class="topic-card fade-in"><h4>「買ったあと」では遅い——順番の話</h4><p>補助金で最も大切な「タイミング」について。</p><p style="margin-top:.8rem"><a href="blog/買ったあとでは遅い順番の話.html" class="btn-ghost">読む <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></p></div>
+      <div class="topic-card fade-in"><h4>小規模事業者持続化補助金の活用事例</h4><p>実際の採択事例から、申請のコツを学びます。</p><p style="margin-top:.8rem"><a href="blog/小規模事業者持続化補助金の活用事例.html" class="btn-ghost">読む <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></p></div>
+      <div class="topic-card fade-in"><h4>経営力向上計画とは？——作るメリットと手順</h4><p>計画策定が経営にもたらす本当の価値。</p><p style="margin-top:.8rem"><a href="blog/経営力向上計画とは.html" class="btn-ghost">読む <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></p></div>
+    </div>
+    <p style="margin-top:2.2rem;text-align:center"><a href="blog/index.html" class="btn btn-primary">ブログ記事一覧を見る（全30本） <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></p>
+    <p class="content-note" style="margin-top:1.6rem">X（旧Twitter）では締切・公募情報をタイムリーに発信予定です。動画コンテンツ・ニュースレターも順次追加していきます。</p>
+  </div>
+</section>
+
+<!-- ===== Section 08: Final CTA ===== -->
+<section class="final-cta" id="final-cta">
+  <div class="wrap">
+    <p class="eyebrow">まずは、ここから</p>
+    <h2 class="section-title">60秒で、あなたの会社の<br>「もったいない」を見つけにいきましょう。</h2>
+    <p class="section-body">賃上げ・設備投資・採用——どれか一つでも予定があるなら、それはもう「使える」タイミングです。まずは無料ガイドで、こぼしているお金の正体を知ってください。</p>
+    <div class="traingo-embed">
+      <iframe src="https://traingo.fp-1.info/f/30-2026-aou3?embed=1" title="補助金助成金30選（書籍版）無料受け取りフォーム" loading="lazy" scrolling="no"></iframe>
+    </div>
+    <div class="pull-quote" style="margin-top:2.5rem">資金調達、会社経営は自分次第。——その第一歩を、ここから。</div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">脱・情弱経営<small>行政書士 山本利安</small></div>
+        <p class="footer-about">中小企業・小規模事業者のための経営者支援。補助金・助成金・融資の活用で、本業に集中できる環境を。行政書士 山本利安／兵庫県加古川市。</p>
+      </div>
+      <div>
+        <h5>サービス</h5>
+        <ul>
+          <li><a href="#offer">無料ガイド</a></li>
+          <li><a href="#ladder">サービス一覧</a></li>
+          <li><a href="#leadmagnets">無料特典</a></li>
+          <li><a href="#strategy">わたしたちのやり方</a></li>
+          <li><a href="mailto:sougyousoudan512@gmail.com">個別相談</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>知る</h5>
+        <ul>
+          <li><a href="#about">わたしについて</a></li>
+          <li><a href="#proof">採択実績</a></li>
+          <li><a href="#content">最新の発信</a></li>
+          <li><a href="#faq">よくあるご質問</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copy" id="footerCopy"></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* Mobile Nav Toggle */
+  var hamburger = document.getElementById('hamburger');
+  var navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', function(){
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('open');
+    });
+  });
+
+  /* Opt-in Form Validation & Submit */
+  window.handleOptin = function(e, prefix){
+    e.preventDefault();
+    var emailInput = document.getElementById(prefix + 'Email');
+    var email = emailInput.value.trim();
+    var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!re.test(email)){
+      emailInput.style.borderColor = '#c0392b';
+      return false;
+    }
+    var gv=function(id){var el=document.getElementById(id);return el?el.value.trim():'';};
+    fetch('https://formsubmit.co/ajax/sougyousoudan512@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:gv(prefix+'Name'),company:gv(prefix+'Company'),email:email,phone:gv(prefix+'Phone'),_subject:'【ファネルハブ】新規リード獲得',_template:'table',page:location.pathname})}).catch(function(){});
+    document.getElementById(prefix + 'OptinForm').classList.add('hidden');
+    document.getElementById(prefix + 'OptinSuccess').classList.add('show');
+    return false;
+  };
+
+  /* Count-up Animation with IntersectionObserver */
+  var counted = false;
+  function animateCountUp(){
+    if(counted) return;
+    counted = true;
+    var els = document.querySelectorAll('.count-up');
+    els.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-target'), 10);
+      var duration = 2000;
+      var startTime = null;
+      function step(timestamp){
+        if(!startTime) startTime = timestamp;
+        var progress = Math.min((timestamp - startTime) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        var current = Math.floor(eased * target);
+        el.textContent = current.toLocaleString();
+        if(progress < 1){
+          requestAnimationFrame(step);
+        } else {
+          el.textContent = target.toLocaleString();
+        }
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  var statsObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        animateCountUp();
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.3});
+  var statsRow = document.getElementById('statsRow');
+  if(statsRow) statsObserver.observe(statsRow);
+
+  /* Fade-in on Scroll */
+  var fadeEls = document.querySelectorAll('.fade-in');
+  var fadeObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.15});
+  fadeEls.forEach(function(el){ fadeObserver.observe(el); });
+
+  /* Smooth Scroll for Anchor Links */
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var href = this.getAttribute('href');
+      if(href === '#') return;
+      var target = document.querySelector(href);
+      if(target){
+        e.preventDefault();
+        var offset = 72;
+        var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({top: top, behavior: 'smooth'});
+      }
+    });
+  });
+
+  /* Footer Year Auto-fill */
+  var year = new Date().getFullYear();
+  var fc = document.getElementById('footerCopy');
+  if(fc) fc.textContent = '\u00A9 ' + year + ' \u5996\u7CBE\u66F8\u5B50\uFF08\u5C71\u672C\u5229\u5B89\u30FB\u884C\u653F\u66F8\u58EB\uFF09';
+})();
+</script>
+</body>
+</html>

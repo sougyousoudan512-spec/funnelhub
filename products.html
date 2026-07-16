@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プロダクト / 新しい機会の提示 | 脱・情弱経営 / 行政書士 山本利安</title>
+<meta name="description" content="「改善」ではなく「新しい機会」として。補助金・助成金を使いこなす経営者になるためのサービス群。行政書士 山本利安（兵庫県加古川市）。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== Reset & Variables ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#1A2A4F;
+  --brass:#9E6F1C;
+  --paper:#FBFAF7;
+  --ink:#23272F;
+  --line:#E4E0D6;
+  --sans:'Noto Sans JP',sans-serif;
+  --serif:'Noto Serif JP',serif;
+  --max:1080px;
+  --gutter:clamp(1rem,4vw,2.5rem);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.8;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button,input{font-family:inherit;font-size:inherit;border:none;outline:none;background:none}
+
+/* ===== Utility ===== */
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.eyebrow{font-family:var(--sans);font-size:.8125rem;font-weight:700;letter-spacing:.12em;color:var(--brass);text-transform:uppercase;margin-bottom:.75rem}
+.section-title{font-family:var(--serif);font-size:clamp(1.5rem,3.5vw,2.25rem);font-weight:700;line-height:1.45;color:var(--navy);margin-bottom:1.25rem}
+.section-body{font-size:1rem;color:#555;max-width:680px;line-height:1.9}
+section{padding:clamp(3.5rem,8vw,6rem) 0}
+
+/* ===== Buttons ===== */
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:.9375rem;border-radius:6px;padding:.875rem 1.75rem;transition:all .25s ease;cursor:pointer}
+.btn-primary{background:var(--brass);color:#fff}
+.btn-primary:hover{background:#7d5816;transform:translateY(-1px)}
+.btn-secondary{border:2px solid var(--brass);color:var(--brass);background:transparent}
+.btn-secondary:hover{background:var(--brass);color:#fff}
+.btn-ghost{color:var(--brass);font-weight:700;font-size:.9375rem;padding:0;background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem;transition:color .2s}
+.btn-ghost:hover{color:#7d5816}
+.btn-ghost svg{transition:transform .2s;display:inline-block}
+.btn-ghost:hover svg{transform:translateX(3px)}
+
+/* ===== Navigation ===== */
+.nav{position:sticky;top:0;z-index:1000;background:rgba(251,250,247,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.nav-brand{font-family:var(--serif);font-weight:700;font-size:1.05rem;color:var(--navy);line-height:1.3}
+.nav-brand small{display:block;font-family:var(--sans);font-size:.7rem;font-weight:500;color:var(--brass);letter-spacing:.06em}
+.nav-back{font-size:.8125rem;font-weight:500;color:var(--ink);transition:color .2s;display:inline-flex;align-items:center;gap:.35rem}
+.nav-back:hover{color:var(--brass)}
+.nav-back svg{display:inline-block}
+
+/* ===== Hero ===== */
+.hero{padding:clamp(3rem,8vw,5.5rem) 0 clamp(2rem,5vw,3.5rem)}
+.hero h1{font-family:var(--serif);font-size:clamp(1.625rem,4vw,2.5rem);font-weight:700;line-height:1.5;color:var(--navy);margin-bottom:1rem;max-width:720px}
+.hero-sub{font-size:.9375rem;color:#555;line-height:1.9;margin-bottom:2rem;max-width:640px}
+
+/* ===== Thinking Section ===== */
+.thinking{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.thinking-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.thinking-points{display:flex;flex-direction:column;gap:1.25rem;margin-top:1.5rem}
+.thinking-point{display:flex;gap:1rem;align-items:flex-start}
+.thinking-point .tp-icon{flex-shrink:0;width:40px;height:40px;border-radius:8px;background:rgba(158,111,28,.08);display:flex;align-items:center;justify-content:center}
+.thinking-point .tp-icon svg{color:var(--brass);display:inline-block}
+.thinking-point p{font-size:.9375rem;color:#555;line-height:1.8}
+.thinking-point strong{color:var(--navy);font-weight:600}
+.pull-quote{border-left:3px solid var(--brass);padding-left:1.25rem;font-family:var(--serif);font-size:1.125rem;font-weight:600;color:var(--navy);line-height:1.7;margin-top:2rem;max-width:600px}
+@media(max-width:768px){.thinking-grid{grid-template-columns:1fr}}
+
+/* ===== Value Ladder ===== */
+.ladder-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
+.ladder-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:2rem 1.75rem;display:flex;flex-direction:column;transition:box-shadow .3s,transform .3s}
+.ladder-card:hover{box-shadow:0 8px 30px rgba(0,0,0,.06);transform:translateY(-3px)}
+.ladder-card.featured{border:2px solid var(--brass);position:relative}
+.ladder-card.featured::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--brass);border-radius:10px 10px 0 0}
+.step-label{font-size:.7rem;font-weight:700;letter-spacing:.12em;color:var(--brass);margin-bottom:.75rem;text-transform:uppercase}
+.ladder-card h3{font-family:var(--serif);font-size:1.25rem;font-weight:700;color:var(--navy);margin-bottom:.35rem}
+.ladder-price{font-size:.875rem;font-weight:700;color:var(--brass);margin-bottom:1rem}
+.ladder-card .card-icon{width:48px;height:48px;border-radius:10px;background:rgba(158,111,28,.08);display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
+.ladder-card .card-icon svg{color:var(--brass);display:inline-block}
+.ladder-list{margin-bottom:1.25rem;flex:1}
+.ladder-list li{font-size:.85rem;color:#555;line-height:1.7;padding:.25rem 0;display:flex;align-items:flex-start;gap:.5rem}
+.ladder-list li svg{flex-shrink:0;margin-top:3px;color:var(--brass);display:inline-block}
+.ladder-for{font-size:.8125rem;color:#888;background:var(--paper);border-radius:6px;padding:.75rem 1rem;margin-bottom:1.25rem;line-height:1.7}
+.ladder-for strong{color:var(--navy);font-weight:600;display:block;margin-bottom:.25rem;font-size:.75rem;letter-spacing:.06em}
+@media(max-width:768px){.ladder-cards{grid-template-columns:1fr}}
+
+/* ===== Questions ===== */
+.questions{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.q-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
+.q-card{background:var(--paper);border:2px solid var(--line);border-radius:12px;padding:2rem 1.5rem;text-align:center;cursor:pointer;transition:all .3s ease;user-select:none}
+.q-card:hover{border-color:var(--brass);box-shadow:0 4px 20px rgba(0,0,0,.05)}
+.q-card.active{border-color:var(--brass);background:rgba(158,111,28,.04)}
+.q-card .q-icon{width:56px;height:56px;border-radius:50%;background:rgba(158,111,28,.08);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem}
+.q-card .q-icon svg{color:var(--brass);display:inline-block}
+.q-card h4{font-family:var(--serif);font-size:1rem;font-weight:600;color:var(--navy);line-height:1.5;margin-bottom:.5rem}
+.q-card .q-badge{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.06em;color:var(--brass);background:rgba(158,111,28,.1);padding:.2rem .65rem;border-radius:4px;opacity:0;transition:opacity .3s}
+.q-card.active .q-badge{opacity:1}
+.q-result{margin-top:2rem;padding:1.5rem;background:var(--paper);border:1px solid var(--line);border-radius:10px;text-align:center;font-size:.9375rem;color:#555;line-height:1.8;transition:all .3s ease}
+.q-result.highlight{border-color:var(--brass);background:rgba(158,111,28,.04)}
+.q-result strong{color:var(--navy);font-weight:600}
+.q-pull-quote{border-left:3px solid var(--brass);padding-left:1.25rem;font-family:var(--serif);font-size:1.125rem;font-weight:600;color:var(--navy);line-height:1.7;margin-top:2.5rem;max-width:600px}
+@media(max-width:768px){.q-cards{grid-template-columns:1fr}}
+
+/* ===== Order / Flow ===== */
+.flow-track{display:flex;align-items:center;justify-content:center;gap:0;margin-top:2.5rem;flex-wrap:wrap}
+.flow-step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:.75rem 1rem;position:relative}
+.flow-step .fs-circle{width:48px;height:48px;border-radius:50%;background:rgba(158,111,28,.08);display:flex;align-items:center;justify-content:center;margin-bottom:.5rem}
+.flow-step .fs-circle svg{color:var(--brass);display:inline-block}
+.flow-step .fs-num{font-size:.65rem;font-weight:700;color:var(--brass);letter-spacing:.08em;margin-bottom:.25rem}
+.flow-step .fs-label{font-size:.8125rem;font-weight:600;color:var(--navy);line-height:1.4}
+.flow-arrow{color:var(--line);display:flex;align-items:center;margin-bottom:1rem}
+.flow-arrow svg{display:inline-block}
+.flow-message{margin-top:2.5rem;max-width:640px;padding:1.5rem;background:rgba(158,111,28,.04);border:1px solid rgba(158,111,28,.15);border-radius:10px}
+.flow-message p{font-family:var(--serif);font-size:1rem;font-weight:600;color:var(--navy);line-height:1.8}
+.flow-message .fm-highlight{color:var(--brass)}
+@media(max-width:768px){
+  .flow-track{flex-direction:column;gap:.5rem}
+  .flow-arrow{transform:rotate(90deg)}
+}
+
+/* ===== Final CTA ===== */
+.final-cta{background:var(--navy);color:#fff;text-align:center}
+.final-cta .eyebrow{color:rgba(255,255,255,.5)}
+.final-cta .section-title{color:#fff}
+.final-cta .section-body{color:rgba(255,255,255,.75);margin:0 auto 2.5rem}
+.final-cta .optin-box{margin:0 auto;border-color:rgba(255,255,255,.15);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:2rem;max-width:440px}
+.final-cta .optin-box h3{font-family:var(--serif);font-size:1.125rem;font-weight:600;color:#fff;margin-bottom:.5rem;line-height:1.5}
+.final-cta .optin-box p{font-size:.85rem;color:rgba(255,255,255,.6);margin-bottom:1.25rem;line-height:1.7}
+.optin-row{display:flex;gap:.5rem}
+.optin-row input[type="email"]{flex:1;border:1px solid var(--line);border-radius:6px;padding:.75rem 1rem;font-size:.875rem;background:var(--paper);transition:border-color .2s;font-family:var(--sans)}
+.optin-row input[type="email"]:focus{border-color:var(--brass)}
+.optin-row button{white-space:nowrap}
+.optin-note{font-size:.75rem;color:#999;margin-top:.75rem;line-height:1.6}
+.optin-success{display:none;padding:1.25rem;background:rgba(255,255,255,.1);border-radius:8px;text-align:center;font-weight:500;color:rgba(255,255,255,.9);font-size:.9rem}
+.optin-success.show{display:block}
+.optin-form.hidden{display:none}
+.final-cta .optin-row input[type="email"]{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2);color:#fff}
+.final-cta .optin-row input[type="email"]::placeholder{color:rgba(255,255,255,.4)}
+.final-cta .optin-note{color:rgba(255,255,255,.4)}
+.final-cta .pull-quote{border-left:3px solid var(--brass);padding-left:1.25rem;font-family:var(--serif);font-size:1.125rem;font-weight:600;color:#fff;line-height:1.7;text-align:left;max-width:540px;margin:2.5rem auto 0}
+@media(max-width:768px){
+  .optin-row{flex-direction:column}
+}
+
+/* ===== Footer ===== */
+.footer{border-top:1px solid var(--line);padding:3rem 0 2rem}
+.footer-inner{text-align:center}
+.footer-brand{font-family:var(--serif);font-weight:700;font-size:1rem;color:var(--navy);margin-bottom:.5rem;line-height:1.3}
+.footer-brand small{display:block;font-family:var(--sans);font-size:.7rem;font-weight:500;color:var(--brass)}
+.footer-copy{font-size:.75rem;color:#aaa;margin-top:1rem}
+
+/* ===== Decorative ===== */
+.section-divider{display:flex;align-items:center;justify-content:center;gap:16px;margin:48px auto;max-width:200px}
+.section-divider::before,.section-divider::after{content:'';flex:1;height:1px;background:var(--line)}
+.section-divider span{width:8px;height:8px;background:var(--brass);border-radius:50%;flex-shrink:0}
+.tier-illustration{display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
+.tier-illustration svg{opacity:.10}
+
+/* ===== Animations ===== */
+.fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- ===== Navigation ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">脱・情弱経営<small>行政書士 山本利安</small></a>
+    <a href="index.html" class="nav-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><polyline points="15 18 9 12 15 6"/></svg>
+      トップへ戻る
+    </a>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">サービス</p>
+    <h1>「改善」ではなく、「新しい機会」として。</h1>
+    <p class="hero-sub">どうすれば自社の価値を高められるかがわかる経営者になる――それが、このサービス群が示す道です。</p>
+  </div>
+</section>
+
+<!-- ===== Section 1: 考え方 ===== -->
+<section class="thinking">
+  <div class="wrap">
+    <div class="thinking-grid">
+      <div class="fade-in">
+        <p class="eyebrow">考え方</p>
+        <h2 class="section-title">なぜ「使う」だけで、同じ一手がまるで違う結果になるのか。</h2>
+        <p class="section-body">補助金は「もらえるお金」ではありません。経営の一手に組み込むことで、売上を伸ばすのと同じ――あるいはそれ以上の効果を生み出す手段です。</p>
+      </div>
+      <div class="fade-in">
+        <div class="thinking-points">
+          <div class="thinking-point">
+            <div class="tp-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <p><strong>利益率10%の会社</strong>にとって、補助金100万円は<strong>売上1,000万円に匹敵</strong>します。</p>
+          </div>
+          <div class="thinking-point">
+            <div class="tp-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </div>
+            <p><strong>利益率5%</strong>なら、補助金100万円は<strong>売上2,000万円に匹敵</strong>します。</p>
+          </div>
+          <div class="thinking-point">
+            <div class="tp-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <p>新しい顧客を探すより、<strong>すでにやろうとしていることに紐づけて取りにいく</strong>ほうが現実的です。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pull-quote fade-in">補助金100万円は、利益率10%の会社にとって、売上1,000万円ぶんの価値があります。</div>
+  </div>
+</section>
+
+<!-- ===== Section 2: バリューラダー ===== -->
+<section id="ladder">
+  <div class="wrap">
+    <p class="eyebrow">サービスの流れ</p>
+    <h2 class="section-title">いきなり依頼じゃなくて、いいんです。</h2>
+    <p class="section-body">信頼は、いきなり生まれない。だから軽い入口から、あなたのペースで。</p>
+    <div class="ladder-cards">
+
+      <!-- STEP 1 -->
+      <div class="ladder-card fade-in">
+        <div class="tier-illustration">
+          <svg width="120" height="60" viewBox="0 0 120 60" fill="none" aria-hidden="true">
+            <rect x="10" y="20" width="100" height="30" rx="6" fill="#1A2A4F"/>
+            <rect x="20" y="10" width="80" height="10" rx="3" fill="#9E6F1C"/>
+            <circle cx="60" cy="35" r="8" fill="#9E6F1C"/>
+          </svg>
+        </div>
+        <span class="step-label">STEP 1 / まず知る</span>
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </div>
+        <h3>資金調達ガイド＋チャットワーク相談</h3>
+        <p class="ladder-price">無料</p>
+        <ul class="ladder-list">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            補助金・助成金の最新活用ガイド（PDF）
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            チャットワークでのかんたん相談窓口
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            定期的な最新情報メール
+          </li>
+        </ul>
+        <div class="ladder-for">
+          <strong>こんな方に</strong>
+          「うちに使える補助金があるか」をリスクゼロで知りたい方
+        </div>
+        <a href="index.html#optin" class="btn btn-primary" style="text-align:center;justify-content:center">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          無料で受け取る
+        </a>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="ladder-card fade-in">
+        <div class="tier-illustration">
+          <svg width="120" height="60" viewBox="0 0 120 60" fill="none" aria-hidden="true">
+            <rect x="10" y="30" width="30" height="20" rx="4" fill="#1A2A4F"/>
+            <rect x="45" y="20" width="30" height="30" rx="4" fill="#1A2A4F"/>
+            <rect x="80" y="10" width="30" height="40" rx="4" fill="#9E6F1C"/>
+            <path d="M25 28 L60 18 L95 8" stroke="#9E6F1C" stroke-width="2" stroke-dasharray="4 3" fill="none"/>
+          </svg>
+        </div>
+        <span class="step-label">STEP 2 / 試す</span>
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3>オンライン講座＋チャットワーク相談</h3>
+        <p class="ladder-price">数万円〜</p>
+        <ul class="ladder-list">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            自走スキルを身につけるオンライン講座
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            チャットワークでの個別相談付き
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            事業計画書の基本データ作成サポート
+          </li>
+        </ul>
+        <div class="ladder-for">
+          <strong>こんな方に</strong>
+          「この人に任せて大丈夫か」を小さく試したい方
+        </div>
+        <a href="mailto:sougyousoudan512@gmail.com" class="btn btn-secondary" style="text-align:center;justify-content:center">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          詳細を問い合わせる
+        </a>
+      </div>
+
+      <!-- STEP 3 (Featured) -->
+      <div class="ladder-card featured fade-in">
+        <div class="tier-illustration">
+          <svg width="120" height="60" viewBox="0 0 120 60" fill="none" aria-hidden="true">
+            <circle cx="40" cy="30" r="18" fill="#1A2A4F"/>
+            <circle cx="80" cy="30" r="18" fill="#9E6F1C"/>
+            <path d="M52 22 L68 22 M52 30 L68 30 M52 38 L68 38" stroke="#FBFAF7" stroke-width="1.5"/>
+            <circle cx="40" cy="30" r="6" fill="#9E6F1C"/>
+            <circle cx="80" cy="30" r="6" fill="#1A2A4F"/>
+          </svg>
+        </div>
+        <span class="step-label">STEP 3 / 任せる</span>
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>個別伴走コンサルティング</h3>
+        <p class="ladder-price">30万円〜</p>
+        <ul class="ladder-list">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            採択まで完全並走
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            電子申請の最終入力まで代行
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            補助金を入口にした売上の仕組みづくり
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            経営計画・資金繰りの相談
+          </li>
+        </ul>
+        <div class="ladder-for">
+          <strong>こんな方に</strong>
+          本業に専念しながら、面倒をまるごと預けたい方
+        </div>
+        <a href="mailto:sougyousoudan512@gmail.com" class="btn btn-primary" style="text-align:center;justify-content:center">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          相談する
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"><span></span></div>
+
+<!-- ===== Section 3: 三つの質問 ===== -->
+<section class="questions" id="questions">
+  <div class="wrap">
+    <p class="eyebrow">3つのチェックポイント</p>
+    <h2 class="section-title">この三つに一つでも「はい」なら、<br>あなたは補助金を「使える」会社です。</h2>
+    <div class="q-cards">
+      <div class="q-card" data-q="1" onclick="toggleQuestion(this)">
+        <div class="q-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h4>来期、賃上げの予定はありますか？</h4>
+        <span class="q-badge">はい</span>
+      </div>
+      <div class="q-card" data-q="2" onclick="toggleQuestion(this)">
+        <div class="q-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+        </div>
+        <h4>これから、人を採用しますか？</h4>
+        <span class="q-badge">はい</span>
+      </div>
+      <div class="q-card" data-q="3" onclick="toggleQuestion(this)">
+        <div class="q-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M12 12h.01"/><path d="M17 12h.01"/><path d="M7 12h.01"/></svg>
+        </div>
+        <h4>設備や機械を、買う予定はありますか？</h4>
+        <span class="q-badge">はい</span>
+      </div>
+    </div>
+    <div class="q-result" id="qResult">
+      一つでもタップしてみてください。あなたの会社が「使える」かどうかがわかります。
+    </div>
+    <div class="q-pull-quote fade-in">大事なのは「対象かどうか」ではなく、「買う前・上げる前に、気づけるかどうか」。</div>
+  </div>
+</section>
+
+<div class="section-divider"><span></span></div>
+
+<!-- ===== Section 4: 順番の話 ===== -->
+<section id="order">
+  <div class="wrap">
+    <p class="eyebrow">相談するタイミング</p>
+    <h2 class="section-title">補助金は「種類」ではなく「順番」で決まります。</h2>
+    <p class="section-body">多くの人が「どの補助金が使えるか」を先に調べます。でも本当に大事なのは、正しい順番で動くことです。</p>
+
+    <div class="flow-track fade-in">
+      <div class="flow-step">
+        <div class="fs-num">01</div>
+        <div class="fs-circle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <span class="fs-label">予定が<br>頭に浮かぶ</span>
+      </div>
+      <div class="flow-arrow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+      <div class="flow-step">
+        <div class="fs-num">02</div>
+        <div class="fs-circle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <span class="fs-label">相談する</span>
+      </div>
+      <div class="flow-arrow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+      <div class="flow-step">
+        <div class="fs-num">03</div>
+        <div class="fs-circle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <span class="fs-label">制度を探す</span>
+      </div>
+      <div class="flow-arrow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+      <div class="flow-step">
+        <div class="fs-num">04</div>
+        <div class="fs-circle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <span class="fs-label">計画を立てる</span>
+      </div>
+      <div class="flow-arrow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+      <div class="flow-step">
+        <div class="fs-num">05</div>
+        <div class="fs-circle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <span class="fs-label">申請</span>
+      </div>
+      <div class="flow-arrow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+      <div class="flow-step">
+        <div class="fs-num">06</div>
+        <div class="fs-circle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        </div>
+        <span class="fs-label">発注</span>
+      </div>
+    </div>
+
+    <div class="flow-message fade-in">
+      <p>「決めてから相談する」のではなく「<span class="fm-highlight">決める前に相談する</span>」。<br>早すぎるくらいで、ちょうどいい。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section 5: Final CTA ===== -->
+<section class="final-cta" id="cta">
+  <div class="wrap">
+    <p class="eyebrow">まずは、ここから</p>
+    <h2 class="section-title">まずは無料ガイドから、<br>始めてみませんか。</h2>
+    <div class="optin-box" id="finalOptinBox">
+      <div class="optin-form" id="finalOptinForm">
+        <h3>最新・資金調達ガイドを無料で受け取る</h3>
+        <p>補助金・助成金の最新情報と活用方法をまとめたPDFガイドをお届けします。</p>
+        <form onsubmit="return handleOptin(event,'final')">
+          <div class="optin-row">
+            <input type="email" placeholder="メールアドレス" required id="finalEmail">
+            <button type="submit" class="btn btn-primary" style="padding:.75rem 1.25rem;font-size:.8125rem">無料で受け取る
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+          <p class="optin-note">※ 営業メールは送りません。いつでも解除できます。</p>
+        </form>
+      </div>
+      <div class="optin-success" id="finalOptinSuccess">ありがとうございます。ガイドをメールでお送りしました。受信ボックスをご確認ください。</div>
+    </div>
+    <div class="pull-quote">差をつけているのは、頭のよさでも会社の大きさでもありません。ただ、知っているか知らないか。</div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">脱・情弱経営<small>行政書士 山本利安</small></div>
+      <nav style="margin:1rem 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;font-size:.8125rem;">
+        <a href="index.html" style="color:#888;transition:color .2s;">トップ</a>
+        <a href="about.html" style="color:#888;transition:color .2s;">わたしについて</a>
+        <a href="movement.html" style="color:#888;transition:color .2s;">仲間になる</a>
+        <a href="reviews.html" style="color:#888;transition:color .2s;">採択実績</a>
+        <a href="blog.html" style="color:#888;transition:color .2s;">ブログ</a>
+        <a href="leadmagnets.html" style="color:#888;transition:color .2s;">無料特典</a>
+        <a href="strategy.html" style="color:#888;transition:color .2s;">わたしたちのやり方</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 行政書士 山本利安</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ===== Fade-in on scroll ===== */
+(function(){
+  var els=document.querySelectorAll('.fade-in');
+  if(!els.length)return;
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}
+    });
+  },{threshold:0.15});
+  els.forEach(function(el){observer.observe(el)});
+})();
+
+/* ===== Three Questions Interactive ===== */
+var activeCount=0;
+function toggleQuestion(el){
+  el.classList.toggle('active');
+  activeCount=document.querySelectorAll('.q-card.active').length;
+  var result=document.getElementById('qResult');
+  if(activeCount===0){
+    result.innerHTML='一つでもタップしてみてください。あなたの会社が「使える」かどうかがわかります。';
+    result.classList.remove('highlight');
+  }else if(activeCount===1){
+    result.innerHTML='<strong>1つ当てはまりました。</strong><br>その予定、補助金・助成金の対象になる可能性があります。買う前・上げる前に相談してみませんか。';
+    result.classList.add('highlight');
+  }else if(activeCount===2){
+    result.innerHTML='<strong>2つ当てはまりました。</strong><br>複数の制度を組み合わせることで、さらに大きな資金調達が見えてきます。早めの相談が効果的です。';
+    result.classList.add('highlight');
+  }else{
+    result.innerHTML='<strong>3つすべて当てはまりました。</strong><br>賃上げ・採用・設備投資――すべてが補助金の対象になりえます。「知っている」だけで、経営の打ち手が変わります。';
+    result.classList.add('highlight');
+  }
+}
+
+/* ===== Opt-in form ===== */
+function handleOptin(e,prefix){
+  e.preventDefault();
+  var emailInput=document.getElementById(prefix+'Email');
+  var email=emailInput?emailInput.value.trim():'';
+  var re=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if(!re.test(email)){ if(emailInput) emailInput.style.borderColor='#c0392b'; return false; }
+  var form=document.getElementById(prefix+'OptinForm');
+  var success=document.getElementById(prefix+'OptinSuccess');
+  fetch('https://formsubmit.co/ajax/sougyousoudan512@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:email,_subject:'【ファネルハブ】新規リード獲得',_template:'table',page:location.pathname})}).catch(function(){});
+  if(form&&success){
+    form.classList.add('hidden');
+    success.classList.add('show');
+  }
+  return false;
+}
+</script>
+</body>
+</html>

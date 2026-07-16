@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>採択実績 / ケーススタディ | 脱・情弱経営 — 行政書士 山本利安</title>
+<meta name="description" content="補助金・助成金の採択実績とケーススタディ。累計採択額19,485万円、14件の採択支援。行政書士 山本利安（兵庫県加古川市）。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== Reset & Variables ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#1A2A4F;
+  --brass:#9E6F1C;
+  --paper:#FBFAF7;
+  --ink:#23272F;
+  --line:#E4E0D6;
+  --sans:'Noto Sans JP',sans-serif;
+  --serif:'Noto Serif JP',serif;
+  --max:1080px;
+  --gutter:clamp(1rem,4vw,2.5rem);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.8;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button,input{font-family:inherit;font-size:inherit;border:none;outline:none;background:none}
+
+/* ===== Utility ===== */
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.eyebrow{font-family:var(--sans);font-size:.8125rem;font-weight:700;letter-spacing:.12em;color:var(--brass);text-transform:uppercase;margin-bottom:.75rem}
+.section-title{font-family:var(--serif);font-size:clamp(1.5rem,3.5vw,2.25rem);font-weight:700;line-height:1.45;color:var(--navy);margin-bottom:1.25rem}
+.section-body{font-size:1rem;color:#555;max-width:680px;line-height:1.9}
+section{padding:clamp(3.5rem,8vw,6rem) 0}
+
+/* ===== Buttons ===== */
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:.9375rem;border-radius:6px;padding:.875rem 1.75rem;transition:all .25s ease;cursor:pointer}
+.btn-primary{background:var(--brass);color:#fff}
+.btn-primary:hover{background:#7d5816;transform:translateY(-1px)}
+.btn-ghost{color:var(--brass);font-weight:700;font-size:.9375rem;padding:0;background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem;transition:color .2s}
+.btn-ghost:hover{color:#7d5816}
+.btn-ghost svg{transition:transform .2s;display:inline-block}
+.btn-ghost:hover svg{transform:translateX(-3px)}
+
+/* ===== Navigation ===== */
+.nav{position:sticky;top:0;z-index:1000;background:rgba(251,250,247,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.nav-brand{font-family:var(--serif);font-weight:700;font-size:1.05rem;color:var(--navy);line-height:1.3}
+.nav-brand small{display:block;font-family:var(--sans);font-size:.7rem;font-weight:500;color:var(--brass);letter-spacing:.06em}
+.nav-links{display:flex;gap:1.75rem;align-items:center}
+.nav-links a{font-size:.8125rem;font-weight:500;color:var(--ink);transition:color .2s;white-space:nowrap}
+.nav-links a:hover{color:var(--brass)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .3s}
+.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+@media(max-width:768px){
+  .nav-links{position:fixed;top:64px;left:0;right:0;background:var(--paper);flex-direction:column;gap:0;border-bottom:1px solid var(--line);transform:translateY(-120%);transition:transform .35s ease;opacity:0;pointer-events:none}
+  .nav-links.open{transform:translateY(0);opacity:1;pointer-events:auto}
+  .nav-links a{padding:1rem var(--gutter);border-top:1px solid var(--line);font-size:.9rem;width:100%;display:block}
+  .hamburger{display:flex}
+}
+
+/* ===== Back link ===== */
+.back-bar{background:#fff;border-bottom:1px solid var(--line);padding:.75rem 0}
+.back-link{display:inline-flex;align-items:center;gap:.35rem;font-size:.8125rem;font-weight:500;color:var(--brass);transition:color .2s}
+.back-link:hover{color:#7d5816}
+.back-link svg{display:inline-block;width:16px;height:16px}
+
+/* ===== Hero ===== */
+.hero{padding:clamp(3rem,8vw,5.5rem) 0 clamp(2rem,5vw,3.5rem)}
+.hero h1{font-family:var(--serif);font-size:clamp(1.625rem,4vw,2.5rem);font-weight:700;line-height:1.5;color:var(--navy);margin-bottom:1rem}
+.hero-sub{font-size:.9375rem;color:#555;line-height:1.9;max-width:680px}
+
+/* ===== Stats ===== */
+.stats{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:clamp(2.5rem,6vw,4rem) 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center}
+.stat-item .stat-number{font-family:var(--serif);font-size:clamp(1.75rem,4vw,2.75rem);font-weight:700;color:var(--navy);line-height:1.2}
+.stat-item .stat-unit{font-size:.875rem;font-weight:700;color:var(--navy)}
+.stat-item .stat-label{font-size:.8125rem;color:#888;margin-top:.35rem;font-weight:500}
+.stat-icon{margin:0 auto .75rem;width:44px;height:44px;background:rgba(158,111,28,.08);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.stat-icon svg{display:block;width:22px;height:22px;color:var(--brass)}
+
+@media(max-width:768px){
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:1.5rem}
+}
+
+/* ===== Case Studies ===== */
+.cases{padding:clamp(3.5rem,8vw,6rem) 0}
+.cases-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;margin-top:2rem}
+.case-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.5rem 1.75rem;transition:box-shadow .3s,transform .3s}
+.case-card:hover{box-shadow:0 8px 30px rgba(0,0,0,.06);transform:translateY(-2px)}
+.case-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:.75rem;flex-wrap:wrap;gap:.5rem}
+.case-tag{display:inline-flex;align-items:center;gap:.3rem;font-size:.7rem;font-weight:700;color:#fff;padding:.25rem .75rem;border-radius:100px;letter-spacing:.04em}
+.case-tag svg{display:inline-block;width:12px;height:12px}
+.tag-manufacturing{background:#2d6a4f}
+.tag-construction{background:#1a5276}
+.tag-service{background:#6c3483}
+.tag-care{background:#c0392b}
+.tag-wholesale{background:#1a5276}
+.tag-beauty{background:#6c3483}
+.tag-paint{background:#1a5276}
+.tag-food{background:#9E6F1C}
+.case-amount{font-family:var(--serif);font-size:1.25rem;font-weight:700;color:var(--navy)}
+.case-body{font-size:.875rem;color:#555;line-height:1.8}
+.case-detail{font-size:.8rem;color:#888;margin-top:.5rem;line-height:1.7;border-top:1px solid var(--line);padding-top:.5rem}
+
+@media(max-width:768px){
+  .cases-grid{grid-template-columns:1fr}
+}
+
+/* ===== Other Achievements ===== */
+.other-achievements{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.achieve-list{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}
+.achieve-item{display:inline-flex;align-items:center;gap:.4rem;background:var(--paper);border:1px solid var(--line);border-radius:100px;padding:.5rem 1.25rem;font-size:.85rem;font-weight:500;color:var(--navy)}
+.achieve-item svg{display:inline-block;width:16px;height:16px;color:var(--brass)}
+.achieve-note{margin-top:1.25rem;font-size:.9rem;color:#555;line-height:1.8}
+
+/* ===== Value Perspective ===== */
+.value-section .value-body{font-size:.9375rem;color:#555;line-height:2;max-width:680px;margin-bottom:2rem}
+.pull-quote{border-left:3px solid var(--brass);padding-left:1.25rem;font-family:var(--serif);font-size:1.125rem;font-weight:600;color:var(--navy);line-height:1.7;max-width:600px}
+.pull-quote-dark{color:#fff}
+
+/* ===== CTA ===== */
+.cta-section{background:var(--navy);color:#fff;padding:clamp(3.5rem,8vw,5.5rem) 0}
+.cta-section .section-title{color:#fff}
+.cta-inner{max-width:600px}
+.cta-form{margin-top:2rem}
+.cta-row{display:flex;gap:.5rem;margin-bottom:.75rem}
+.cta-row input[type="email"]{flex:1;border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:.75rem 1rem;font-size:.875rem;background:rgba(255,255,255,.08);color:#fff;transition:border-color .2s}
+.cta-row input[type="email"]::placeholder{color:rgba(255,255,255,.4)}
+.cta-row input[type="email"]:focus{border-color:var(--brass)}
+.cta-note{font-size:.75rem;color:rgba(255,255,255,.45);line-height:1.6}
+.cta-quote{margin-top:2.5rem;border-left:3px solid var(--brass);padding-left:1.25rem;font-family:var(--serif);font-size:1rem;font-weight:600;color:rgba(255,255,255,.85);line-height:1.7}
+.optin-success{display:none;padding:1.25rem;background:rgba(255,255,255,.1);border-radius:8px;text-align:center;font-weight:500;color:rgba(255,255,255,.9);font-size:.9rem;border:1px solid rgba(255,255,255,.15)}
+.optin-success.show{display:block}
+.optin-form.hidden{display:none}
+
+@media(max-width:768px){
+  .cta-row{flex-direction:column}
+}
+
+/* ===== Footer ===== */
+.footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.08);padding:2.5rem 0}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-copy{font-size:.75rem;color:rgba(255,255,255,.4)}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{font-size:.75rem;color:rgba(255,255,255,.45);transition:color .2s}
+.footer-links a:hover{color:var(--brass)}
+
+/* ===== Count-up animation ===== */
+.stat-number .count{display:inline-block}
+
+/* ===== Decorative ===== */
+.section-divider{display:flex;align-items:center;justify-content:center;gap:16px;margin:48px auto;max-width:200px}
+.section-divider::before,.section-divider::after{content:'';flex:1;height:1px;background:var(--line)}
+.section-divider span{width:8px;height:8px;background:var(--brass);border-radius:50%;flex-shrink:0}
+.case-card{position:relative;overflow:hidden}
+.case-card::after{
+  content:'';position:absolute;top:-20px;right:-20px;width:80px;height:80px;
+  border-radius:50%;background:rgba(158,111,28,.04);pointer-events:none;
+}
+.case-card .case-industry-icon{
+  position:absolute;bottom:12px;right:12px;opacity:.06;pointer-events:none;
+}
+.case-card .case-industry-icon svg{display:block}
+
+/* ===== Fade-in on scroll ===== */
+.fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      脱・情弱経営
+      <small>行政書士 山本利安</small>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">トップ</a>
+      <a href="#cases">採択実績</a>
+      <a href="#value">視点</a>
+      <a href="#cta">相談する</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Back link -->
+<div class="back-bar">
+  <div class="wrap">
+    <a href="index.html" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      トップページに戻る
+    </a>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">採択実績</p>
+    <h1>「使う」を選んだ会社に、何が起きたか。</h1>
+    <p class="hero-sub">数字は嘘をつきません。業種も規模もさまざまですが、共通しているのはたった一つ――「買う前に、相談した」ということです。</p>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat-item fade-in">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div class="stat-number"><span class="count" data-target="19485">0</span><span class="stat-unit">万円</span></div>
+        <div class="stat-label">累計採択額</div>
+      </div>
+      <div class="stat-item fade-in">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="stat-number"><span class="count" data-target="14">0</span><span class="stat-unit">件</span></div>
+        <div class="stat-label">採択件数</div>
+      </div>
+      <div class="stat-item fade-in">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <div class="stat-number"><span class="count" data-target="8">0</span><span class="stat-unit">業種</span></div>
+        <div class="stat-label">対応業種</div>
+      </div>
+      <div class="stat-item fade-in">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="stat-number"><span class="count" data-target="300">0</span><span class="stat-unit">社以上</span></div>
+        <div class="stat-label">支援実績</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Case Studies -->
+<section class="cases" id="cases">
+  <div class="wrap">
+    <p class="eyebrow">ケーススタディ</p>
+    <h2 class="section-title">全14件の採択実績</h2>
+    <p class="section-body">業種も規模もさまざま。しかし共通しているのは、設備投資を「感覚」ではなく「計画」に変えたこと。</p>
+
+    <div class="cases-grid">
+
+      <!-- Case 1 -->
+      <div class="case-card fade-in">
+        <div class="case-industry-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1A2A4F" stroke-width="1.5"><path d="M2 20h20"/><path d="M5 20V8l5-4 5 4v12"/><path d="M15 20V4l5 4v12"/></svg></div>
+        <div class="case-header">
+          <span class="case-tag tag-manufacturing">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8l5-4 5 4v12"/><path d="M15 20V4l5 4v12"/></svg>
+            製造業
+          </span>
+          <span class="case-amount">1,700万円</span>
+        </div>
+        <div class="case-body">液圧プレスブレーキ導入。IoT対応設備による産業廃棄物処理機油圧ユニットの一括受注生産体制を構築。</div>
+        <div class="case-detail">+助成金300万円も採択。</div>
+      </div>
+
+      <!-- Case 2 -->
+      <div class="case-card fade-in">
+        <div class="case-industry-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1A2A4F" stroke-width="1.5"><rect x="1" y="12" width="6" height="10"/><rect x="9" y="7" width="6" height="15"/><rect x="17" y="2" width="6" height="20"/></svg></div>
+        <div class="case-header">
+          <span class="case-tag tag-construction">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="12" width="6" height="10"/><rect x="9" y="7" width="6" height="15"/><rect x="17" y="2" width="6" height="20"/></svg>
+            建設業
+          </span>
+          <span class="case-amount">4,000万円</span>
+        </div>
+        <div class="case-body">ICT建機の導入。地域資源を有効活用するワンストップ中間処理事業を構築。</div>
+      </div>
+
+      <!-- Case 3 -->
+      <div class="case-card fade-in">
+        <div class="case-industry-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1A2A4F" stroke-width="1.5"><path d="M2 20h20"/><path d="M5 20V8l5-4 5 4v12"/><path d="M15 20V4l5 4v12"/></svg></div>
+        <div class="case-header">
+          <span class="case-tag tag-manufacturing">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8l5-4 5 4v12"/><path d="M15 20V4l5 4v12"/></svg>
+            製造業
+          </span>
+          <span class="case-amount">3,000万円</span>
+        </div>
+        <div class="case-body">高性能CNC旋盤（複合加工機）導入。高精度・高効率な中小型スピンドル加工事業への新規参入。</div>
+      </div>
+
+      <!-- Case 4 -->
+      <div class="case-card fade-in">
+        <div class="case-industry-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1A2A4F" stroke-width="1.5"><path d="M2 20h20"/><path d="M5 20V8l5-4 5 4v12"/><path d="M15 20V4l5 4v12"/></svg></div>
+        <div class="case-header">
+          <span class="case-tag tag-manufacturing">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8l5-4 5 4v12"/><path d="M15 20V4l5 4v12"/></svg>
+            製造業
+          </span>
+          <span class="case-amount">3,500万円</span>
+        </div>
+        <div class="case-body">横形マシニングセンタ導入。環境事業・焼入炉等向け特殊耐熱捲揚機構部品の製造に着手。</div>
+      </div>
+
+      <!-- Case 5 -->
+      <div class="case-card fade-in">
+        <div class="case-industry-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1A2A4F" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+        <div class="case-header">
+          <span class="case-tag tag-wholesale">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            卸売業
+          </span>
+          <span class="case-amount">2,000万円</span>
+        </div>
+        <div class="case-body">テント倉庫・ホイストクレーン導入。循環型社会の確立と前例のない農業ネットワークを設立。</div>
+      </div>
+
+      <!-- Case 6 -->
+      <div class="case-card fade-in">
+        <div class="case-industry-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1A2A4F" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+        <div class="case-header">
+          <span class="case-tag tag-beauty">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            美容業
+          </span>
+          <span class="case-amount">2,500万円</span>
+        </div>
+        <div class="case-body">新規カフェ事業立ち上げ。カフェへの新分野展開による売上回復・経営革新を通じた地域振興。</div>
+      </div>
+
+      <!-- Case 7 -->
+      <div class="case-card fade-in">
+        <div class="case-header">
+          <span class="case-tag tag-paint">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 3H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/><path d="M12 11v8"/><path d="M8 19h8"/></svg>
+            塗装業
+          </span>
+          <span class="case-amount">650万円</span>
+        </div>
+        <div class="case-body">自動裁断機導入。繰り返し使える養生製品による省力化・環境改善計画を実現。</div>
+      </div>
+
+      <!-- Case 8 -->
+      <div class="case-card fade-in">
+        <div class="case-header">
+          <span class="case-tag tag-manufacturing">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8l5-4 5 4v12"/><path d="M15 20V4l5 4v12"/></svg>
+            製造業
+          </span>
+          <span class="case-amount">200万円</span>
+        </div>
+        <div class="case-body">新規野球練習場の設立。屋外野球練習場の整備と収益多角化。</div>
+      </div>
+
+      <!-- Case 9 -->
+      <div class="case-card fade-in">
+        <div class="case-header">
+          <span class="case-tag tag-care">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            介護事業
+          </span>
+          <span class="case-amount">770万円</span>
+        </div>
+        <div class="case-body">認知症高齢者グループホーム等防災改修等支援事業（小規模多機能型居宅介護事業所）。</div>
+      </div>
+
+      <!-- Case 10 -->
+      <div class="case-card fade-in">
+        <div class="case-header">
+          <span class="case-tag tag-care">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            介護事業
+          </span>
+          <span class="case-amount">770万円</span>
+        </div>
+        <div class="case-body">認知症高齢者グループホーム等防災改修等支援事業（認知症高齢者グループホーム）。</div>
+      </div>
+
+      <!-- Case 11 -->
+      <div class="case-card fade-in">
+        <div class="case-header">
+          <span class="case-tag tag-manufacturing">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8l5-4 5 4v12"/><path d="M15 20V4l5 4v12"/></svg>
+            製造業
+          </span>
+          <span class="case-amount">665万円</span>
+        </div>
+        <div class="case-body">溶接ロボットアーム導入（リース利用）。自動化による生産性向上。</div>
+      </div>
+
+      <!-- Case 12 -->
+      <div class="case-card fade-in">
+        <div class="case-header">
+          <span class="case-tag tag-food">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            飲食業
+          </span>
+          <span class="case-amount">200万円</span>
+        </div>
+        <div class="case-body">エスプレッソマシーン・グラインダ導入。専門性の高いコーヒー提供体制を構築。</div>
+      </div>
+
+      <!-- Case 13 -->
+      <div class="case-card fade-in">
+        <div class="case-header">
+          <span class="case-tag tag-beauty">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            美容業
+          </span>
+          <span class="case-amount">200万円</span>
+        </div>
+        <div class="case-body">アレルギー対応リフォーム。完全個室サロンのアレルゲンフリー次世代LEDマツエク。</div>
+      </div>
+
+      <!-- Case 14 -->
+      <div class="case-card fade-in">
+        <div class="case-header">
+          <span class="case-tag tag-food">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            飲食業
+          </span>
+          <span class="case-amount">100万円</span>
+        </div>
+        <div class="case-body">売り場リフォーム。販売スペースの拡張と商品力向上・販売効率化で顧客満足と定着を実現。</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"><span></span></div>
+
+<!-- Other Achievements -->
+<section class="other-achievements">
+  <div class="wrap">
+    <p class="eyebrow">その他の実績</p>
+    <h2 class="section-title">その他の策定実績</h2>
+    <div class="achieve-list">
+      <span class="achieve-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        経営力向上計画（製造業）
+      </span>
+      <span class="achieve-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        先端設備等導入計画（製造業）
+      </span>
+      <span class="achieve-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        経営革新計画（製造業）
+      </span>
+    </div>
+    <p class="achieve-note">事業再構築補助金の実績もあり。業種・規模に応じた計画策定を一貫してサポートしています。</p>
+  </div>
+</section>
+
+<div class="section-divider"><span></span></div>
+
+<!-- Value Perspective -->
+<section class="value-section" id="value">
+  <div class="wrap">
+    <p class="eyebrow">視点</p>
+    <h2 class="section-title">「いくらもらえた」よりも、「何が買えた」。</h2>
+    <p class="value-body">金額は記憶に残りにくいが、買えたものは毎日その場に残り続ける。新しい設備が入ると現場の空気が変わり、人が辞めにくくなり、新しい人も入りやすくなる。</p>
+    <blockquote class="pull-quote">お金は通り過ぎていきます。でも、買えたものは、会社に居続けます。</blockquote>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="cta">
+  <div class="wrap">
+    <div class="cta-inner">
+      <p class="eyebrow" style="color:rgba(255,255,255,.5)">無料相談</p>
+      <h2 class="section-title">あなたの会社も、「使う」側に回りませんか。</h2>
+      <form class="cta-form optin-form" id="ctaForm" onsubmit="return handleCtaSubmit(event)">
+        <div class="cta-row">
+          <input type="email" name="email" placeholder="メールアドレスを入力" required>
+          <button type="submit" class="btn btn-primary">無料で相談する</button>
+        </div>
+        <p class="cta-note">送信後、24時間以内にご連絡いたします。営業メールは一切送りません。</p>
+      </form>
+      <div class="optin-success" id="ctaSuccess">ありがとうございます。24時間以内にご連絡いたします。</div>
+      <div class="cta-quote">「使う」を選んだ会社に、追い風は確実に届いています。</div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; 2026 行政書士 山本利安</p>
+      <div class="footer-links">
+        <a href="index.html">トップ</a>
+        <a href="about.html">わたしについて</a>
+        <a href="movement.html">仲間になる</a>
+        <a href="products.html">サービス</a>
+        <a href="blog.html">ブログ</a>
+        <a href="leadmagnets.html">無料特典</a>
+        <a href="strategy.html">わたしたちのやり方</a>
+        <a href="mailto:sougyousoudan512@gmail.com">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ===== Hamburger ===== */
+(function(){
+  var h=document.getElementById('hamburger');
+  var n=document.getElementById('navLinks');
+  h.addEventListener('click',function(){
+    h.classList.toggle('active');
+    n.classList.toggle('open');
+  });
+  n.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      h.classList.remove('active');
+      n.classList.remove('open');
+    });
+  });
+})();
+
+/* ===== Count-up with IntersectionObserver ===== */
+(function(){
+  var counters=document.querySelectorAll('.count');
+  var animated=new Set();
+
+  function animateCount(el){
+    var target=parseInt(el.getAttribute('data-target'),10);
+    var duration=1600;
+    var start=0;
+    var startTime=null;
+
+    function step(ts){
+      if(!startTime)startTime=ts;
+      var progress=Math.min((ts-startTime)/duration,1);
+      var ease=1-Math.pow(1-progress,3);
+      var current=Math.floor(ease*target);
+      el.textContent=current.toLocaleString();
+      if(progress<1){
+        requestAnimationFrame(step);
+      }else{
+        el.textContent=target.toLocaleString();
+      }
+    }
+    requestAnimationFrame(step);
+  }
+
+  if('IntersectionObserver' in window){
+    var obs=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting && !animated.has(entry.target)){
+          animated.add(entry.target);
+          animateCount(entry.target);
+        }
+      });
+    },{threshold:0.3});
+    counters.forEach(function(c){obs.observe(c);});
+  }else{
+    counters.forEach(function(c){animateCount(c);});
+  }
+})();
+
+/* ===== Fade-in on scroll ===== */
+(function(){
+  var els=document.querySelectorAll('.fade-in');
+  if('IntersectionObserver' in window){
+    var obs=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){obs.observe(el);});
+  }else{
+    els.forEach(function(el){el.classList.add('visible');});
+  }
+})();
+
+/* ===== CTA Form ===== */
+function handleCtaSubmit(e){
+  e.preventDefault();
+  var form=document.getElementById('ctaForm');
+  var success=document.getElementById('ctaSuccess');
+  var emailInput=form.querySelector('input[type=email]');
+  var email=emailInput?emailInput.value.trim():'';
+  var re=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if(!re.test(email)){ if(emailInput) emailInput.style.borderColor='#c0392b'; return false; }
+  fetch('https://formsubmit.co/ajax/sougyousoudan512@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:email,_subject:'【ファネルハブ】新規リード獲得',_template:'table',page:location.pathname})}).catch(function(){});
+  form.classList.add('hidden');
+  success.classList.add('show');
+  return false;
+}
+</script>
+</body>
+</html>

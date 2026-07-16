@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ストラテジー｜脱・情弱経営 / 行政書士 山本利安</title>
+<meta name="description" content="わたしたちのやり方。三つの思い込みを壊し、本業に専念しながら資金を得続ける秘訣。行政書士 山本利安／兵庫県加古川市。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== Reset & Variables ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#1A2A4F;
+  --brass:#9E6F1C;
+  --paper:#FBFAF7;
+  --ink:#23272F;
+  --line:#E4E0D6;
+  --sans:'Noto Sans JP',sans-serif;
+  --serif:'Noto Serif JP',serif;
+  --max:1080px;
+  --gutter:clamp(1rem,4vw,2.5rem);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.8;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button,input{font-family:inherit;font-size:inherit;border:none;outline:none;background:none}
+
+/* ===== Utility ===== */
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.eyebrow{font-family:var(--sans);font-size:.8125rem;font-weight:700;letter-spacing:.12em;color:var(--brass);text-transform:uppercase;margin-bottom:.75rem}
+.section-title{font-family:var(--serif);font-size:clamp(1.5rem,3.5vw,2.25rem);font-weight:700;line-height:1.45;color:var(--navy);margin-bottom:1.25rem}
+.section-body{font-size:1rem;color:#555;max-width:680px;line-height:1.9}
+section{padding:clamp(3.5rem,8vw,6rem) 0}
+
+/* ===== Buttons ===== */
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:.9375rem;border-radius:6px;padding:.875rem 1.75rem;transition:all .25s ease;cursor:pointer}
+.btn-primary{background:var(--brass);color:#fff}
+.btn-primary:hover{background:#7d5816;transform:translateY(-1px)}
+
+/* ===== Navigation ===== */
+.nav{position:sticky;top:0;z-index:1000;background:rgba(251,250,247,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.nav-brand{font-family:var(--serif);font-weight:700;font-size:1.05rem;color:var(--navy);line-height:1.3}
+.nav-brand small{display:block;font-family:var(--sans);font-size:.7rem;font-weight:500;color:var(--brass);letter-spacing:.06em}
+.nav-links{display:flex;gap:1.75rem;align-items:center}
+.nav-links a{font-size:.8125rem;font-weight:500;color:var(--ink);transition:color .2s;white-space:nowrap}
+.nav-links a:hover{color:var(--brass)}
+.nav-back{display:inline-flex;align-items:center;gap:.35rem;font-size:.8125rem;font-weight:500;color:var(--brass);transition:color .2s}
+.nav-back:hover{color:#7d5816}
+.nav-back svg{display:inline-block}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .3s}
+.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+@media(max-width:768px){
+  .nav-links{position:fixed;top:64px;left:0;right:0;background:var(--paper);flex-direction:column;gap:0;border-bottom:1px solid var(--line);transform:translateY(-120%);transition:transform .35s ease;opacity:0;pointer-events:none}
+  .nav-links.open{transform:translateY(0);opacity:1;pointer-events:auto}
+  .nav-links a{padding:1rem var(--gutter);border-top:1px solid var(--line);font-size:.9rem;width:100%;display:block}
+  .hamburger{display:flex}
+}
+
+/* ===== Hero ===== */
+.hero{padding:clamp(3rem,8vw,5.5rem) 0 clamp(2rem,5vw,3.5rem)}
+.hero .eyebrow{display:flex;align-items:center;gap:.5rem}
+.hero h1{font-family:var(--serif);font-size:clamp(1.625rem,4vw,2.5rem);font-weight:700;line-height:1.5;color:var(--navy);margin-bottom:1rem;max-width:720px}
+.hero-sub{font-size:.9375rem;color:#555;line-height:1.9;margin-bottom:0;max-width:620px}
+
+/* ===== Wall Cards ===== */
+.walls-grid{display:grid;grid-template-columns:1fr;gap:2rem;margin-top:2.5rem}
+.wall-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:2rem 2rem 1.75rem;transition:box-shadow .3s,transform .3s}
+.wall-card:hover{box-shadow:0 8px 30px rgba(0,0,0,.06);transform:translateY(-3px)}
+.wall-header{display:flex;align-items:flex-start;gap:1.25rem;margin-bottom:1.25rem}
+.wall-icon{width:56px;height:56px;border-radius:12px;background:rgba(158,111,28,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.wall-icon svg{color:var(--brass);display:inline-block}
+.wall-label{font-family:var(--sans);font-size:.75rem;font-weight:700;letter-spacing:.08em;color:var(--brass);margin-bottom:.25rem}
+.wall-title{font-family:var(--serif);font-size:1.25rem;font-weight:700;color:var(--navy);line-height:1.4}
+.wall-belief{background:rgba(26,42,79,.04);border-radius:8px;padding:1rem 1.25rem;margin-bottom:1rem}
+.wall-belief-label{font-size:.75rem;font-weight:700;color:#999;letter-spacing:.06em;margin-bottom:.35rem}
+.wall-belief p{font-family:var(--serif);font-size:1rem;font-weight:600;color:var(--navy);line-height:1.6}
+.wall-body{font-size:.9375rem;color:#555;line-height:1.9;margin-bottom:1rem}
+.wall-quote{border-left:3px solid var(--brass);padding-left:1rem;font-family:var(--serif);font-size:1.05rem;font-weight:600;color:var(--navy);line-height:1.6}
+
+/* ===== Secrets Section ===== */
+.secrets-list{margin-top:2rem;display:flex;flex-direction:column;gap:2rem}
+.secret-item{display:flex;align-items:flex-start;gap:1.5rem}
+.secret-num{width:48px;height:48px;border-radius:50%;background:var(--navy);color:#fff;font-family:var(--serif);font-size:1.25rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.secret-content h3{font-family:var(--serif);font-size:1.125rem;font-weight:700;color:var(--navy);margin-bottom:.35rem;line-height:1.4}
+.secret-content p{font-size:.9375rem;color:#555;line-height:1.9}
+
+/* ===== Consultation Section ===== */
+.consult-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}
+.consult-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:2rem 1.75rem;transition:box-shadow .3s}
+.consult-card:hover{box-shadow:0 6px 24px rgba(0,0,0,.05)}
+.consult-q{font-family:var(--serif);font-size:1.125rem;font-weight:700;color:var(--navy);line-height:1.5;margin-bottom:.75rem;display:flex;align-items:flex-start;gap:.75rem}
+.consult-q-label{font-family:var(--sans);font-size:.8125rem;font-weight:700;color:var(--brass);letter-spacing:.06em;white-space:nowrap;padding-top:.15rem}
+.consult-card p{font-size:.9375rem;color:#555;line-height:1.8}
+.consult-message{margin-top:2rem;padding:1.5rem 1.75rem;border-left:3px solid var(--brass);background:rgba(158,111,28,.04);border-radius:0 8px 8px 0}
+.consult-message p{font-family:var(--serif);font-size:1.05rem;font-weight:600;color:var(--navy);line-height:1.7}
+@media(max-width:768px){.consult-grid{grid-template-columns:1fr}}
+
+/* ===== Section Alt ===== */
+.section-alt{background:#f5f3ee}
+
+/* ===== Pull Quote ===== */
+.pull-quote{border-left:3px solid var(--brass);padding-left:1.25rem;font-family:var(--serif);font-size:1.125rem;font-weight:600;color:var(--navy);line-height:1.7;margin:2rem 0}
+
+/* ===== Final CTA ===== */
+.final-cta{background:var(--navy);color:#fff;text-align:center}
+.final-cta .eyebrow{color:rgba(255,255,255,.5)}
+.final-cta .section-title{color:#fff}
+.final-cta .section-body{color:rgba(255,255,255,.75);margin:0 auto 2.5rem}
+.final-cta .pull-quote{color:#fff;text-align:left;max-width:540px;margin:2.5rem auto 0;border-left-color:var(--brass)}
+.optin-box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:2rem;max-width:440px}
+.optin-box h3{font-family:var(--serif);font-size:1.125rem;font-weight:600;color:var(--navy);margin-bottom:.5rem;line-height:1.5}
+.optin-box p{font-size:.85rem;color:#666;margin-bottom:1.25rem;line-height:1.7}
+.optin-row{display:flex;gap:.5rem}
+.optin-row input[type="email"]{flex:1;border:1px solid var(--line);border-radius:6px;padding:.75rem 1rem;font-size:.875rem;background:var(--paper);transition:border-color .2s}
+.optin-row input[type="email"]:focus{border-color:var(--brass)}
+.optin-row button{white-space:nowrap}
+.optin-note{font-size:.75rem;color:#999;margin-top:.75rem;line-height:1.6}
+.optin-success{display:none;padding:1.25rem;background:#f0f7f0;border-radius:8px;text-align:center;font-weight:500;color:#2d6a2d;font-size:.9rem}
+.optin-success.show{display:block}
+.optin-form.hidden{display:none}
+.final-cta .optin-box{margin:0 auto;border-color:rgba(255,255,255,.15);background:rgba(255,255,255,.05)}
+.final-cta .optin-box h3{color:#fff}
+.final-cta .optin-box p{color:rgba(255,255,255,.6)}
+.final-cta .optin-row input[type="email"]{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2);color:#fff}
+.final-cta .optin-row input[type="email"]::placeholder{color:rgba(255,255,255,.4)}
+.final-cta .optin-note{color:rgba(255,255,255,.4)}
+.final-cta .optin-success{background:rgba(255,255,255,.1);color:rgba(255,255,255,.9)}
+@media(max-width:768px){
+  .optin-box{max-width:100%}
+  .optin-row{flex-direction:column}
+}
+
+/* ===== Footer ===== */
+.footer{border-top:1px solid var(--line);padding:3rem 0 2rem}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2rem;margin-bottom:2rem}
+.footer-brand{font-family:var(--serif);font-weight:700;font-size:1rem;color:var(--navy);margin-bottom:.5rem;line-height:1.3}
+.footer-brand small{display:block;font-family:var(--sans);font-size:.7rem;font-weight:500;color:var(--brass)}
+.footer-about{font-size:.8125rem;color:#888;line-height:1.8;margin-top:.5rem}
+.footer h5{font-size:.75rem;font-weight:700;letter-spacing:.1em;color:var(--brass);margin-bottom:.75rem;text-transform:uppercase}
+.footer ul li{margin-bottom:.4rem}
+.footer ul a{font-size:.8125rem;color:#666;transition:color .2s}
+.footer ul a:hover{color:var(--brass)}
+.footer-copy{font-size:.75rem;color:#aaa;text-align:center;padding-top:1.5rem;border-top:1px solid var(--line)}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr}}
+
+/* ===== Animations ===== */
+.fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- ===== Navigation ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div style="display:flex;align-items:center;gap:1.5rem">
+      <a href="index.html" class="nav-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><polyline points="15 18 9 12 15 6"/></svg>
+        トップに戻る
+      </a>
+      <div class="nav-brand">脱・情弱経営<small>行政書士 山本利安</small></div>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">トップ</a>
+      <a href="about.html">わたしについて</a>
+      <a href="movement.html">仲間になる</a>
+      <a href="strategy.html" style="color:var(--brass)">やり方</a>
+      <a href="products.html">サービス</a>
+      <a href="reviews.html">実績</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      わたしたちのやり方
+    </p>
+    <h1>「誰が」「何を」実現するのを助けるか。</h1>
+    <p class="hero-sub">自分の判断・思い・タイミングで、資金調達の決断ができる経営者になる。それを助けることが、わたしたちのミッションです。</p>
+  </div>
+</section>
+
+<!-- ===== Section 1: 三つの壁 ===== -->
+<section class="section-alt">
+  <div class="wrap">
+    <p class="eyebrow fade-in">三つの思い込みを壊す</p>
+    <h2 class="section-title fade-in">あなたの最初の一歩を止めている、三つの壁。</h2>
+    <p class="section-body fade-in">多くの経営者が補助金を見送る理由は、能力でもやる気でもありません。三つの「思い込み」です。わたしたちは、その壁を一つずつ壊します。</p>
+
+    <div class="walls-grid">
+
+      <!-- 壁1 -->
+      <div class="wall-card fade-in">
+        <div class="wall-header">
+          <div class="wall-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <div>
+            <p class="wall-label">壁 1 : ビークル（手段への疑い）</p>
+            <h3 class="wall-title">手段そのものを疑ってしまう</h3>
+          </div>
+        </div>
+        <div class="wall-belief">
+          <p class="wall-belief-label">思い込み</p>
+          <p>「めんどくさくて複雑でわからない」</p>
+        </div>
+        <p class="wall-body">準備を仕組み化すれば負担は大幅に減る。見るべきは賃上げ・設備・採用の三点だけ。全部を理解しようとするから途方に暮れる。三点に絞れば、道はシンプルになる。</p>
+        <div class="wall-quote">見るのは三点だけでいい。</div>
+      </div>
+
+      <!-- 壁2 -->
+      <div class="wall-card fade-in">
+        <div class="wall-header">
+          <div class="wall-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div>
+            <p class="wall-label">壁 2 : 内部（自分への疑い）</p>
+            <h3 class="wall-title">自分の力を過小評価してしまう</h3>
+          </div>
+        </div>
+        <div class="wall-belief">
+          <p class="wall-belief-label">思い込み</p>
+          <p>「専門知識がない、時間がないから自分には無理」</p>
+        </div>
+        <p class="wall-body">伴走支援と仕組み化で、未経験でも採択した事例は多数。面倒な山場はまるごと任せる。あなたがやるべきは「これからの予定」を教えてくれること、それだけ。</p>
+        <div class="wall-quote">面倒な山場は、まるごと任せていい場所。</div>
+      </div>
+
+      <!-- 壁3 -->
+      <div class="wall-card fade-in">
+        <div class="wall-header">
+          <div class="wall-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <p class="wall-label">壁 3 : 外部（環境のせい）</p>
+            <h3 class="wall-title">外部の声に足を止められてしまう</h3>
+          </div>
+        </div>
+        <div class="wall-belief">
+          <p class="wall-belief-label">思い込み</p>
+          <p>「専門家が否定している」「うちは規模が足りない」</p>
+        </div>
+        <p class="wall-body">否定する理由を知れば、実は的外れなことが多い。制度は毎年広がっている。規模が小さいほど、補助金一回の重みは大きい。小さいことは見送る理由にならない。</p>
+        <div class="wall-quote">小さいことは、使うべき理由になる。</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section 2: 三つの秘訣 ===== -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow fade-in">三つの秘訣</p>
+    <h2 class="section-title fade-in">本業に専念しながら、資金を得続ける三つの秘訣。</h2>
+
+    <div class="secrets-list">
+      <div class="secret-item fade-in">
+        <div class="secret-num">1</div>
+        <div class="secret-content">
+          <h3>見るのは三点だけ</h3>
+          <p>賃上げ・設備・採用。この三つだけを見張る。制度を全部覚える必要はない。</p>
+        </div>
+      </div>
+      <div class="secret-item fade-in">
+        <div class="secret-num">2</div>
+        <div class="secret-content">
+          <h3>面倒な山場はまるごと任せる</h3>
+          <p>本業の手を止めずに、書類の山場だけ預ける。最終入力まで代行。</p>
+        </div>
+      </div>
+      <div class="secret-item fade-in">
+        <div class="secret-num">3</div>
+        <div class="secret-content">
+          <h3>タイミングを絶対に逃さない</h3>
+          <p>「決めてから」ではなく「決める前に」相談。早すぎるくらいでちょうどいい。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section 3: 相談のとき ===== -->
+<section class="section-alt">
+  <div class="wrap">
+    <p class="eyebrow fade-in">ご相談の流れ</p>
+    <h2 class="section-title fade-in">わたしが相談のときに聞くのは、たった二つだけ。</h2>
+
+    <div class="consult-grid">
+      <div class="consult-card fade-in">
+        <div class="consult-q">
+          <span class="consult-q-label">Q1</span>
+          <span>これから、何をしようとしていますか?</span>
+        </div>
+        <p>あなたの予定の中に補助金を使う瞬間が隠れている。</p>
+      </div>
+      <div class="consult-card fade-in">
+        <div class="consult-q">
+          <span class="consult-q-label">Q2</span>
+          <span>それは、いつ頃の予定ですか?</span>
+        </div>
+        <p>相談のタイミングがすべてを決める。まだ迷っている段階がいちばん価値がある。</p>
+      </div>
+    </div>
+
+    <div class="consult-message fade-in">
+      <p>準備するものは何もない。あなたの「これからの予定」だけ聞かせてください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA Section ===== -->
+<section class="final-cta">
+  <div class="wrap">
+    <p class="eyebrow">まずは、ここから</p>
+    <h2 class="section-title">まずは、知ることから始めませんか。</h2>
+    <p class="section-body">無料の資金調達ガイドでは、補助金・助成金の活用ポイントから融資との組み合わせ方まで、中小企業が「使える」制度を厳選してまとめています。</p>
+    <div class="optin-box" id="ctaOptinBox">
+      <div class="optin-form" id="ctaOptinForm">
+        <h3>最新・資金調達ガイドを無料で受け取る</h3>
+        <p>補助金・助成金の最新情報と活用方法をまとめたPDFガイドをお届けします。</p>
+        <form onsubmit="return handleOptin(event,'cta')">
+          <div class="optin-row">
+            <input type="email" placeholder="メールアドレス" required id="ctaEmail">
+            <button type="submit" class="btn btn-primary" style="padding:.75rem 1.25rem;font-size:.8125rem">無料で受け取る
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+          <p class="optin-note">※ 営業メールは送りません。いつでも解除できます。</p>
+        </form>
+      </div>
+      <div class="optin-success" id="ctaOptinSuccess">ありがとうございます。ガイドをメールでお送りしました。受信ボックスをご確認ください。</div>
+    </div>
+    <div class="pull-quote" style="color:#fff">差をつけているのは、知っているか知らないか。それだけです。</div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">脱・情弱経営<small>行政書士 山本利安</small></div>
+        <p class="footer-about">中小企業・小規模事業者のための経営者支援。補助金・助成金・融資の活用で、本業に集中できる環境を。行政書士 山本利安／兵庫県加古川市。</p>
+      </div>
+      <div>
+        <h5>ページ</h5>
+        <ul>
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="about.html">わたしについて</a></li>
+          <li><a href="movement.html">仲間になる</a></li>
+          <li><a href="strategy.html">やり方</a></li>
+          <li><a href="products.html">サービス</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>もっと知る</h5>
+        <ul>
+          <li><a href="reviews.html">実績</a></li>
+          <li><a href="blog.html">ブログ</a></li>
+          <li><a href="mailto:sougyousoudan512@gmail.com">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; 2026 行政書士 山本利安</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* Mobile Nav Toggle */
+  var hamburger = document.getElementById('hamburger');
+  var navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', function(){
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('open');
+    });
+  });
+
+  /* Opt-in Form */
+  window.handleOptin = function(e, prefix){
+    e.preventDefault();
+    var emailInput = document.getElementById(prefix + 'Email');
+    var email = emailInput.value.trim();
+    var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!re.test(email)){
+      emailInput.style.borderColor = '#c0392b';
+      return false;
+    }
+    fetch('https://formsubmit.co/ajax/sougyousoudan512@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:email,_subject:'【ファネルハブ】新規リード獲得',_template:'table',page:location.pathname})}).catch(function(){});
+    document.getElementById(prefix + 'OptinForm').classList.add('hidden');
+    document.getElementById(prefix + 'OptinSuccess').classList.add('show');
+    return false;
+  };
+
+  /* Fade-in on Scroll */
+  var fadeEls = document.querySelectorAll('.fade-in');
+  var fadeObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.15});
+  fadeEls.forEach(function(el){ fadeObserver.observe(el); });
+})();
+</script>
+</body>
+</html>

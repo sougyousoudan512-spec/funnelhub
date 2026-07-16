@@ -1,0 +1,665 @@
+﻿<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>脱・情弱経営 ｜ 補助金は「もらう」より「使う」｜ 行政書士 山本利安・山本利安</title>
+<meta name="description" content="読むほど腑に落ちる、本気の本文。製造業・医療法人の経営者へ。 製造業・医療法人のための補助金活用。賃上げ・採用・設備投資、経営が動く瞬間を利益に変える「脱・情弱経営」。行政書士 山本利安（行政書士 山本利安・兵庫県加古川市）。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1A2A4F; --navy-2:#22335c; --brass:#9E6F1C; --brass-2:#b9852e;
+  --paper:#FBFAF7; --paper-2:#F4F1EA; --ink:#23272F; --ink-2:#3c4350;
+  --line:#E4E0D6; --white:#ffffff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:17px; line-height:1.9; letter-spacing:.02em;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:"Noto Serif JP",serif; color:var(--navy); line-height:1.5; letter-spacing:.01em;}
+a{color:inherit}
+.wrap{max-width:720px; margin:0 auto; padding:0 24px}
+.eyebrow{display:inline-block; font-size:12px; font-weight:700; letter-spacing:.18em;
+  color:var(--brass); margin-bottom:16px; text-transform:uppercase;}
+.lead{font-size:18px; color:var(--ink); font-weight:500; margin:0 0 22px; line-height:1.9}
+.subh{font-size:21px; margin:34px 0 12px}
+p{margin:0 0 18px}
+.pull{margin:36px 0; padding:8px 0 8px 24px; border-left:4px solid var(--brass);
+  font-family:"Noto Serif JP",serif; font-size:20px; font-weight:600; color:var(--navy);
+  line-height:1.8; font-style:normal; letter-spacing:.01em;}
+
+/* ---------- nav ---------- */
+.nav{position:sticky; top:0; z-index:50; background:rgba(251,250,247,.95);
+  backdrop-filter:saturate(180%) blur(12px); -webkit-backdrop-filter:saturate(180%) blur(12px);
+  border-bottom:1px solid rgba(228,224,214,.6);}
+.nav__inner{max-width:1100px; margin:0 auto; padding:12px 24px; display:flex;
+  align-items:center; gap:12px;}
+.brand{display:flex; flex-direction:column; line-height:1.2; text-decoration:none; margin-right:auto;}
+.brand b{font-family:"Noto Serif JP",serif; color:var(--navy); font-size:18px; letter-spacing:.03em;}
+.brand small{color:var(--brass); font-size:10px; letter-spacing:.14em; font-weight:600;}
+.nav__links{display:flex; gap:2px; align-items:center}
+.nav__links a{text-decoration:none; color:var(--ink-2); font-size:13.5px; font-weight:500;
+  padding:8px 14px; border-radius:8px; transition:all .2s ease; white-space:nowrap;}
+.nav__links a:hover{background:rgba(26,42,79,.04); color:var(--navy)}
+.nav__cta{background:var(--navy); color:#fff !important; padding:10px 20px !important;
+  border-radius:10px; font-weight:700 !important; font-size:13px !important; letter-spacing:.02em;
+  transition:all .2s ease !important; box-shadow:0 2px 8px rgba(26,42,79,.15);}
+.nav__cta:hover{background:var(--navy-2) !important; color:#fff !important;
+  box-shadow:0 4px 16px rgba(26,42,79,.25) !important; transform:translateY(-1px);}
+.nav__toggle{display:none; width:44px; height:44px; border:1px solid var(--line);
+  background:#fff; border-radius:10px; font-size:12px; align-items:center; justify-content:center;
+  cursor:pointer; transition:all .2s ease;}
+.nav__toggle:hover{border-color:var(--navy); background:var(--paper-2);}
+
+/* ---------- hero ---------- */
+.hero{max-width:1100px; margin:0 auto; padding:72px 24px 48px}
+.hero__grid{display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center}
+.hero__h1{font-size:clamp(28px,4.5vw,42px); margin:8px 0 20px; line-height:1.4;
+  background:linear-gradient(135deg, var(--navy) 0%, #2a3e6a 100%);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;}
+.hero__sub{font-size:17px; color:var(--ink-2); margin:0 0 28px; max-width:36em; line-height:1.9}
+.hero__cta{display:flex; flex-wrap:wrap; gap:12px; margin-bottom:16px}
+.hero__micro{font-size:13px; color:var(--ink-2); max-width:34em; line-height:1.8}
+.btn{display:inline-flex; align-items:center; justify-content:center; min-height:52px;
+  padding:0 24px; border-radius:12px; text-decoration:none; font-weight:700; font-size:15px;
+  border:2px solid transparent; transition:all .25s ease; letter-spacing:.01em;}
+.btn--primary{background:var(--brass); color:#fff; box-shadow:0 4px 12px rgba(158,111,28,.2);}
+.btn--primary:hover{background:var(--brass-2); box-shadow:0 6px 20px rgba(158,111,28,.3); transform:translateY(-1px);}
+.btn--primary:active{transform:translateY(0px); box-shadow:0 2px 8px rgba(158,111,28,.2);}
+.btn--ghost{background:#fff; color:var(--navy); border-color:var(--line);
+  box-shadow:0 2px 8px rgba(0,0,0,.04);}
+.btn--ghost:hover{border-color:var(--navy); box-shadow:0 4px 12px rgba(0,0,0,.08); transform:translateY(-1px);}
+
+/* ---------- optin form ---------- */
+.hero__form .optin{margin-top:0}
+.optin{background:#fff; border:1px solid rgba(228,224,214,.8); border-radius:20px; padding:28px 24px;
+  box-shadow:0 12px 40px rgba(26,42,79,.07), 0 2px 8px rgba(26,42,79,.04);}
+.optin__title{font-family:"Noto Serif JP",serif; color:var(--navy); font-size:18px;
+  font-weight:700; margin:0 0 8px; line-height:1.5}
+.optin__desc{font-size:14px; color:var(--ink-2); margin:0 0 20px; line-height:1.8}
+.optin__label{display:flex; align-items:center; gap:8px; font-size:13px; font-weight:700;
+  color:var(--navy); margin-bottom:8px}
+.req{font-size:10px; color:#fff; background:var(--brass); padding:2px 8px; border-radius:999px;
+  font-weight:700; letter-spacing:.06em}
+.optin__input{width:100%; height:52px; font-size:15px; padding:0 16px; border:1.5px solid var(--line);
+  border-radius:12px; background:#fff; color:var(--ink); transition:border-color .2s ease;}
+.optin__input:focus{border-color:var(--navy); outline:none; box-shadow:0 0 0 3px rgba(26,42,79,.08);}
+.optin__input[aria-invalid="true"]{border-color:#c0392b}
+.optin__err{color:#c0392b; font-size:13px; margin:8px 0 0; font-weight:600}
+.optin__btn{margin-top:14px; width:100%; min-height:52px; border:none; border-radius:12px;
+  background:var(--navy); color:#fff; font-size:15px; font-weight:700; cursor:pointer;
+  transition:all .25s ease; box-shadow:0 4px 12px rgba(26,42,79,.15); letter-spacing:.02em;}
+.optin__btn:hover{background:var(--navy-2); box-shadow:0 6px 20px rgba(26,42,79,.25); transform:translateY(-1px);}
+.optin__btn:active{transform:translateY(0); box-shadow:0 2px 8px rgba(26,42,79,.15);}
+.optin__note{font-size:12px; color:var(--ink-2); margin:14px 0 0; line-height:1.7}
+.optin__done{margin:14px 0 0; padding:16px 18px; background:#eef6ee; border:1px solid #cfe6cf;
+  border-radius:12px; color:#27632a; font-size:14px; font-weight:600}
+
+/* ---------- badges ---------- */
+.badges{list-style:none; display:flex; flex-wrap:wrap; gap:8px; padding:0; margin:36px 0 0}
+.badges li{font-size:12px; font-weight:600; color:var(--navy); background:#fff;
+  border:1px solid var(--line); border-radius:999px; padding:8px 16px;
+  box-shadow:0 1px 3px rgba(0,0,0,.04); transition:all .2s ease;}
+.badges li:hover{border-color:var(--brass); color:var(--brass);}
+
+/* ---------- sections ---------- */
+.band{padding:12px 0 8px}
+.section{padding:72px 0; border-top:1px solid rgba(228,224,214,.6)}
+.section h2{font-size:clamp(24px,3.5vw,30px); margin:0 0 24px; line-height:1.5}
+.section--dark{background:linear-gradient(170deg, var(--navy) 0%, #0f1d3a 100%); border-top:none}
+.section--dark .eyebrow{color:#e6c98a}
+.section--dark h2,.section--dark h3{color:#fff}
+.section--dark p{color:rgba(223,228,238,.9)}
+.section--dark .lead{color:#fff}
+.section--dark .pull{color:#fff; border-left-color:#e6c98a}
+.section--cta{background:linear-gradient(170deg, var(--navy) 0%, #0f1d3a 100%); border-top:none}
+.section--cta .eyebrow{color:#e6c98a}
+.section--cta h2{color:#fff}
+.section--cta p{color:rgba(223,228,238,.9)}
+.section--cta .lead{color:#fff}
+.section--cta .optin{margin-top:28px}
+
+/* ---------- question cards ---------- */
+.qcards{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:28px 0 16px}
+.qcard{position:relative; text-align:left; background:#fff; border:1.5px solid var(--line);
+  border-radius:16px; padding:20px 18px 18px; cursor:pointer; display:flex; flex-direction:column;
+  gap:8px; min-height:120px; font-family:inherit; transition:all .25s ease;
+  box-shadow:0 2px 8px rgba(0,0,0,.03);}
+.qcard:hover{box-shadow:0 6px 20px rgba(0,0,0,.07); transform:translateY(-2px);}
+.qcard .qlabel{font-size:11px; font-weight:800; color:var(--brass); letter-spacing:.12em}
+.qcard .qtext{font-size:15px; font-weight:700; color:var(--navy); line-height:1.6}
+.qcard .qmark{position:absolute; top:14px; right:14px; font-size:11px; font-weight:800;
+  color:#fff; background:var(--brass); border-radius:999px; padding:3px 10px; opacity:0;
+  transition:all .2s ease; transform:scale(.8);}
+.qcard[aria-pressed="true"]{border-color:var(--brass); background:#fffaf0;
+  box-shadow:0 8px 24px rgba(158,111,28,.12);}
+.qcard[aria-pressed="true"] .qmark{opacity:1; transform:scale(1);}
+.qresult{font-weight:700; color:var(--navy); background:var(--paper-2); border:1px solid var(--line);
+  border-radius:12px; padding:16px 18px; margin:8px 0 0; transition:all .3s ease;}
+.qresult.hit{background:#fffaf0; border-color:var(--brass); color:var(--brass)}
+
+/* ---------- ladder ---------- */
+.ladder{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:32px 0 12px}
+.lcard{background:#fff; border:1.5px solid var(--line); border-radius:20px; padding:28px 22px;
+  display:flex; flex-direction:column; transition:all .3s ease;
+  box-shadow:0 2px 8px rgba(0,0,0,.03);}
+.lcard:hover{box-shadow:0 8px 28px rgba(0,0,0,.08); transform:translateY(-3px);}
+.lcard--featured{border-color:var(--brass); box-shadow:0 8px 32px rgba(158,111,28,.1);
+  background:linear-gradient(180deg, #fffdf8 0%, #fff 100%);}
+.lstep{font-size:11px; font-weight:800; letter-spacing:.1em; color:var(--brass); margin-bottom:10px}
+.lcard h3{font-size:18px; margin:0 0 12px}
+.lcard p{font-size:14px; color:var(--ink-2); margin:0 0 20px; line-height:1.8}
+.lcta{margin-top:auto; text-decoration:none; font-weight:700; color:var(--navy);
+  border:1.5px solid var(--line); border-radius:12px; min-height:48px; display:flex;
+  align-items:center; justify-content:center; padding:0 16px; font-size:14px;
+  transition:all .25s ease;}
+.lcta:hover{border-color:var(--navy); box-shadow:0 4px 12px rgba(26,42,79,.1); transform:translateY(-1px);}
+.lcta--primary{background:var(--brass); color:#fff; border-color:var(--brass);
+  box-shadow:0 4px 12px rgba(158,111,28,.2);}
+.lcta--primary:hover{background:var(--brass-2); box-shadow:0 6px 20px rgba(158,111,28,.3);}
+
+/* ---------- footer ---------- */
+.foot{background:linear-gradient(180deg, #11203f 0%, #0a1528 100%); color:#c7d0e2; padding:60px 0 32px}
+.foot__grid{max-width:1100px; margin:0 auto; padding:0 24px; display:grid;
+  grid-template-columns:1.4fr 1fr 1fr; gap:32px}
+.foot h4{font-family:"Noto Serif JP",serif; color:#fff; font-size:15px; margin:0 0 14px; letter-spacing:.02em}
+.foot p,.foot li{font-size:13px; line-height:2; margin:0}
+.foot ul{list-style:none; padding:0; margin:0}
+.foot a{color:rgba(199,208,226,.8); text-decoration:none; transition:color .2s ease;}
+.foot a:hover{color:#fff}
+.foot__copy{max-width:1100px; margin:32px auto 0; padding:20px 24px 0; border-top:1px solid rgba(36,52,90,.6);
+  font-size:12px; color:rgba(154,166,192,.7)}
+
+/* ---------- responsive ---------- */
+@media (max-width:880px){
+  .nav__links{position:absolute; top:64px; left:0; right:0; background:rgba(255,255,255,.98);
+    backdrop-filter:blur(12px); flex-direction:column;
+    align-items:stretch; gap:0; border-bottom:1px solid var(--line); padding:8px 14px; display:none;
+    box-shadow:0 16px 32px rgba(0,0,0,.1)}
+  .nav__links.open{display:flex}
+  .nav__links a{padding:14px 14px; border-radius:10px}
+  .nav__cta{margin-top:6px; text-align:center}
+  .nav__toggle{display:flex}
+  .hero__grid{grid-template-columns:1fr; gap:28px}
+  .hero__h1{font-size:28px}
+  .qcards,.ladder{grid-template-columns:1fr}
+  .foot__grid{grid-template-columns:1fr; gap:28px}
+}
+@media (max-width:520px){
+  body{font-size:16px}
+  .hero{padding-top:40px}
+  .hero__h1{font-size:24px}
+  .section{padding:56px 0}
+  .section h2{font-size:22px}
+  .pull{font-size:17px}
+}
+/* ---------- proof ---------- */
+.proof{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:32px 0 20px}
+.proof__box{text-align:center; background:#fff; border:1.5px solid var(--line); border-radius:18px;
+  padding:24px 14px; transition:all .3s ease; box-shadow:0 2px 8px rgba(0,0,0,.03);}
+.proof__box:hover{box-shadow:0 6px 20px rgba(0,0,0,.07); transform:translateY(-2px);}
+.proof__num{font-family:"Noto Serif JP",serif; font-size:clamp(28px,4vw,38px); font-weight:700;
+  color:var(--brass); line-height:1.2}
+.proof__unit{font-size:13px; color:var(--brass); font-weight:700}
+.proof__label{font-size:12px; color:var(--ink-2); margin-top:8px; font-weight:500}
+.cases{display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin:32px 0 16px}
+.ccard{background:#fff; border:1.5px solid var(--line); border-radius:18px; padding:22px 20px;
+  transition:all .3s ease; box-shadow:0 2px 8px rgba(0,0,0,.03);}
+.ccard:hover{box-shadow:0 8px 24px rgba(0,0,0,.07); transform:translateY(-2px);}
+.ccard__tag{display:inline-block; font-size:11px; font-weight:800; letter-spacing:.08em; color:#fff;
+  background:var(--navy); border-radius:999px; padding:3px 12px; margin-bottom:10px}
+.ccard__tag--mfg{background:#2d6a4f}
+.ccard__tag--con{background:#1a5276}
+.ccard__tag--srv{background:#6c3483}
+.ccard__tag--med{background:#c0392b}
+.ccard__amount{font-family:"Noto Serif JP",serif; font-size:clamp(22px,3vw,28px); font-weight:700;
+  color:var(--brass); margin:8px 0 6px}
+.ccard__amount span{font-size:15px}
+.ccard__desc{font-size:13px; color:var(--ink-2); line-height:1.8; margin:0}
+@media (max-width:880px){
+  .proof{grid-template-columns:repeat(2,1fr)}
+  .cases{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .proof__num{font-size:28px}
+  .ccard__amount{font-size:22px}
+}
+.img-placeholder{background:var(--paper-2);border:2px dashed var(--line);border-radius:16px;display:flex;align-items:center;justify-content:center;color:var(--ink-2);font-size:14px;text-align:center;padding:20px;font-weight:500}
+.section-divider{display:flex;align-items:center;justify-content:center;gap:16px;margin:48px auto;max-width:200px}
+.section-divider::before,.section-divider::after{content:'';flex:1;height:1px;background:var(--line)}
+.section-divider span{width:8px;height:8px;background:var(--brass);border-radius:50%;flex-shrink:0}
+/* ---------- smooth scroll offset ---------- */
+[id]{scroll-margin-top:80px}
+/* ---------- focus ---------- */
+.btn:focus-visible,.optin__btn:focus-visible,.nav__links a:focus-visible,.qcard:focus-visible,
+.lcta:focus-visible,.optin__input:focus-visible{outline:3px solid rgba(20,135,250,.5); outline-offset:2px}
+/* ---------- selection ---------- */
+::selection{background:rgba(158,111,28,.15); color:var(--navy)}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="メイン">
+  <div class="nav__inner">
+    <a class="brand" href="index.html"><b>脱・情弱経営</b><small>補助金活用・行政書士 山本利安</small></a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="navlinks">メニュー</button>
+    <div class="nav__links" id="navlinks">
+      <a href="#about">著者について</a>
+      <a href="#proof">採択実績</a>
+      <a href="#ladder">サービス</a>
+      <a href="index.html">ファネルハブ</a>
+      <a class="nav__cta" href="#contact">無料ガイドを受け取る</a>
+    </div>
+  </div>
+</nav>
+
+
+<header class="hero" id="top">
+  <div class="hero__grid">
+    <div class="hero__copy">
+      <span class="eyebrow">はじめに｜製造業・医療法人のための補助金活用</span>
+      <h1 class="hero__h1">補助金は、「もらうもの」ではありません。「使うもの」です。</h1>
+      <p class="hero__sub">賃上げするとき。設備を買うとき。人を採用するとき。経営が動くその瞬間を、利益に変える。それが「脱・情弱経営」です。</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#contact">60秒セルフ診断を受け取る →</a>
+        <a class="btn btn--ghost" href="#questions">まず3つの質問だけ</a>
+      </div>
+      <p class="hero__micro">登録はメールアドレスだけ。あなたの会社が“もらい損ねている”補助金の目安が、すぐ届きます。</p>
+    </div>
+    <aside class="hero__form">
+      
+<form class="optin" id="hero-optin" novalidate>
+  <p class="optin__title">あなたの会社、補助金でいくら損してる？</p>
+  <p class="optin__desc">製造業・医療向けの「もらい損ね」セルフ診断。メールアドレスを入れると、結果の受け取り方をすぐにお送りします。</p>
+  <label class="optin__label" for="hero-optin-email">メールアドレス<span class="req">必須</span></label>
+  <input class="optin__input" id="hero-optin-email" name="email" type="email" inputmode="email"
+         autocomplete="email" placeholder="例：yamamoto@example.co.jp" aria-describedby="hero-optin-help hero-optin-err">
+  <p class="optin__err" id="hero-optin-err" role="alert" hidden></p>
+  <button class="optin__btn" type="submit">無料で診断を受け取る →</button>
+  <p class="optin__note" id="hero-optin-help">※ 営業メールは送りません。配信は補助金の最新情報と活用例だけ。いつでも解除できます。</p>
+  <p class="optin__done" role="status" hidden>送信ありがとうございます。診断結果の受け取り方を、ご案内のメールでお送りします。届かない場合は迷惑メールフォルダもご確認ください。</p>
+</form>
+    </aside>
+  </div>
+  <ul class="badges" aria-label="特長">
+    <li>製造業の採択に強い</li>
+    <li>省力化・持続化・業務改善 ほか対応</li>
+    <li>申請の最終入力まで代行</li>
+    <li>医療法人・薬局も対象拡大</li>
+  </ul>
+</header>
+
+<div style="max-width:320px;margin:30px auto;"><img src="images/hero_bridge.jpg" alt="行政書士 山本利安" style="width:100%;border-radius:16px;box-shadow:0 8px 24px rgba(26,42,79,.12);"></div>
+
+<section class="band">
+  <div class="wrap">
+    <p class="lead">この一行を、わたしはずっと言い続けています。なぜなら、補助金を「もらえたらラッキー」くらいに思っている会社と、「使うのが当たり前」と思っている会社とでは、5年後に残る利益が、まるで違ってくるからです。</p>
+<p>多くの経営者にとって、補助金は「面倒で、よく分からなくて、たぶんうちは関係ないもの」です。というのも、申請の書類は読みにくく、要項は専門用語だらけで、調べはじめた途端に「やっぱりやめておこう」と思わせる作りになっているからです。だからこそ、ほとんどの会社が、もらえるはずのお金を、毎年そっと見送っています。</p>
+<p>でも、考えてみてください。あなたの会社は、これからも賃上げをしますよね。人も採りますよね。古くなった機械や設備を、いつか買い替えますよね。——その一つひとつが、本当は補助金を「使う」タイミングなのです。なぜなら、補助金は「困っている会社を助ける施し」ではなく、「前に進もうとする会社の背中を、国が押すための仕組み」だからです。</p>
+<p>つまり、補助金は弱者の救済ではありません。動こうとしている会社のための、追い風です。というのも、国がお金を出すのは、その会社が設備を入れ、人を雇い、給料を上げ、地域の経済を回してくれることに、価値があると判断しているからです。あなたが前に進むこと自体が、補助の理由になる。だから「うちなんて」と引く必要は、本当はどこにもないのです。</p>
+<p>わたしの仕事は、その追い風を、あなたが取りこぼさないようにすることです。賃上げのとき、採用のとき、設備投資のとき——経営が動くその瞬間に、横で「それ、補助金が使えますよ」と言える人間でいること。それだけで、同じ一手から残る利益が、何十万、ときに何百万と変わってきます。これが、わたしが掲げている「脱・情弱経営」という考え方の、いちばん芯にある部分です。</p>
+<p>この文章は、長いです。読み飛ばさずに、最後まで付き合ってもらえたら、きっとあなたの中で、補助金という言葉の意味そのものが、書き換わっているはずです。なぜそう言い切れるのか。それは、わたしがこれから話すのは、テクニックではなく、「お金との向き合い方」そのものだからです。向き合い方が変われば、行動が変わる。行動が変われば、残る利益が変わる。——だから、急がず、じっくり読んでください。</p>
+<blockquote class="pull">もらうな、使え。——これが、わたしの信念です。</blockquote>
+  </div>
+</section>
+
+<div class="section-divider"><span></span></div>
+
+<section class="section"><div class="wrap"><span class="eyebrow">まず、知ってほしいこと</span><h2>なぜ、こんなにも多くの会社が「もったいない」を放置しているのか。</h2><p class="lead">わたしが日々いちばん強く感じているのは、「もらえるのに、もらわない」会社の多さです。なぜそんなことが起きるのか。理由は、能力でも、やる気でもありません。たった三つの「ねじれ」があるからです。</p>
+<p>一つめのねじれは、情報のねじれです。補助金の制度は、毎年のように内容が変わり、公募の時期も金額も対象も入れ替わります。というのも、国の予算や政策の方向性に合わせて、その都度かたちを変えていく仕組みだからです。だから、去年の知識はもう古い。一度「うちは対象外だった」と思い込んだ会社ほど、最新の情報にたどり着けず、本当は対象になっているのに、気づけません。</p>
+<p>たとえば、こういうことが起きます。三年前に調べて「対象外」と判断した社長が、その判断を、ずっと正しいものとして持ち続けてしまう。ところが、その間に制度は二度三度と見直され、いまでは堂々と対象になっている。なぜこんなすれ違いが起きるのか。それは、「一度調べた」という安心感が、「もう一度調べる」という行動を、止めてしまうからです。情報のねじれとは、知識が古いことそのものではなく、古い知識を更新しないまま信じ続けてしまう、その心の動きのことなのです。</p>
+<p>二つめのねじれは、タイミングのねじれです。補助金の多くは、「買ったあと」「上げたあと」では間に合いません。なぜなら、補助金は「これからやること」に対して交付されるものであって、「もう済ませたこと」には、基本的に出ないからです。ところが、経営者が補助金のことを思い出すのは、たいてい設備を買ったあと、賃上げを決めたあとです。順番が逆になっているから、せっかくの機会が、毎回するりと抜けていきます。</p>
+<p>このタイミングのねじれは、本当に惜しいものです。というのも、ほんの一週間、相談の順番を前にずらすだけで、結果がまるで変わるからです。「機械を発注する前に、一本連絡していれば」「賃上げを正式に決める前に、相談していれば」——わたしは、この「していれば」を、数えきれないほど聞いてきました。そのたびに思うのです。惜しいのは、お金そのものではなく、順番を一つ間違えただけで、それを失ってしまう、その仕組みなのだと。</p>
+<p>三つめのねじれは、心のねじれです。「補助金なんて、なんだか不正っぽい」「もらったら、あとで厳しく調べられそう」「うちみたいな小さい会社が手を出すものじゃない」——こうした後ろめたさが、最初の一歩を止めます。というのも、補助金という言葉に、どこか「ずるいことをしてお金をもらう」というイメージが、つきまとっているからです。でも、これはまったくの思い込みです。補助金は、堂々と使うものです。正しい手順で、正しい目的に使う限り、後ろめたさを感じる理由は、一つもありません。</p>
+<p>この三つのねじれが重なると、どうなるか。「情報が古いから対象外だと思い込み」「思い出したときには手遅れで」「そもそも手を出すのが怖い」。結果として、もらえるはずのお金が、毎年こぼれ落ちていく。これが、わたしが「もったいない」と呼んでいる現象の正体です。そして、このねじれは、知ってさえいれば、誰でもほどけます。だからわたしは、まずこの構造を、あなたに知ってほしいのです。</p></div></section>
+<section class="section"><div class="wrap"><span class="eyebrow">放置の代償</span><h2>「いつかやろう」を続けた会社に、5年後、何が残るのか。</h2><p class="lead">補助金を見送ることの本当の怖さは、一回いくら損したか、ではありません。それを「毎年」「何年も」続けてしまうことにあります。ここでは、その代償が、時間とともにどう膨らんでいくのかを、正直にお話しします。</p>
+<p>まず、一年単位で考えてみましょう。仮に、ある年に賃上げをして、その機会に補助金を使えば60万円が手元に残ったとします。それを見送れば、60万円は消えます。たった一年の話なら、「まあ、しかたない」で済むかもしれません。でも、これは一回きりの出来事ではありません。なぜなら、賃上げも、設備の更新も、採用も、経営を続けるかぎり、何度でもやってくるからです。</p>
+<p>では、五年で考えてみましょう。毎年のように訪れる「使えたはずの機会」を、五年間すべて見送り続けた会社と、その都度きちんと使ってきた会社。両者の差は、もはや一年分の金額ではありません。なぜなら、補助金で得たお金は、利益として残り、その利益が、次の投資や、次の人材や、次の挑戦の元手になっていくからです。使った会社は、その元手で次の一手を打ち、さらに前へ進む。見送った会社は、毎年ふりだしに戻り続ける。差は、足し算ではなく、掛け算で開いていきます。</p>
+<p>そして、十年で考えると、これはもう「お金の差」ではなくなります。「体力の差」になります。というのも、追い風を受け取り続けた会社は、設備が新しく、人が育ち、現場に余裕が生まれ、新しい挑戦に手を出せる状態になっているからです。一方で、見送り続けた会社は、古い設備をだましだまし使い、人手が足りず、目の前の仕事に追われ続けている。同じ業種、同じ規模で始めても、十年後には、まるで違う会社になっているのです。</p>
+<p>わたしがこの話をするのは、あなたを脅すためではありません。むしろ逆です。なぜなら、この代償は、いますぐ向きを変えれば、まだ十分に取り返せるからです。というのも、補助金の機会は、毎年やってくるからです。過ぎてしまった機会は戻りませんが、これから来る機会は、まだ全部、あなたのものです。だから、過去を悔やむより、次の一手から「使う」側に回る。それだけで、五年後の景色は、確実に変わります。</p>
+<blockquote class="pull">損が怖いのではありません。損を、何年も続けてしまうことが、怖いのです。</blockquote></div></section>
+<div class="section-divider"><span></span></div>
+<section class="section" id="proof"><div class="wrap"><span class="eyebrow">採択実績</span><h2>「使う」を選んだ会社に、何が起きたか。</h2><p class="lead">数字は、嘘をつきません。わたしが伴走した企業の、補助金採択の実績です。業種も規模もさまざまですが、共通しているのはたった一つ——「買う前に、相談した」ということです。</p>
+<div class="proof">
+  <div class="proof__box"><div class="proof__num" data-count="19485">0</div><div class="proof__unit">万円</div><div class="proof__label">累計採択額</div></div>
+  <div class="proof__box"><div class="proof__num" data-count="14">0</div><div class="proof__unit">件</div><div class="proof__label">採択件数</div></div>
+  <div class="proof__box"><div class="proof__num" data-count="8">0</div><div class="proof__unit">業種</div><div class="proof__label">対応業種</div></div>
+  <div class="proof__box"><div class="proof__num" data-count="100">0</div><div class="proof__unit">％</div><div class="proof__label">採択率</div></div>
+</div>
+<h3 class="subh">業種別の採択事例</h3>
+<div class="cases">
+  <div class="ccard"><span class="ccard__tag ccard__tag--mfg">製造業</span><div class="ccard__amount">1,700<span>万円</span></div><p class="ccard__desc">液圧プレスブレーキ導入。IoT対応設備による産業廃棄物処理機油圧ユニットの一括受注生産体制を構築。＋助成金300万円も採択。</p></div>
+  <div class="ccard"><span class="ccard__tag ccard__tag--con">建設業</span><div class="ccard__amount">4,000<span>万円</span></div><p class="ccard__desc">ICT建機の導入。地域資源を有効活用するワンストップ中間処理事業を構築。</p><div class="img-placeholder" style="aspect-ratio:16/9;margin-top:12px;font-size:13px;">写真を挿入：ICT建機または建設現場の写真</div></div>
+  <div class="ccard"><span class="ccard__tag ccard__tag--mfg">製造業</span><div class="ccard__amount">3,000<span>万円</span></div><p class="ccard__desc">高性能CNC旋盤（複合加工機）導入。高精度・高効率な中小型スピンドル加工事業への新規参入。</p><div class="img-placeholder" style="aspect-ratio:16/9;margin-top:12px;font-size:13px;">写真を挿入：CNC旋盤または精密加工設備の写真</div></div>
+  <div class="ccard"><span class="ccard__tag ccard__tag--mfg">製造業</span><div class="ccard__amount">3,500<span>万円</span></div><p class="ccard__desc">横形マシニングセンタ導入。環境事業・焼入炉等向け特殊耐熱捲揚機構部品の製造に着手。</p><div class="img-placeholder" style="aspect-ratio:16/9;margin-top:12px;font-size:13px;">写真を挿入：横形マシニングセンタまたは工場設備の写真</div></div>
+  <div class="ccard"><span class="ccard__tag ccard__tag--srv">卸売業</span><div class="ccard__amount">2,000<span>万円</span></div><p class="ccard__desc">テント倉庫・ホイストクレーン導入。循環型社会の確立と前例のない農業ネットワークを設立。</p></div>
+  <div class="ccard"><span class="ccard__tag ccard__tag--srv">美容業</span><div class="ccard__amount">2,500<span>万円</span></div><p class="ccard__desc">新規カフェ事業立ち上げ。カフェへの新分野展開による売上回復・経営革新を通じた地域振興。</p></div>
+  <div class="ccard"><span class="ccard__tag ccard__tag--srv">塗装業</span><div class="ccard__amount">650<span>万円</span></div><p class="ccard__desc">自動裁断機導入。繰り返し使える養生製品による省力化・環境改善計画を実現。</p></div>
+  <div class="ccard"><span class="ccard__tag ccard__tag--mfg">製造業</span><div class="ccard__amount">200<span>万円</span></div><p class="ccard__desc">新規野球練習場の設立。屋外野球練習場の整備と収益多角化による脱・一本足打法を実現。</p></div>
+  <div class="ccard"><span class="ccard__tag ccard__tag--med">介護事業</span><div class="ccard__amount">770<span>万円</span></div><p class="ccard__desc">認知症高齢者グループホーム等防災改修等支援事業（小規模多機能型居宅介護事業所）。</p></div>
+  <div class="ccard"><span class="ccard__tag ccard__tag--med">介護事業</span><div class="ccard__amount">770<span>万円</span></div><p class="ccard__desc">認知症高齢者グループホーム等防災改修等支援事業（認知症高齢者グループホーム）。</p></div>
+  <div class="ccard"><span class="ccard__tag ccard__tag--mfg">製造業</span><div class="ccard__amount">665<span>万円</span></div><p class="ccard__desc">溶接ロボットアーム導入（リース利用）。自動化による生産性向上。</p></div>
+  <div class="ccard"><span class="ccard__tag ccard__tag--srv">飲食業</span><div class="ccard__amount">200<span>万円</span></div><p class="ccard__desc">エスプレッソマシーン・グラインダ導入。専門性の高いコーヒー提供体制を構築。</p></div>
+  <div class="ccard"><span class="ccard__tag ccard__tag--srv">美容業</span><div class="ccard__amount">200<span>万円</span></div><p class="ccard__desc">アレルギー対応リフォーム。地域密着・完全個室サロンのアレルゲンフリー次世代LEDマツエク。</p></div>
+  <div class="ccard"><span class="ccard__tag ccard__tag--srv">飲食業</span><div class="ccard__amount">100<span>万円</span></div><p class="ccard__desc">売り場リフォーム。販売スペースの拡張と商品力向上・販売効率化で顧客満足と定着を実現。</p></div>
+</div>
+<p>そのほか、経営力向上計画・先端設備等導入計画・経営革新計画の策定実績も多数。</p>
+<blockquote class="pull">「使う」を選んだ会社に、追い風は確実に届いています。</blockquote></div></section>
+<section class="section" id="questions"><div class="wrap"><span class="eyebrow">3つのチェックポイント</span><h2>この三つに一つでも「はい」なら、あなたは補助金を「使える」会社です。</h2><p class="lead">むずかしい制度の話は、いったん横に置きましょう。あなたに考えてほしいのは、自分の会社のことだけ。それも、たった3つの質問に答えるだけです。</p>
+
+<div class="qcards" role="group" aria-label="3つの質問">
+  <button type="button" class="qcard" aria-pressed="false">
+    <span class="qlabel">Q1</span>
+    <span class="qtext">来期、賃上げの予定はありますか？</span>
+    <span class="qmark" aria-hidden="true">はい</span>
+  </button>
+  <button type="button" class="qcard" aria-pressed="false">
+    <span class="qlabel">Q2</span>
+    <span class="qtext">これから、人を採用しますか？</span>
+    <span class="qmark" aria-hidden="true">はい</span>
+  </button>
+  <button type="button" class="qcard" aria-pressed="false">
+    <span class="qlabel">Q3</span>
+    <span class="qtext">設備や機械を、買う予定はありますか？</span>
+    <span class="qmark" aria-hidden="true">はい</span>
+  </button>
+</div>
+<p class="qresult" id="qresult" aria-live="polite">カードを押して、当てはまるものを選んでみてください。</p>
+
+<p>一つめ。「来期、賃上げの予定はありますか」。——もし「ある」なら、それは大きな合図です。なぜなら、賃上げは多くの補助金や助成金にとって、申請の追い風になる行動だからです。というのも、国はいま「給料を上げる会社」を、政策的に強く後押ししているからです。同じ賃上げでも、それを申請に結びつけた会社と、ただのコストとして処理した会社とでは、手元に残るお金が、まったく変わってきます。</p>
+<p>もう少し踏み込みましょう。賃上げは、経営者にとって、勇気のいる決断です。なぜなら、一度上げた給料は、簡単には下げられないからです。その重い決断を、ただの「出ていくお金」で終わらせるのか、それとも「補助金を引き寄せるきっかけ」に変えるのか。ここで差がつきます。というのも、せっかく勇気を出して上げるのなら、その一手を、できるだけ多くの追い風に変えたほうが、絶対に得だからです。賃上げの予定があるなら、決める前に、一度だけ立ち止まってください。</p>
+<p>二つめ。「これから、人を採用しますか」。——もし「する」なら、それも合図です。なぜなら、人を雇い、育て、定着させていく過程には、活用できる制度が、いくつもあるからです。というのも、雇用を生み、人材に投資する会社は、地域にとっても国にとっても、守りたい存在だからです。採用と育成は、ただの出費ではなく、補助を引き寄せる行動になり得るのです。</p>
+<p>採用について、もう一歩。人を一人雇うというのは、ただ給料を払うこと以上の重みがあります。なぜなら、その人の人生を、一部引き受けるということだからです。だからこそ、採用には不安がつきまといます。「この人件費を、ちゃんと回収できるだろうか」と。ここで、人材に関わる制度を知っているかどうかが効いてきます。というのも、その不安を、制度が一部やわらげてくれることがあるからです。採用の決断を、少しでも軽くできるなら、使わない手はありません。</p>
+<p>三つめ。「設備や機械を、買う予定はありますか」。——もし「ある」なら、これはとくに大きな合図です。なぜなら、設備投資こそ、補助金がもっとも力を発揮する場面だからです。というのも、機械一台、システム一式といった「目に見える投資」は、補助の対象として明確で、金額も大きくなりやすいからです。買う前に一本相談するかどうかで、同じ機械が、自腹で入るか、国の負担込みで入るかが、分かれます。</p>
+<p>設備の話は、とくに「順番」が命です。なぜなら、ほとんどの設備系の補助金は、「買ってから」では、もう手が届かないからです。見積もりを取り、機種を決め、発注のボタンを押す——その一歩手前で、相談が入るかどうか。ここで、何十万、何百万という差が生まれます。というのも、同じ機械を、同じ価格で買っても、補助の対象として動いたかどうかで、最終的に手元に残るお金が、まるで違ってくるからです。「買おうかな」と思った、その瞬間が、相談すべきタイミングです。</p>
+<p>どれか一つでも「はい」があったなら、あなたの会社は、いま補助金を「使える」会社です。なぜそう言い切れるのか。それは、補助金が「特別な誰か」のためのものではなく、「これから動こうとしている、ごく普通の会社」のためのものだからです。賃上げ、採用、設備——このどれも、健全に経営していれば、いつか必ず通る道です。つまり、補助金を使う資格は、最初からあなたの中にあるのです。</p>
+<blockquote class="pull">大事なのは「対象かどうか」ではなく、「買う前・上げる前に、気づけるかどうか」。</blockquote></div></section>
+<section class="section"><div class="wrap"><span class="eyebrow">なぜ、三つなのか</span><h2>見るべきは、「経営が動く瞬間」だけでいい。</h2><p class="lead">なぜ、わたしは「賃上げ・採用・設備」という三つに、これほどこだわるのでしょうか。それは、この三つが、補助金を使うべき「経営が動く瞬間」を、ほぼ言い当てているからです。</p>
+<p>補助金が複雑に見えるのは、制度の数が多すぎるからです。次から次へと新しい名前の制度が出てきて、要項を読み比べているうちに、頭が痛くなってくる。なぜこんなことになるのか。それは、制度の側から見ようとするからです。制度を全部覚えてから、自分に当てはめようとすると、いつまでたっても入口にたどり着けません。</p>
+<p>だから、発想を逆にします。制度から自分を見るのではなく、自分の経営から制度を見るのです。あなたの会社で、これから「お金が大きく動く瞬間」はいつか。それを先に決めてしまう。というのも、補助金は「お金が動く瞬間」に紐づいて存在しているからです。そして、その瞬間のほとんどが、賃上げ・採用・設備の三つに集約されます。だから、この三つだけを見張っていれば、機会を取りこぼすことは、ほとんどなくなるのです。</p>
+<p>この考え方の何が良いか。それは、あなたが「補助金の専門家」になる必要が、まったくなくなることです。なぜなら、あなたがやるべきことは、「賃上げ・採用・設備のどれかが動きそうだ」と感じた瞬間に、相談すること。ただそれだけだからです。制度の細かいことは、こちらが調べます。あなたは、自分の経営の予定を、いちばんよく知っている。その予定さえ教えてもらえれば、あとはわたしの仕事です。役割を分ければ、補助金は、驚くほど簡単になります。</p>
+<blockquote class="pull">制度を覚えるのではなく、自分の経営の「動く瞬間」を見張る。それだけでいいのです。</blockquote></div></section>
+<section class="section"><div class="wrap"><span class="eyebrow">数字で見る</span><h2>なぜ「同じ一手」が、まるで違う結果になるのか。</h2><p class="lead">ここで、少しだけ数字の話をさせてください。なぜなら、補助金の本当の価値は、「いくらもらえたか」ではなく、「その会社にとって、どれだけの売上に匹敵するか」で見ると、はっきり見えてくるからです。</p>
+<p>仮に、あなたの会社の利益率が10%だとします。これは、1,000万円を売り上げて、ようやく100万円の利益が手元に残る、という意味です。では、補助金で100万円を得たら、それはいくらの売上に匹敵するでしょうか。答えは、1,000万円です。なぜなら、補助金の100万円は、売上のように原価も人件費もかからず、まるごと利益として残るお金だからです。つまり、補助金100万円を取りにいくことは、新しく1,000万円を売り上げにいくのと、同じ価値があるのです。</p>
+<p>この計算を、もう一段深く考えてみましょう。新たに1,000万円を売り上げるのは、簡単なことではありません。なぜなら、新しい顧客を探し、提案し、納品し、回収する——その一連の手間と時間と労力が、丸ごとかかるからです。ところが補助金は、すでにあなたが「やろうとしていること」、つまり賃上げや設備投資に紐づけて、取りにいけます。新しい売上を一から作るより、よほど現実的で、よほど確実なのです。</p>
+<p>もし利益率がもっと低ければ、この差はさらに開きます。利益率が5%の会社にとって、補助金100万円は、なんと2,000万円の売上に匹敵します。というのも、5%の利益率では、2,000万円を売って、ようやく100万円が残るからです。利益率が薄い会社ほど、補助金一回の重みは増していく。これは皮肉なようでいて、実は希望でもあります。なぜなら、利益率に悩んでいる会社こそ、補助金を「使う」ことの恩恵を、いちばん大きく受け取れるからです。</p>
+<p>さらに言えば、これは一度きりの話ではありません。というのも、賃上げは毎年あり、設備の更新は数年ごとにやってくるからです。そのたびに補助金を「使う」習慣がある会社は、1,000万円相当の追い風を、何度でも受け取り続けます。逆に、その習慣がない会社は、同じ回数だけ、同じ金額を、静かに見送り続けます。10年という単位で見れば、この差は、もはや会社の体力そのものの差になります。</p>
+<p>だから、わたしは声を大にして言いたいのです。補助金は、マイナスをゼロに戻す「改善」ではありません。ゼロを一にする、「新しい機会」です。なぜなら、それは支出を取り戻す行為ではなく、本来あなたの手元に残るはずのお金を、取りこぼさずに掴む行為だからです。同じ賃上げ、同じ設備投資という「同じ一手」が、知っているか知らないかだけで、まるで違う結果になる。その分かれ目に、わたしは立っていたいのです。</p>
+<blockquote class="pull">補助金100万円は、利益率10%の会社にとって、売上1,000万円ぶんの価値があります。</blockquote></div></section>
+<section class="section"><div class="wrap"><span class="eyebrow">よくある思い込み</span><h2>補助金は「施し」ではありません。国が、前に進む会社に投資しているのです。</h2><p class="lead">どうしても消えない後ろめたさ——「補助金をもらうのは、なんだか申し訳ない」という感覚。この正体を、はっきりさせておきましょう。なぜなら、この後ろめたさこそが、最初の一歩を止める、最大の壁だからです。</p>
+<p>まず、根本のところから。なぜ、国は補助金にお金を出すのでしょうか。慈善事業でしょうか。違います。投資だからです。というのも、ある会社が設備を入れ、生産性を上げ、人を雇い、給料を上げれば、その会社は税金を多く納め、雇用を生み、地域でお金を回すからです。国にとって、それは「お金を配る」のではなく、「未来の税収と雇用に、先に投資する」ことなのです。</p>
+<p>この見方に立てば、後ろめたさは消えます。なぜなら、補助金を使うことは、国の投資に応えることだからです。あなたが設備を入れ、前に進み、会社を強くすることこそ、国が望んでいる結果なのです。むしろ、使えるのに使わずに、会社を弱らせてしまうほうが、国の意図に反しているとさえ言えます。「申し訳ない」と引くのではなく、「期待に応える」と前に出る。それが、本来あるべき姿勢です。</p>
+<p>もちろん、これは「何でもかんでも、もらえばいい」という意味ではありません。というのも、補助金には、必ず「その目的に正しく使う」という前提があるからです。設備を入れると言って、別のことに使う。賃上げをすると言って、しない。そういうことは、当然ながら許されません。でも、これは逆に言えば、正しい目的で、正しく使う限り、何ら恥じることはない、ということでもあります。堂々と申請し、堂々と使い、堂々と報告する。それでいいのです。</p>
+<p>わたしが「もらうな、使え」と言うのは、まさにこの点に関わっています。「もらう」には、施しを受けるような、卑屈な響きがあります。でも「使う」は違います。道具として、堂々と手に取る、という響きです。なぜ言葉にこだわるのか。それは、言葉が姿勢を作り、姿勢が行動を作るからです。「使う」と言い換えた瞬間、あなたの背筋は、少し伸びるはずです。</p>
+<blockquote class="pull">あなたが前に進むこと。それ自体が、補助の理由です。だから、堂々と使ってください。</blockquote></div></section>
+<section class="section" id="about"><div class="wrap"><span class="eyebrow">わたしについて</span><h2>「もったいない」を、誰よりも近くで見てきました。</h2>
+<div style="width:240px;height:240px;margin:0 auto 24px;border-radius:50%;overflow:hidden;box-shadow:0 8px 24px rgba(26,42,79,.12);"><img src="images/hero_bridge.jpg" alt="山本利安" style="width:100%;height:100%;object-fit:cover;"></div>
+<p class="lead">ここで、わたし自身のことを、少しだけ話させてください。なぜなら、「なぜそこまで補助金にこだわるのか」を理解してもらうには、わたしがどんな道を歩いてきたかを知ってもらうのが、いちばん早いからです。</p>
+<p>わたしのキャリアは、ホテルマンから始まりました。次に人材派遣の営業をやり、それから保険の営業に移り、介護施設で事務をして、司法書士事務所で働き、そして行政書士として独立しました。いまは兵庫県加古川市を拠点に、仕事をしています。一見すると、てんでバラバラな経歴に見えるでしょう。実際、よくそう言われます。</p>
+<p>でも、わたし自身の中では、どの仕事も一本の線でつながっています。なぜなら、どの現場でも、わたしが見ていたものは同じだったからです。それは、「使えるのに、使わない」という、もったいなさでした。というのも、人は思っている以上に、目の前にある手段を、活かしきれずに過ごしているからです。</p>
+<p>ホテルでは、せっかくの設備やサービスがそろっているのに、ただ泊まって帰っていくお客様を、たくさん見ました。使えば、もっと豊かな時間になったはずなのに。なぜ、使わないのか。それは、「そこに何があるか」を、知らないからです。この経験は、いまのわたしの仕事に、まっすぐつながっています。というのも、補助金もまた、「そこに何があるか」を知らないだけで、見送られているものだからです。</p>
+<p>人材派遣の営業では、同じ人が同じ仕事をしても、看板ひとつ、契約のかたちひとつで、時間あたりの単価がまるで違ってくる現実を、知りました。なぜ、同じ働きなのに、報われ方が変わるのか。それは、「どう位置づけるか」で、価値が変わるからです。この感覚も、補助金に通じています。というのも、同じ賃上げ、同じ設備投資が、どう位置づけるかで、まるで違うお金を生むからです。</p>
+<p>保険の営業では、こんなにも必要なものなのに、伝え方ひとつで、まったく届かないという、もどかしさを味わいました。介護の現場では、制度を知っているかどうかで、受けられる支援がまるで変わってしまう人たちを、間近で見ました。とくに介護の経験は、わたしに深く刻まれています。なぜなら、「制度を知らないだけで、受けられたはずの助けを受け損ねる」という現実を、人の暮らしのレベルで、目の当たりにしたからです。</p>
+<p>そして、司法書士事務所と行政書士の世界に入って、わたしは決定的なものに出会いました。それが、補助金という「もらえるのに、もらわないお金」です。なぜわたしがこれにこだわるのか。それは、これまでの全部の現場で感じてきた「もったいなさ」の、いちばん分かりやすくて、いちばん金額の大きいかたちが、ここにあったからです。バラバラだった経験のすべてが、補助金という一点で、結ばれた感覚でした。</p>
+<p>だからわたしは、補助金を「もらって安心」で終わらせたくないのです。というのも、もらって満足してしまうと、それは結局「一度きりの幸運」で終わってしまうからです。そうではなく、あなたの会社が動こうとしている、まさにその瞬間に、当たり前のように使ってほしい。受け身で待つのではなく、「いま、使うべきタイミングはここですよ」と、一緒に探していく。それが、いまのわたしの仕事です。</p>
+<blockquote class="pull">看板があっても売れないもの。活かせるのに活かさない人。もらえるのに、もらわないお金。——わたしは、そのすべてを近くで見てきました。</blockquote></div></section>
+<section class="section"><div class="wrap"><span class="eyebrow">わたしの立ち位置</span><h2>わたしは、手続きの代行屋ではなく、あなたの「経営の相談相手」でいたい。</h2><p class="lead">わたしのことを、「書類を書いてくれる人」だと思っているなら、半分だけ正解で、半分は違います。書類は書きます。でも、わたしが本当にやりたいのは、その手前のことです。</p>
+<p>なぜなら、補助金は、書類を書く前の段階で、ほとんど勝負がついているからです。というのも、「いつ、何を、いくらで動かすか」という経営の判断こそが、補助金を使えるかどうかを、最初に決めてしまうからです。書類は、その判断を、かたちにするだけの作業です。だから、書類だけ上手に書ける人より、経営の動きを一緒に考えられる人のほうが、ずっと役に立つのです。</p>
+<p>わたしが大事にしているのは、あなたの会社の「これから」を、一緒に眺めることです。来期、何をしようとしているのか。どこを伸ばし、どこを変えようとしているのか。その話の中に、補助金を使うべき瞬間が、必ず隠れています。というのも、補助金は経営から切り離された「別の手続き」ではなく、経営そのものの中に、織り込まれているものだからです。だから、わたしは経営の相談相手として、横にいたいのです。</p>
+<p>もちろん、わたしは何でも屋ではありません。あれもこれもと、手を広げるつもりはないのです。なぜなら、一つのことを深くやるほうが、あなたの役に立つと信じているからです。わたしが集中しているのは、「補助金を使って、会社を前に進める」という、その一点です。余計なものを足さず、この一点を、誰よりも深く。それが、わたしの選んだ立ち位置です。</p>
+<blockquote class="pull">書類を書く前に、経営を一緒に考える。それが、わたしの仕事の本当の中身です。</blockquote></div></section>
+<div class="section-divider"><span></span></div>
+<section class="section section--dark" id="flag"><div class="wrap"><span class="eyebrow">わたしたちの想い</span><h2>「もらうな、使え」。この一言に、すべてが込められています。</h2><p class="lead">「もらうな、使え」。乱暴な言い方に聞こえるかもしれません。でも、わたしはこの言葉を、いちばん大切にしています。なぜなら、補助金との向き合い方が、この一言で根本から変わるからです。</p>
+<p>「もらう」という言葉には、受け身のにおいがあります。誰かが運んできてくれるのを待つ、棚からぼた餅が落ちてくるのを待つ——そういう姿勢です。というのも、「もらう」と思っている限り、補助金はいつまでも「運がよければ手に入るもの」のままだからです。そして、運に任せている会社のところに、補助金は、めったに来ません。</p>
+<p>一方で、「使う」という言葉には、主体性があります。自分の経営の中に、補助金という道具を組み込んで、狙って取りにいく——そういう姿勢です。なぜなら、「使う」と決めた瞬間に、人は「いつ」「何に」「いくら」という、具体的な問いを立て始めるからです。その問いが立てば、あとは情報とタイミングの問題でしかありません。「使う」と決めること自体が、もう半分、勝負を決めているのです。</p>
+<p>わたしが戦いたい相手は、補助金そのものではありません。三つの、目に見えない敵です。一つめは、「もったいない」を当たり前にしてしまう、世の中の空気。二つめは、読みにくくて当然、と思わせる、行政の書類のかたち。三つめは、「自分にはどうせ無理だ」と、最初の一歩を止めてしまう、思い込み。——この三つこそが、あなたの会社からお金を奪っている、本当の犯人です。</p>
+<p>脱・情弱経営とは、この三つの敵と縁を切る、ということです。「情弱」、つまり「常に弱い立場に甘んじる経営」から抜け出すということです。なぜそれが可能なのか。それは、これらの敵が、あなたの実力や、会社の規模とは、まったく関係のないところにいるからです。情報のねじれは、知ればほどける。書類の壁は、任せれば越えられる。思い込みは、一度確認すれば消える。だから、誰にでも、抜け出す道は開かれています。</p>
+<p>ここで気をつけてほしいのは、「情弱」というのは、あなたを責める言葉ではない、ということです。むしろ逆です。なぜなら、多くの真面目な経営者ほど、「うちなんて」「身の丈に合わない」と、自分で自分を小さく見積もってしまうからです。その謙虚さは美徳ですが、こと補助金に関しては、損につながります。だから、ここだけは、少し図々しくなってください。あなたの会社には、追い風を受け取る資格が、最初からあるのですから。</p>
+<blockquote class="pull">情報に弱いままでいるのは、もうやめにしましょう。あなたの会社には、追い風を受け取る資格があります。</blockquote></div></section>
+<section class="section" id="secrets"><div class="wrap"><span class="eyebrow">本業に専念しながら</span><h2>1,000万円の売上に匹敵する資金を、得続ける三つの秘訣。</h2><p class="lead">では、具体的にどうすれば、本業の手を止めずに、補助金という追い風を受け取り続けられるのか。むずかしいテクニックは要りません。やっている会社は、ただ三つのことを知っているだけです。順番にお話しします。</p>
+<p>一つめの秘訣は、「見るのは三点だけでいい」と知ることです。なぜなら、補助金が複雑に見えるのは、最初から全部を理解しようとするからです。要項を頭から読み、すべての制度を比べ、完璧に把握しようとすれば、誰だって途方に暮れます。でも、本当に見るべきなのは、賃上げ・設備・採用の三点だけ。というのも、この三つは「経営が動く瞬間」であり、補助金を使うきっかけが、ほぼここに集まっているからです。</p>
+<p>この「三点だけ」という割り切りが、なぜそれほど効くのか。それは、人が行動できなくなる最大の理由が、「考えることが多すぎる」ことだからです。選択肢が増えるほど、人は決められなくなり、決められないまま、見送ってしまう。だから、見る場所を三つに絞る。これは、手を抜いているのではなく、行動できるかたちまで、問題を小さくしているのです。三点について「いつ・何を・いくらで」を、買う前・上げる前に確認する。それだけで、もらえるお金が、急にくっきりと見えてきます。</p>
+<p>二つめの秘訣は、「面倒な山場は、まるごと任せる」と割り切ることです。なぜなら、補助金の申請には、書類が前後し、要件をにらみ、右往左往する山場が、必ずあるからです。そして、多くの会社が途中で止まるのは、能力が足りないからではなく、この山場を、自分一人で抱え込もうとするからです。というのも、本業を回しながら、慣れない申請書と格闘するのは、時間も気力も奪われる、わりに合わない作業だからです。</p>
+<p>ここで大事なのは、「任せること」を、負けや甘えだと思わないことです。なぜなら、経営とは、自分がやるべきことと、人に任せるべきことを、正しく振り分ける技術だからです。あなたが本業で生み出せる価値と、慣れない申請書に費やす時間。どちらが会社のためになるかは、明らかです。だから、山場は、最初から任せる場所だと決めてしまう。最終的な入力まで代わりに進める人間がいれば、あなたは本業の手を一ミリも止めずに、資金だけが入ってくる。これが、「本業に専念しながら」という言葉の、本当の中身です。</p>
+<p>三つめの秘訣は、「使うタイミングを、絶対に逃さない」と肝に銘じることです。なぜなら、補助金は、待っていても向こうからは来ないからです。鍵を握るのは、賃上げ・採用・設備という「経営が動く瞬間」に、ぴたりと合わせて動くこと。というのも、買ったあと・上げたあとでは、ほとんどの補助金は間に合わないからです。だから、その予定が頭に浮かんだ、まさにその時点で、一本だけ連絡を入れる。</p>
+<p>このタイミングの秘訣には、ちょっとしたコツがあります。それは、「決めてから相談する」のではなく、「決める前に相談する」ことです。なぜなら、決めてしまったあとでは、もう打てる手が限られているからです。「機械を買おうと思っている」「来期、賃上げを考えている」——この、まだ迷っている段階こそが、いちばん選択肢の多い、いちばん価値のある瞬間です。早すぎるかな、と思うくらいで、ちょうどいい。たったそれだけの行動が、同じ一手を、国の負担込みの一手に変えてしまうのです。</p>
+<p>この三つを並べてみると、あることに気づくはずです。どれも、特別な才能や、潤沢な資金を、必要としていません。なぜなら、これは「能力」の問題ではなく、「知っているか、知らないか」の問題だからです。三点だけを見る。山場は任せる。タイミングを逃さない。——たったこれだけのことを知り、その通りに動くだけで、本業に集中したまま、1,000万円の売上に匹敵する資金を、何度でも手にすることができます。</p>
+<blockquote class="pull">差をつけているのは、頭のよさでも、会社の大きさでもありません。ただ、知っているか、知らないか。それだけです。</blockquote></div></section>
+<div class="section-divider"><span></span></div>
+<section class="section" id="ladder"><div class="wrap"><span class="eyebrow">お手伝いの流れ</span><h2>「いきなり依頼」じゃなくて、いいんです。</h2><p class="lead">ここまで読んで、「気にはなるけれど、いきなり依頼するのは、さすがにハードルが高い」と感じている方も多いと思います。その感覚は、まったく正しいです。だからわたしは、その手前に、もっと軽い入口を、用意しています。</p>
+<p>なぜ、わざわざ段階を分けているのか。それは、信頼というものが、いきなり生まれるものではないと、知っているからです。というのも、見ず知らずの相手に、自分の会社の数字や事情を、最初から全部さらけ出せる人など、そうはいないからです。だから、いちばん軽いところから、あなたのペースで近づいてきてもらえるように、関わり方を三つに分けています。</p>
+<p>一段めは、「まず知る」段階です。無料のセルフ診断や、補助金の情報を、ただ受け取るだけ。お金もかかりませんし、何かを売り込まれることも、ありません。なぜここを無料にしているのか。それは、「自分の会社に、本当に使える補助金があるのかどうか」を、リスクゼロで確かめてほしいからです。ここで「うちには関係なさそうだ」と思えば、それで終わりにして構いません。それでも、こぼしていたお金の存在に気づけただけで、価値はあります。</p>
+<p>二段めは、「試す」段階です。一度のヒアリングをもとに、事業計画書の下書きにあたる、基本のデータを作ります。なぜこの段階を用意しているのか。それは、いきなり大きな契約を結ぶ前に、「この人に任せて大丈夫か」「自分の会社のことを、ちゃんと分かってくれるか」を、小さく試してほしいからです。ここで相性が合わないと感じれば、無理に先へ進める必要は、ありません。わたしは、合わない相手を、高い段階へ押し上げることを、しないと決めています。</p>
+<p>三段めは、「任せる」段階です。設備投資などに、申請の最終入力まで伴走し、面倒な部分を、まるごと代行します。さらにその先、補助金を入口にして、売上につながる仕組みづくりまでを、お手伝いします。なぜここまでやるのか。それは、補助金を「もらって終わり」にしてほしくないからです。というのも、せっかく入れた設備や、せっかく整えた体制を、次の売上につなげてこそ、補助金は本当の意味で「使えた」と言えるからです。本業に専念できる環境を、まるごと整える。それが、この段階の役割です。</p>
+<p>この三段階に、共通しているものがあります。それは、「あなたが、いつでも引き返せる」ということです。なぜそれを大事にしているのか。それは、引き返せる安心があってはじめて、人は前に進めるからです。後戻りできない、と感じた瞬間、人は動けなくなります。だから、どの段階でも、合わないと思えば、そこで止まっていい。無理に背中を押すことは、決してしません。それでも前に進みたいと思ってもらえたなら、それは本物の信頼です。</p>
+<blockquote class="pull">軽いところから、あなたのペースで。無理に背中を押すことは、決してしません。</blockquote>
+<div class="ladder">
+  <div class="lcard">
+    <span class="lstep">STEP 1 ／ まず知る</span>
+    <h3>無料で、確かめる</h3>
+    <p>セルフ診断や補助金の情報を、ただ受け取るだけ。売り込みはありません。「うちに使える補助金があるか」を、リスクゼロで確かめてください。</p>
+    <a class="lcta" href="#contact">無料で診断を受け取る →</a>
+  </div>
+  <div class="lcard">
+    <span class="lstep">STEP 2 ／ 試す</span>
+    <h3>小さく、任せてみる</h3>
+    <p>一度のヒアリングで、事業計画書の下書きにあたる基本データを作成。大きな契約の前に「この人に任せて大丈夫か」を小さく試せます。合わなければ、先へは進めません。</p>
+    <a class="lcta" href="#contact">相談してみる →</a>
+  </div>
+  <div class="lcard lcard--featured">
+    <span class="lstep">STEP 3 ／ 任せる</span>
+    <h3>面倒を、まるごと預ける</h3>
+    <p>設備投資などに申請の最終入力まで伴走し、面倒な部分を代行。さらにその先、売上につながる仕組みづくりまで。本業に専念できる環境を、まるごと整えます。</p>
+    <a class="lcta lcta--primary" href="#contact">話を聞いてみる →</a>
+  </div>
+</div>
+</div></section>
+<section class="section" id="value"><div class="wrap"><span class="eyebrow">成果の見方</span><h2>「いくらもらえた」よりも、「何が買えた」。</h2><p class="lead">補助金の話になると、どうしても「いくらもらえたか」という金額に、目が行きがちです。でも、わたしがあなたに本当に問いたいのは、そこではありません。「それで、何が買えたのか」です。</p>
+<p>なぜ、金額そのものではなく、「何が買えたか」を大事にするのか。それは、金額は記憶に残りにくく、買えたものは、毎日その場に残り続けるからです。というのも、「100万円もらった」という事実は、一年も経てばぼんやりしてきますが、「あの機械が入った」「あの設備が来た」という変化は、現場で働く人たちが、毎日その効果を実感し続けるからです。お金は通り過ぎていきますが、買えたものは、会社に居続けます。</p>
+<p>考えてみてください。人手のかかっていた工程が、自動化されて、残業が減ったとします。すると、現場の空気が変わり、人が辞めにくくなり、新しい人も入りやすくなります。なぜなら、働きやすさそのものが、目に見えて改善されるからです。これは、補助金の金額をいくら眺めていても、決して見えてこない価値です。「何が買えたか」で考えるからこそ、補助金が会社にもたらす本当の変化が、はっきりと見えてくるのです。</p>
+<p>もう一つ、買えたものには、思いがけない効果があります。それは、社員の誇りです。なぜなら、新しい設備が入ると、働く人たちは「この会社は、前に進もうとしている」と感じるからです。古い機械をだましだまし使い続ける会社と、必要な投資をきちんとする会社とでは、そこで働く人の気持ちが、まるで違います。補助金で買えたものは、お金以上に、社員の心に効く。これは、金額の話だけをしていては、絶対に見えてこない価値です。</p>
+<p>だから、あなたにも、ぜひこう問いかけてほしいのです。「もし補助金を使えるなら、自分の会社では、何を買いたいだろうか」。長年我慢してきた設備でしょうか。導入をためらっていたシステムでしょうか。それとも、人を増やすための、最初の一歩でしょうか。——その答えがひとつでも浮かんだなら、それはもう、補助金を「使う」べき理由が、あなたの中にある、ということです。</p>
+<blockquote class="pull">お金は通り過ぎていきます。でも、買えたものは、会社に居続けます。</blockquote></div></section>
+<section class="section"><div class="wrap"><span class="eyebrow">補助金を使う習慣</span><h2>補助金を「使う」習慣は、経営そのものを変えていきます。</h2><p class="lead">ここまで読んでくださったあなたには、もう一つ、お伝えしたいことがあります。それは、補助金を「使う」という習慣が、単なる節約術ではなく、経営の見方そのものを変えていく、ということです。</p>
+<p>どういうことか。補助金を「使う」会社は、何かを決めるとき、「これは、補助金を使う瞬間ではないか」と、自然に立ち止まるようになります。なぜなら、一度その習慣がつくと、賃上げも、採用も、設備投資も、すべてが「機会」に見えてくるからです。というのも、人は、自分が意識しているものしか、目に入らないからです。補助金を意識し始めた会社は、これまで見えなかった機会が、次々と見えるようになります。</p>
+<p>この「立ち止まる癖」が、実は、経営にとって大きな意味を持ちます。なぜなら、大きな決断の前に、一度立ち止まって考える習慣は、補助金以外の場面でも、会社を守るからです。「本当に、いまそれを買うべきか」「もっといい順番はないか」——補助金をきっかけに身につくこの問いが、無駄な出費を減らし、よりよい判断を導きます。補助金は、お金をもたらすだけでなく、考え方をもたらすのです。</p>
+<p>そしてもう一つ。補助金を「使う」会社は、前向きになります。なぜなら、「使えるお金がある」と思える会社は、新しい挑戦に、一歩踏み出しやすくなるからです。「設備を入れたいけれど、お金が」とためらっていた経営者が、「補助金が使えるなら、やってみよう」と動き出す。その一歩が、次の成長を生む。お金の見方が変わると、行動が変わり、行動が変わると、会社の未来が変わるのです。</p>
+<blockquote class="pull">補助金は、お金をもたらすだけでなく、前に進む「習慣」をもたらします。</blockquote></div></section>
+<section class="section"><div class="wrap"><span class="eyebrow">よくある不安に、正面から答えます</span><h2>「自分でもできる」「途中で止まりそう」「うちは対象外」——その不安に、お答えします。</h2><p class="lead">ここまで読んでも、心のどこかに、まだ引っかかりが残っているかもしれません。その引っかかりは、たいてい、いくつかのパターンに分かれます。一つずつ、正直にお答えします。</p>
+<p>一つめ。「補助金なんて、調べれば自分でもできるんじゃないか」。——その通りです。できます。わたしは、それを否定しません。なぜなら、補助金は、特別な資格がなければ触れないような、秘密の制度ではないからです。ただし、一点だけ。多くの人が途中で挫折するのは、能力が足りないからではなく、「全部を読もうとして、複雑にしてしまう」からです。というのも、要項には、あなたの会社に関係のない部分まで、びっしりと書かれているからです。本当に見るべき三点に絞れば、道はずっとシンプルになります。「自分でやる」と決めるなら、せめてその絞り方だけは、知っておいてほしいのです。</p>
+<p>二つめ。「最後までやり切れる自信がない。途中で止まりそうで不安だ」。——その不安は、まっとうです。なぜなら、申請には、書類が前後して右往左往する山場が、確かにあるからです。でも、考えてみてください。その山場は、あなたが必ずしも、自分で越えなければならない場所でしょうか。というのも、そこはまさに、人に任せていい場所だからです。あなたが悩んで時間を溶かすべきところではなく、わたしが代わりに進めるべきところ。途中で止まる心配があるのなら、止まりやすい場所だけを、こちらに預けてしまえばいいのです。</p>
+<p>三つめ。「うちみたいな会社は、どうせ対象外だろう」。——この思い込みが、いちばん根が深く、いちばん惜しいものです。なぜ惜しいのか。それは、「対象外だ」と決めつけている会社のうち、かなりの割合が、実は対象だからです。というのも、制度は毎年広がり、これまで外れていた業種が、新たに入ってくることが、珍しくないからです。だから、「うちは無理」と自分で線を引く前に、一度だけ、確認してみてください。確認するだけなら、何も失いません。</p>
+<p>四つめ。「不正を疑われそうで、怖い」。——この心配にも、はっきりお答えします。正しい手順で、正しい目的に使う限り、後ろめたさを感じる理由は、一つもありません。なぜなら、補助金は、最初から「こういう目的に使ってください」と決まっているお金だからです。その目的どおりに使い、きちんと報告すれば、何も恐れることはありません。書類が読みにくいのは、あなたのせいではなく、制度の側の問題です。その読みにくさを、わたしが間に入って、引き受けます。</p>
+<p>五つめ。「いまは忙しくて、それどころじゃない」。——これは、とてもよく分かります。でも、だからこそ、です。なぜなら、忙しい経営者ほど、自分で全部やろうとして、結局すべてを見送ってしまうからです。というのも、補助金は、本業の片手間でやるには、重すぎる作業だからです。だから、忙しいあなたこそ、面倒な部分を任せて、本業に集中すべきなのです。「忙しいから、やらない」ではなく、「忙しいから、任せる」。これが、正しい順番です。</p>
+<p>六つめ。「うちは、規模が小さすぎるのでは」。——むしろ逆です。なぜなら、規模が小さい会社ほど、補助金一回の重みが大きいからです。というのも、大きな会社にとっての100万円と、小さな会社にとっての100万円では、その一円あたりの意味が、まるで違うからです。小さな会社にとって、補助金は、経営を一段押し上げる、決定的な一手になり得ます。小さいことは、補助金を見送る理由にはなりません。むしろ、使うべき理由になるのです。</p>
+<blockquote class="pull">止めているのは、能力でも、環境でもありません。たいていは、ほんの少しの思い込みです。</blockquote></div></section>
+<section class="section"><div class="wrap"><span class="eyebrow">製造業の経営者へ</span><h2>あなたの設備投資は、もっと報われていいはずです。</h2><p class="lead">もし、あなたが製造業の経営者なら、この一節は、とくに読んでほしいと思っています。なぜなら、製造業ほど、補助金を「使う」ことの恩恵が、はっきりと現れる業種は、少ないからです。</p>
+<p>理由は、シンプルです。製造業は、設備が命だからです。というのも、機械一台の性能が、生産量を、品質を、納期を、そして利益を、直接左右するからです。だからこそ、製造業の設備投資は、金額が大きくなりやすく、その分、補助金が効く場面も多くなります。一台の機械を入れるか入れないかで、会社の未来が変わる——その決断に、追い風を加えられるかどうかは、決して小さな話ではありません。</p>
+<p>それなのに、多くの製造業の経営者が、設備を「自腹で、当たり前のように」買っています。なぜか。それは、「設備は自分で買うもの」という常識が、あまりにも深く根づいているからです。でも、その常識のせいで、本来受け取れたはずの追い風を、毎回見送っているとしたら、これほどもったいないことはありません。設備を買うその瞬間こそ、補助金がいちばん力を発揮する瞬間なのです。</p>
+<p>だから、製造業のあなたに、一つだけお願いがあります。次に設備を買おうと思ったとき、発注のボタンを押す前に、一度だけ、わたしに声をかけてください。なぜ「前に」なのか。それは、何度も言うとおり、買ったあとでは間に合わないからです。たった一本の連絡が、同じ機械を、自腹で入れるか、国の負担込みで入れるかを、分けます。あなたの設備投資は、もっと報われていいはずです。</p>
+<blockquote class="pull">設備を買うその瞬間こそ、補助金がいちばん力を発揮する瞬間です。</blockquote></div></section>
+<section class="section"><div class="wrap"><span class="eyebrow">医療・薬局の経営者へ</span><h2>「うちは関係ない」と思っている、その思い込みこそ、見直してほしいのです。</h2><p class="lead">医療法人や、調剤薬局、歯科をはじめとする医療の現場を担う方にも、お伝えしたいことがあります。それは、「医療は補助金と縁が薄い」という思い込みを、いちど手放してほしい、ということです。</p>
+<p>なぜ、その思い込みを見直してほしいのか。それは、制度が、年々その対象を広げているからです。というのも、医療の現場もまた、人手不足や、設備の更新、業務の効率化といった、経営上の課題を抱えているからです。そして、それらの課題に立ち向かう投資は、補助の対象になり得ます。「医療だから関係ない」のではなく、「医療にも、使える場面が増えている」というのが、いまの実情に近いのです。</p>
+<p>たとえば、外注していたものを、院内で完結できる設備に置き換える。人手のかかっていた業務を、機械やシステムで効率化する。——こうした投資は、医療の現場でも、確かに起きています。なぜ、これらが大事なのか。それは、医療の現場こそ、人の手が貴重で、その手を本来の仕事に集中させることに、大きな価値があるからです。効率化のための投資は、医療においては、患者さんに向き合う時間を取り戻すことでもあるのです。</p>
+<p>だからこそ、「買う前の一本の連絡」が、ここでも効きます。設備を入れようと思ったとき、システムを導入しようと思ったとき、その一歩手前で、相談してみてください。なぜなら、ここでも順番が、すべてを決めるからです。「うちは医療だから関係ない」と線を引く前に、一度だけ、確認する。それだけで、これまで見送っていた追い風を、受け取れるかもしれないのです。</p>
+<blockquote class="pull">「医療だから関係ない」のではなく、「医療にも、使える場面が増えている」のです。</blockquote></div></section>
+<section class="section"><div class="wrap"><span class="eyebrow">「情弱」に込めた想い</span><h2>なぜ、「情弱経営」という、きつい言葉を、あえて選んだのか。</h2><p class="lead">「脱・情弱経営」。この言葉を初めて見た人は、たいてい少し驚きます。「情弱」、つまり「常に弱い」。経営者に向かって、ずいぶんきつい言葉を使うものだ、と。なぜ、わたしはこの言葉を、あえて選んだのでしょうか。</p>
+<p>やわらかい言葉では、届かないからです。なぜなら、本当にもったいないことほど、人は「まあ、いいか」で流してしまうからです。というのも、補助金を見送ることには、痛みが伴わないからです。財布から現金が出ていくわけではない。だから、損をしている実感がわかず、「来年でいいや」と先延ばしにできてしまう。その鈍さを、揺さぶるためには、少しきつい言葉が要るのです。</p>
+<p>それに、「情弱」という言葉には、希望が込められています。意外に聞こえるかもしれません。でも、考えてみてください。「弱い」のではなく、「常に弱い立場に、甘んじている」だけなのだとしたら。それは、変えられるということです。なぜなら、甘んじているのは、実力のせいではなく、向き合い方のせいだからです。向き合い方は、いつでも変えられます。だから「脱・情弱」、つまり「そこから抜け出せる」と、わたしは言い切れるのです。</p>
+<p>わたしは、あなたを「弱い」と言いたいのではありません。むしろ、その逆です。なぜなら、ここまで会社を続けてきた経営者が、弱いはずがないからです。日々、人を雇い、給料を払い、責任を背負って、前に進んでいる。それは、立派な強さです。ただ、こと補助金に関してだけは、その強さが、なぜか「弱気」に変わってしまう。「うちなんて」と引いてしまう。その一点だけを、変えたいのです。</p>
+<p>だから「情弱」という言葉は、あなたを責める言葉ではなく、目を覚ますための言葉です。きつく聞こえたなら、それでいい。なぜなら、きつく聞こえたということは、どこか心当たりがある、ということだからです。その心当たりこそが、変化の入口です。常に弱いふりをするのは、もう、やめにしましょう。</p>
+<blockquote class="pull">「弱い」のではありません。「常に弱い立場に、甘んじている」だけ。だから、抜け出せます。</blockquote></div></section>
+<section class="section"><div class="wrap"><span class="eyebrow">加古川の現場から</span><h2>わたしが、小さな会社の現場に、こだわり続ける理由。</h2><p class="lead">わたしは、兵庫県加古川市を拠点に、仕事をしています。きらびやかな都心のオフィスでも、名の知れた大企業の相手でもありません。地域の、製造業や医療の、小さな現場。そこに、わたしはこだわっています。なぜか。</p>
+<p>それは、いちばん「もったいない」が起きているのが、まさにこうした現場だからです。なぜなら、大きな会社には、補助金を専門に扱う担当者がいたり、付き合いのある専門家がいたりするからです。ところが、地域の小さな会社には、そうした人がいません。社長が、現場に立ち、営業もし、経理も見て、そのうえ補助金まで——となれば、手が回らないのは当たり前です。だから、もらえるはずのお金が、いちばん多くこぼれているのです。</p>
+<p>そして、こうした現場こそ、補助金一回の重みが、いちばん大きい場所でもあります。というのも、規模が小さいほど、100万円が経営に与える影響は、大きくなるからです。大企業にとっては誤差のような金額でも、地域の小さな会社にとっては、新しい機械が一台入るか入らないか、人を一人雇えるか雇えないか、という分かれ目になる。だから、わたしは、ここで力になりたいのです。いちばん効く場所で、いちばん必要としている人に。</p>
+<p>もう一つ、地方の現場には、都会にはない良さがあります。それは、顔が見える、ということです。なぜそれが大事なのか。それは、補助金の仕事は、その会社の「これから」を、深く知らなければできないからです。どんな思いで経営をしているのか。何を変えたくて、何を守りたいのか。——こうしたことは、書類の上だけでは、絶対に分かりません。顔を合わせ、現場を見て、はじめて見えてくる。地域に根ざしているからこそ、わたしは、そこまで踏み込めるのです。</p>
+<p>だから、わたしは、これからも、地域の小さな現場にこだわります。なぜなら、ここに、わたしがいる意味が、いちばんはっきりとあるからです。大きな看板も、派手な実績の数字も要りません。目の前の一社の「もったいない」を、一つずつ、確かにほどいていく。それが、わたしの選んだ道です。</p>
+<blockquote class="pull">いちばん「もったいない」が起きている場所で、いちばん必要としている人の力になりたい。</blockquote></div></section>
+<section class="section"><div class="wrap"><span class="eyebrow">相談するタイミング</span><h2>補助金は、「種類」ではなく「順番」で決まります。</h2><p class="lead">補助金について、多くの人が、最初に知りたがるのは「どんな種類があるか」です。でも、本当に大事なのは、種類ではありません。「順番」です。なぜ、そう言い切れるのでしょうか。</p>
+<p>それは、どんなに良い補助金を見つけても、順番を間違えれば、一円も受け取れないからです。なぜなら、補助金のほとんどは、「これからやること」に対して出るものだからです。というのも、すでに買ってしまった機械、すでに上げてしまった給料には、原則として、手が届かないからです。だから、「どの補助金を使うか」を考える前に、「いつ相談するか」が、すべてを決めてしまうのです。</p>
+<p>具体的に言いましょう。理想の順番は、こうです。まず、「設備を買おうかな」「賃上げをしようかな」と、頭に浮かぶ。その、まだ迷っている段階で、相談する。それから、使える補助金を一緒に探し、計画を立て、申請の準備に入り、そのうえで発注する。——この順番なら、補助金は、ちゃんと間に合います。逆に、先に発注してしまうと、もう打てる手は、ほとんど残っていません。</p>
+<p>なぜ、多くの人が、この順番を間違えるのか。それは、「決めてから相談する」のが、自然に感じられるからです。というのも、人は、何かを決めて、ある程度かたちにしてから、人に相談したくなるものだからです。まだ迷っている段階で相談するのは、なんだか落ち着かない。でも、補助金に関しては、その「落ち着かない段階」こそが、いちばん価値のある瞬間なのです。</p>
+<p>だから、覚えておいてほしいのは、たった一つです。「決めてから」ではなく、「決める前に」。早すぎるかな、と思うくらいで、ちょうどいいのです。なぜなら、早く相談して困ることは、何もないからです。逆に、遅れて困ることは、いくらでもあります。順番さえ間違えなければ、補助金は、驚くほど素直に、あなたの味方になってくれます。</p>
+<blockquote class="pull">「どの補助金を使うか」より、「いつ相談するか」。順番が、すべてを決めます。</blockquote></div></section>
+<section class="section"><div class="wrap"><span class="eyebrow">ご相談の流れ</span><h2>わたしが、相談のときに、必ず聞くこと。</h2><p class="lead">「相談する」と言っても、何を話せばいいのか分からない——そう思う方も、多いと思います。だから、ここで、わたしが相談のときに、必ず聞いていることを、お伝えしておきます。身構える必要は、まったくありません。</p>
+<p>わたしが、いちばん最初に聞くのは、これです。「これから、何をしようとしていますか」。——たったこれだけです。なぜ、この問いから始めるのか。それは、補助金を使う瞬間が、あなたの「これから」の中に、必ず隠れているからです。というのも、何度もお伝えしているとおり、賃上げ・採用・設備という「経営が動く瞬間」こそが、補助金の入口だからです。だから、まずは、あなたの予定を聞かせてもらうところから、始めます。</p>
+<p>このとき、補助金の知識は、まったく要りません。なぜなら、制度のことは、こちらが調べるからです。あなたが話すのは、あなたの会社のことだけ。「来期、機械を入れ替えたい」「人を一人増やそうと思っている」「給料を、少し上げてやりたい」——そんな、ふだんの言葉で、十分です。というのも、わたしの仕事は、その言葉の中から、補助金を使える瞬間を、見つけ出すことだからです。</p>
+<p>そして、わたしが次に確かめるのは、「順番」です。それは、いつ頃の予定なのか。もう決まっているのか、まだ迷っているのか。——なぜ、これを確かめるのか。それは、ここまで何度もお伝えしたとおり、順番が、すべてを決めるからです。まだ迷っている段階なら、打てる手は、たくさんあります。だから、わたしは、あなたの「これから」と「いつ」を、丁寧に聞いていくのです。</p>
+<p>つまり、相談のために、あなたが準備するものは、何もありません。なぜなら、必要なのは、知識でも書類でもなく、あなたの会社の「これからの予定」だけだからです。それは、あなたがいちばんよく知っていることです。だから、どうか、構えないでください。ただ、これからやりたいことを、話してくれればいい。あとは、わたしの仕事です。</p>
+<blockquote class="pull">準備するものは、何もありません。あなたの「これからの予定」だけ、聞かせてください。</blockquote></div></section>
+<section class="section"><div class="wrap"><span class="eyebrow">合わないときは</span><h2>合わないときは、はっきり「やめましょう」と言います。</h2><p class="lead">これは、あまり多くの人が、口に出さないことかもしれません。でも、わたしは、はっきり言っておきたいのです。合わないときは、わたしのほうから「やめましょう」と言います。なぜ、そんなことを、わざわざ伝えるのでしょうか。</p>
+<p>それは、無理に進めることが、あなたのためにならないと、知っているからです。なぜなら、補助金は、目的に合っていなければ、かえって会社の負担になることがあるからです。というのも、補助金には、必ず「その目的に使う」という約束が伴うからです。本当は必要のない設備を、補助金のためだけに買う——そんなことをすれば、お金は入っても、会社は前に進みません。それは、わたしの目指すものとは、正反対です。</p>
+<p>だから、わたしは、相談の中で「これは、合わないな」と感じたら、正直にそう伝えます。「いまは、補助金を使うタイミングではないかもしれません」と。なぜ、わざわざ仕事を手放すようなことを言うのか。それは、その一回の正直さが、長い信頼を作ると、信じているからです。というのも、無理に進めて、あとで「合わなかった」と思われるくらいなら、最初に正直に伝えたほうが、お互いにとって、ずっといいからです。</p>
+<p>これは、関わり方を三段階に分けていることとも、つながっています。なぜなら、軽い段階から始めるのは、「合うかどうか」を、お互いに確かめるためだからです。試す段階で、相性が合わないと感じれば、そこで止まっていい。わたしは、合わない相手を、高い段階へ無理に押し上げることを、しないと決めています。これは、わたし自身が、ずっと守ってきた線です。</p>
+<p>だから、どうか、安心してください。わたしに相談したからといって、何かを売り込まれたり、無理に契約させられたりすることは、ありません。なぜなら、わたしが大切にしているのは、目先の一件ではなく、長く続く信頼だからです。合わないなら、合わないと言う。その正直さを、わたしは、何よりも大事にしています。</p>
+<blockquote class="pull">無理に進めて後悔されるくらいなら、正直に「やめましょう」と言う。それが、わたしの流儀です。</blockquote></div></section>
+<section class="section"><div class="wrap"><span class="eyebrow">繰り返し活用する</span><h2>補助金は、一度きりの花火で、終わらせてはいけません。</h2><p class="lead">多くの会社が、補助金を「一度きりのイベント」として、とらえています。一回もらって、それで終わり。でも、わたしは、それこそが、いちばんもったいないと思っています。なぜなら、補助金の本当の力は、繰り返すことで、はじめて現れるからです。</p>
+<p>考えてみてください。賃上げは、毎年あります。設備の更新は、数年ごとにやってきます。採用も、折にふれて必要になります。——つまり、補助金を使う「瞬間」は、これから何度も、繰り返しやってくるのです。なぜ、それを一度きりで終わらせるのか。それは、一度もらえたことを、「たまたまの幸運」だと思ってしまうからです。でも、それは幸運ではなく、習慣にできるものなのです。</p>
+<p>一度きりの会社と、繰り返す会社とでは、何が違うのか。それは、積み上がり方です。なぜなら、補助金で得たお金は、次の投資の元手になり、その投資が、また次の機会を生むからです。というのも、新しい設備が利益を生み、その利益でまた次の一手を打てるようになる——という好循環が、回り始めるからです。一度きりの会社は、毎回ふりだしに戻りますが、繰り返す会社は、らせん階段を上がるように、前へ前へと進んでいきます。</p>
+<p>だから、わたしは、最初の一回を、終わりではなく、始まりにしたいのです。なぜなら、一度「使う」ことを経験した会社は、次からは、自分で「これは使う瞬間かもしれない」と、気づけるようになるからです。最初は、わたしが横で気づかせる。二度目、三度目と進むうちに、あなた自身の中に、その感覚が育っていく。——それが、わたしの本当の目標です。補助金を、あなたの経営の「習慣」にすること。</p>
+<p>一度きりの花火は、美しいけれど、すぐに消えます。でも、習慣は、消えません。なぜなら、習慣は、会社の中に、ずっと残り続けるからです。だから、最初の一歩を、どうか「一度きり」にしないでください。その一歩を、繰り返せるリズムに変えていく。それこそが、脱・情弱経営の、本当のゴールなのです。</p>
+<blockquote class="pull">一度きりの花火ではなく、繰り返せるリズムへ。それが、脱・情弱経営のゴールです。</blockquote></div></section>
+<section class="section"><div class="wrap"><span class="eyebrow">経営者の決断</span><h2>決めるのは、いつも、あなた一人です。だからこそ。</h2><p class="lead">最後の手前で、もう一つだけ、伝えたいことがあります。それは、経営という仕事の、孤独についてです。なぜ、補助金の話で、孤独の話をするのか。少しだけ、付き合ってください。</p>
+<p>経営者は、孤独です。なぜなら、最後に決めるのは、いつも、たった一人だからです。社員には相談できないことがある。家族にも、言えないことがある。数字の重さも、決断の責任も、すべて一人で背負っている。というのも、それが、経営者という立場だからです。誰も代わってはくれません。その孤独の中で、あなたは、日々、決断を下し続けている。</p>
+<p>だから、補助金のような「分かりにくくて、面倒で、でも見過ごせないもの」は、後回しになりがちです。なぜなら、ただでさえ決めることが多すぎて、優先順位の低いものは、どうしても後ろに回るからです。というのも、人の注意力には、限りがあるからです。目の前の仕事で手一杯のとき、補助金にまで気が回らないのは、当たり前のことです。それは、あなたの怠慢ではなく、人間として、自然なことなのです。</p>
+<p>だからこそ、わたしのような存在に、意味があると思っています。なぜなら、あなたが背負っているものの、ほんの一部を、横で引き受けられるからです。「補助金のことは、考えなくていい。動きそうなときに、一言かけてくれれば、あとはこちらで見ておく」——そう言える相手が一人いるだけで、あなたの肩の荷は、少し軽くなるはずです。それは、お金の話である以上に、孤独を分かち合う話でもあるのです。</p>
+<p>わたしは、あなたの代わりに、決断することはできません。なぜなら、それは、あなたにしかできない仕事だからです。でも、その決断が、より良いものになるように、横で支えることはできます。「それ、補助金が使えますよ」と、そっと声をかける。その一言で、あなたの決断が、少しだけ報われる。——そういう相談相手で、わたしは、ありたいのです。</p>
+<blockquote class="pull">決めるのは、あなた一人。でも、その決断を、横で支える相手は、いていい。</blockquote></div></section>
+<section class="section"><div class="wrap"><span class="eyebrow">時間の大切さ</span><h2>あなたの時間こそ、いちばん高いコストです。</h2><p class="lead">補助金の話をすると、どうしても「いくら得するか」というお金の話になりがちです。でも、わたしがもう一つ、強く意識してほしいものがあります。それは、あなたの「時間」です。なぜなら、経営者にとって、時間こそ、いちばん高いコストだからです。</p>
+<p>考えてみてください。社長が、慣れない申請書とにらめっこして、半日を溶かす。要項を読み込み、分からない用語を調べ、何度も書き直す。——その半日に、いくらの価値があるでしょうか。なぜ、これが大きな損失なのか。それは、その半日を本業に使えば、あなたは、もっと大きな価値を生み出せたはずだからです。というのも、社長にしかできない仕事が、必ずあるからです。その時間を、書類仕事で削ってしまうのは、見えにくいけれど、とても大きな損なのです。</p>
+<p>お金の損は、目に見えます。でも、時間の損は、目に見えません。だから、つい軽く考えてしまう。なぜなら、現金が出ていくわけではないからです。でも、本当は、こちらのほうが、ずっと深刻なこともあります。というのも、お金は取り戻せても、時間は二度と戻ってこないからです。書類に費やした時間は、消えてなくなります。その間に逃した商談も、見られなかった現場も、戻ってはきません。</p>
+<p>だからこそ、「面倒な部分を任せる」ということには、お金の節約以上の意味があります。なぜなら、それは、あなたの時間と注意力を、本業に取り戻す、ということだからです。というのも、人の集中力には限りがあり、それをどこに向けるかで、会社の成果は大きく変わるからです。補助金の山場を任せることは、ただ楽をすることではなく、いちばん価値のある資源を、いちばん価値のある場所に、振り向け直すことなのです。</p>
+<p>わたしが「本業に専念しながら」という言葉を、何度も使うのは、このためです。なぜなら、補助金で得たお金以上に、本業に集中できた時間が、長い目で見れば、会社を強くするからです。資金は入る。しかも、あなたの時間は奪われない。——この二つが同時に叶うからこそ、補助金は「使う」価値があるのです。あなたの時間を、どうか、安く見ないでください。</p>
+<blockquote class="pull">お金は取り戻せます。でも、時間は、二度と戻ってきません。</blockquote></div></section>
+<section class="section"><div class="wrap"><span class="eyebrow">この文章に込めた想い</span><h2>なぜ、わたしは、こんなに長い文章を、無料で書いているのか。</h2><p class="lead">ここまで読んでくださったあなたは、もしかすると、こう思っているかもしれません。「ずいぶん丁寧に、長く書いてくれるけれど、これは何のためなのか」と。その問いに、正直にお答えします。なぜなら、わたしの考え方そのものが、この文章に表れているからです。</p>
+<p>わたしは、最初に「与える」と決めています。なぜなら、それが、わたしの信じている、仕事の順番だからです。というのも、いきなり「依頼してください」と言われても、人は動けないからです。まず、役に立つ。まず、知ってもらう。まず、信頼してもらう。——その順番でしか、本当の関係は始まらないと、わたしは思っています。だから、こうして長い文章を書き、できるだけ多くのことを、先にお渡ししているのです。</p>
+<p>この文章を読んだだけで、あなたが「自分でやってみよう」と思えたなら、それでいいのです。意外に聞こえるかもしれません。なぜなら、それは、わたしに依頼しない、という選択だからです。でも、それでいいのです。というのも、わたしの目的は、目の前の一件を取ることではなく、「もったいない」を、一つでも多く、この世から減らすことだからです。あなたが自分で動けるようになったのなら、それは、わたしにとっても、嬉しいことなのです。</p>
+<p>もちろん、読んでみて「やっぱり、一人では難しそうだ」「面倒なところは任せたい」と思ったなら、そのときは、声をかけてください。なぜなら、そのときこそ、わたしの出番だからです。でも、それは、押し売りされて始まる関係ではなく、あなた自身が「この人になら」と思って始まる関係です。というのも、そういう関係でなければ、長くは続かないからです。だから、わたしは、急がず、無理をせず、まず与えることから始めるのです。</p>
+<p>長い文章を、最後まで読んでもらえること。それ自体が、わたしにとっては、すでに一つの信頼です。なぜなら、人は、信頼できない相手の話を、最後までは読まないからです。ここまで付き合ってくださったということは、わたしの考え方が、少しは届いた、ということだと思っています。だから、この長さは、無駄ではありません。この長さこそが、わたしからあなたへの、最初の贈り物なのです。</p>
+<blockquote class="pull">まず、与える。まず、役に立つ。——本当の関係は、その順番でしか、始まりません。</blockquote></div></section>
+<section class="section"><div class="wrap"><span class="eyebrow">顧問の先生がいる方へ</span><h2>「顧問の専門家がいるから大丈夫」——その安心に、一つだけ。</h2><p class="lead">ここで、よくいただく言葉に、もう一歩深くお答えしておきます。それは、「うちには、ずっと付き合いのある専門家がいるから、大丈夫」というものです。その安心は、とても大切です。でも、一つだけ、お伝えしたいことがあります。</p>
+<p>それは、「日々の数字を見ること」と、「補助金を使う瞬間を捉えること」は、別の仕事だ、ということです。なぜなら、補助金は、経営の「これから」の予定に紐づくものだからです。というのも、日々の数字を整える仕事は、どちらかといえば「過ぎたこと」を扱う仕事であり、補助金は「これからやること」を扱う仕事だからです。向いている方向が、そもそも違うのです。だから、片方が得意な人が、もう片方も得意とは、かぎりません。</p>
+<p>これは、どちらが偉い、という話ではありません。なぜなら、どちらも、会社にとって欠かせない仕事だからです。日々の数字を、きちんと見てくれる人は、本当に大切です。ただ、補助金という分野は、毎年制度が変わり、タイミングが命で、申請の山場がある——という、独特の性質を持っています。というのも、この分野だけは、専門に追いかけていないと、最新の動きについていけないからです。だから、ここだけは、別に手当てしておくと、取りこぼしが減るのです。</p>
+<p>わたしは、いま付き合いのある相手を、変えてほしいとは、まったく思っていません。なぜなら、長く築いてきた信頼は、何より大切だからです。むしろ、わたしの役割は、その関係の「すき間」を埋めることだと思っています。というのも、どんなに良い相手がいても、補助金を使う瞬間は、すき間からこぼれ落ちやすいからです。そのこぼれ落ちる一点だけを、わたしが横で見ておく。それで、いいのです。</p>
+<p>だから、「もう専門家がいるから」という理由で、補助金の機会まで見送ってしまうのは、少しもったいないのです。なぜなら、それは、別の分野の話だからです。いまの関係はそのままに、補助金という一点だけ、別の目で見ておく。——その小さな備えが、何十万、何百万という差を、生むことがあります。一つだけ、この視点を、頭の片隅に置いておいてください。</p>
+<blockquote class="pull">「日々の数字を見ること」と、「補助金を使う瞬間を捉えること」は、別の仕事です。</blockquote></div></section>
+<section class="section section--cta" id="contact"><div class="wrap"><span class="eyebrow">最後に</span><h2>まずは、60秒。あなたの会社の「もったいない」を、見つけにいきましょう。</h2><p class="lead">長い文章を、ここまで読んでくださって、本当にありがとうございます。最後に、わたしから一つだけ、お願いがあります。</p>
+<p>どうか、「いつかやろう」で終わらせないでください。なぜなら、補助金における「いつか」は、ほとんどの場合、間に合わないからです。というのも、補助金は「これからやること」に交付されるものであって、賃上げや設備投資を、済ませてしまったあとでは、もう手が届かないからです。だから、「いつか」ではなく、「予定が見えた、いま」が、動くべき瞬間なのです。</p>
+<p>とはいえ、いきなり大きな決断をしてほしいわけでは、ありません。お願いしたいのは、たった60秒の確認だけです。あなたの会社に、いま使えるタイミングがあるのかどうか。もしあるなら、それはいくらくらいの規模になりそうなのか。——その目安を、まず知るところから始めてほしいのです。なぜ60秒で済むのか。それは、見るべき点が、賃上げ・採用・設備の三つだけだからです。</p>
+<p>もし、この三つのどれかに予定があるのなら、それはもう、十分すぎる「始める合図」です。なぜなら、補助金を使う資格は、最初からあなたの中にあり、あとはタイミングを逃さないかどうか、それだけの問題だからです。あなたが動こうとしている、まさにその瞬間にこそ、わたしは横にいたい。「それ、補助金が使えますよ」と、当たり前のように言える人間で、ありたいのです。</p>
+<p>ここまで読んで、もし少しでも、心が動いたのなら——その感覚を、どうか大切にしてください。なぜなら、その「気になる」という気持ちこそ、あなたの会社が、まだ取りこぼしている追い風があることの、何よりの証拠だからです。読むほどに、思い当たることが増えていったのなら、それは偶然ではありません。あなたの経営の中に、確かに「使える瞬間」が、眠っているのです。</p>
+<p>補助金は、もらうものではありません。使うものです。受け身で待つ「情弱」の経営から抜け出して、追い風を、自分の手で掴みにいきましょう。その最初の一歩を、いま、ここから始めてください。あなたの会社の「もったいない」を見つけにいく、その60秒に、わたしは、よろこんでおつきあいします。</p>
+<blockquote class="pull">もらうな、使え。——その生き方を、ここから、ご一緒に。</blockquote>
+<form class="optin" id="cta-optin" novalidate>
+  <p class="optin__title">補助金「もらい損ね」セルフ診断</p>
+  <p class="optin__desc">メールアドレスだけで、受け取り方をご案内します。</p>
+  <label class="optin__label" for="cta-optin-email">メールアドレス<span class="req">必須</span></label>
+  <input class="optin__input" id="cta-optin-email" name="email" type="email" inputmode="email"
+         autocomplete="email" placeholder="例：yamamoto@example.co.jp" aria-describedby="cta-optin-help cta-optin-err">
+  <p class="optin__err" id="cta-optin-err" role="alert" hidden></p>
+  <button class="optin__btn" type="submit">無料で診断を受け取る →</button>
+  <p class="optin__note" id="cta-optin-help">※ 営業メールは送りません。配信は補助金の最新情報と活用例だけ。いつでも解除できます。</p>
+  <p class="optin__done" role="status" hidden>送信ありがとうございます。診断結果の受け取り方を、ご案内のメールでお送りします。届かない場合は迷惑メールフォルダもご確認ください。</p>
+</form></div></section>
+
+<footer class="foot">
+  <div class="foot__grid">
+    <div>
+      <h4>脱・情弱経営 ／ 行政書士 山本利安</h4>
+      <p>製造業・医療法人のための補助金活用。賃上げ・設備投資・採用——経営が動く瞬間を、利益に変えます。行政書士 山本利安／兵庫県加古川市。</p>
+    </div>
+    <div>
+      <h4>サービス</h4>
+      <ul>
+        <li><a href="#questions">3つの質問（新しい機会）</a></li>
+        <li><a href="#secrets">3つの秘訣</a></li>
+        <li><a href="#ladder">関わり方（3段階）</a></li>
+        <li><a href="#contact">無料セルフ診断</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>知る・つながる</h4>
+      <ul>
+        <li><a href="#about">わたしについて</a></li>
+        <li><a href="#flag">もらうな、使え</a></li>
+        <li><a href="#proof">採択実績</a></li>
+        <li><a href="#contact">お問い合わせ・無料診断</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot__copy">© <span id="yy"></span> 行政書士 山本利安　｜　補助金は「もらう」より「使う」。</div>
+</footer>
+
+<script>
+(function(){
+  // mobile nav
+  var t=document.querySelector('.nav__toggle'), links=document.querySelector('.nav__links');
+  if(t){ t.addEventListener('click',function(){
+    var open=links.classList.toggle('open');
+    t.setAttribute('aria-expanded', open?'true':'false');
+  });
+  links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');});});
+  }
+  // question cards
+  var cards=document.querySelectorAll('.qcard'), res=document.getElementById('qresult');
+  function refresh(){
+    var n=0; cards.forEach(function(c){ if(c.getAttribute('aria-pressed')==='true') n++; });
+    if(n===0){ res.textContent='カードを押して、当てはまるものを選んでみてください。'; res.classList.remove('hit'); }
+    else { res.textContent='1つでも「はい」なら、あなたは補助金を“使える”会社です。買う前・上げる前に、まず相談してください。'; res.classList.add('hit'); }
+  }
+  cards.forEach(function(c){ c.addEventListener('click',function(){
+    c.setAttribute('aria-pressed', c.getAttribute('aria-pressed')==='true'?'false':'true'); refresh();
+  });});
+  // opt-in forms
+  document.querySelectorAll('.optin').forEach(function(f){
+    var input=f.querySelector('.optin__input'), err=f.querySelector('.optin__err'),
+        done=f.querySelector('.optin__done'), btn=f.querySelector('.optin__btn');
+    function valid(){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim()); }
+    function showErr(){ err.hidden=false; err.textContent='メールアドレスの形式が正しくないようです。例：name@example.co.jp の形でご入力ください。';
+      input.setAttribute('aria-invalid','true'); }
+    function clearErr(){ err.hidden=true; input.removeAttribute('aria-invalid'); }
+    input.addEventListener('blur',function(){ if(input.value.trim()==='') {clearErr();return;} valid()?clearErr():showErr(); });
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      if(!valid()){ showErr(); input.focus(); return; }
+      clearErr();
+      fetch('https://formsubmit.co/ajax/sougyousoudan512@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:input.value.trim(),_subject:'【ファネルハブ】新規リード獲得',_template:'table',page:location.pathname})}).catch(function(){});
+      btn.disabled=true; btn.textContent='送信中...';
+      setTimeout(function(){
+        done.hidden=false; input.value=''; btn.disabled=false; btn.textContent='無料で診断を受け取る →';
+        done.scrollIntoView({behavior:'smooth',block:'center'});
+      },600);
+    });
+  });
+  // count-up animation
+  var counters=document.querySelectorAll('[data-count]');
+  if(counters.length && 'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting) return;
+        var el=en.target, target=parseInt(el.getAttribute('data-count'),10);
+        var duration=1600, start=performance.now();
+        function step(now){
+          var p=Math.min((now-start)/duration,1);
+          var ease=1-Math.pow(1-p,3);
+          el.textContent=Math.floor(ease*target).toLocaleString();
+          if(p<1) requestAnimationFrame(step);
+          else el.textContent=target.toLocaleString();
+        }
+        requestAnimationFrame(step);
+        io.unobserve(el);
+      });
+    },{threshold:.3});
+    counters.forEach(function(c){ io.observe(c); });
+  }
+})();
+</script>
+<script>document.getElementById('yy').textContent=new Date().getFullYear();</script>
+</body>
+</html>

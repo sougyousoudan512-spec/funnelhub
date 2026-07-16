@@ -1,0 +1,906 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>補助金もらい損ねチェック｜行政書士 山本利安</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1A2A4F;
+  --brass: #9E6F1C;
+  --paper: #FBFAF7;
+  --ink: #23272F;
+  --line: #E4E0D6;
+  --brass-light: #C4952E;
+  --navy-light: #2A3E6F;
+  --shadow: rgba(26, 42, 79, 0.08);
+  --shadow-md: rgba(26, 42, 79, 0.12);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.8;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Back Link ── */
+.back-link {
+  display: block;
+  padding: 14px 20px;
+  background: var(--navy);
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+.back-link:hover { color: #fff; }
+
+/* ── Header ── */
+.page-header {
+  background: linear-gradient(165deg, var(--navy) 0%, #0F1A33 100%);
+  padding: 48px 20px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: -60%;
+  right: -20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(158,111,28,0.12) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.header-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: var(--brass);
+  border: 1px solid rgba(158,111,28,0.4);
+  padding: 4px 16px;
+  border-radius: 2px;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+.header-title {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.header-title em {
+  font-style: normal;
+  color: var(--brass);
+}
+.header-sub {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.65);
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* ── Main Container ── */
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ── Progress Bar ── */
+.progress-section {
+  padding: 28px 0 8px;
+}
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 0.82rem;
+  color: var(--navy);
+  font-weight: 500;
+}
+.progress-label span:last-child {
+  color: rgba(35,39,47,0.45);
+}
+.progress-track {
+  width: 100%;
+  height: 6px;
+  background: var(--line);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--navy) 0%, var(--brass) 100%);
+  border-radius: 3px;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Quiz Card ── */
+.quiz-area {
+  padding: 20px 0 40px;
+  min-height: 420px;
+  position: relative;
+}
+
+.question-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px 28px 28px;
+  box-shadow: 0 2px 16px var(--shadow), 0 0 0 1px rgba(228,224,214,0.5);
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(40px);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.question-card.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+  position: relative;
+}
+.question-card.exit-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  pointer-events: none;
+}
+
+.q-number {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--brass);
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+.q-text {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--navy);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* ── Options ── */
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.option-item {
+  position: relative;
+}
+.option-item input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.option-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1.5px solid var(--line);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--ink);
+}
+.option-label:hover {
+  border-color: var(--brass);
+  background: rgba(158,111,28,0.03);
+}
+.option-radio {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--line);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+.option-radio::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--brass);
+  transform: scale(0);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.option-item input[type="radio"]:checked + .option-label {
+  border-color: var(--brass);
+  background: rgba(158,111,28,0.05);
+  font-weight: 500;
+}
+.option-item input[type="radio"]:checked + .option-label .option-radio {
+  border-color: var(--brass);
+}
+.option-item input[type="radio"]:checked + .option-label .option-radio::after {
+  transform: scale(1);
+}
+
+/* ── Navigation ── */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+  gap: 12px;
+}
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  font-size: 0.88rem;
+  color: var(--navy);
+  background: none;
+  border: 1.5px solid var(--line);
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.btn-back:hover {
+  border-color: var(--navy);
+  background: rgba(26,42,79,0.03);
+}
+.btn-back.hidden { visibility: hidden; }
+.btn-next {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 28px;
+  font-size: 0.92rem;
+  color: #fff;
+  background: var(--navy);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  transition: all 0.25s;
+  opacity: 0.4;
+  pointer-events: none;
+}
+.btn-next.enabled {
+  opacity: 1;
+  pointer-events: auto;
+}
+.btn-next.enabled:hover {
+  background: var(--navy-light);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(26,42,79,0.2);
+}
+
+/* ── Results ── */
+.result-area {
+  padding: 20px 0 60px;
+  display: none;
+}
+.result-area.visible { display: block; }
+
+.result-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 40px 28px 36px;
+  box-shadow: 0 4px 24px var(--shadow-md), 0 0 0 1px rgba(228,224,214,0.4);
+  text-align: center;
+  animation: resultIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+@keyframes resultIn {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Score Circle */
+.score-circle-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+.score-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+.score-circle svg {
+  width: 120px;
+  height: 120px;
+  transform: rotate(-90deg);
+}
+.score-circle .track {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 6;
+}
+.score-circle .fill-ring {
+  fill: none;
+  stroke: var(--brass);
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-dasharray: 326.7;
+  stroke-dashoffset: 326.7;
+  transition: stroke-dashoffset 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+.score-value {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.score-num {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--navy);
+  line-height: 1;
+}
+.score-max {
+  font-size: 0.75rem;
+  color: rgba(35,39,47,0.45);
+  margin-top: 2px;
+}
+
+.result-zone {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 5px 16px;
+  border-radius: 3px;
+  margin-bottom: 18px;
+}
+.zone-high { background: rgba(158,111,28,0.12); color: var(--brass); }
+.zone-mid { background: rgba(26,42,79,0.08); color: var(--navy); }
+.zone-low { background: rgba(35,39,47,0.06); color: var(--ink); }
+
+.result-title {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--navy);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+.result-body {
+  font-size: 0.92rem;
+  color: var(--ink);
+  line-height: 1.9;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+/* ── Opt-in Form ── */
+.optin-section {
+  background: rgba(26,42,79,0.03);
+  border-radius: 10px;
+  padding: 28px 24px;
+  margin-top: 8px;
+}
+.optin-heading {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.optin-sub {
+  font-size: 0.82rem;
+  color: rgba(35,39,47,0.55);
+  margin-bottom: 18px;
+}
+.optin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.optin-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid var(--line);
+  border-radius: 6px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.optin-input::placeholder { color: rgba(35,39,47,0.35); }
+.optin-input:focus { border-color: var(--brass); }
+.optin-input.error { border-color: #c0392b; }
+.error-msg {
+  font-size: 0.8rem;
+  color: #c0392b;
+  display: none;
+  margin-top: -6px;
+}
+.error-msg.show { display: block; }
+
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--brass) 0%, var(--brass-light) 100%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: all 0.25s;
+  box-shadow: 0 2px 8px rgba(158,111,28,0.2);
+}
+.btn-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(158,111,28,0.3);
+}
+.btn-cta .arrow { font-size: 1.1em; }
+
+.optin-privacy {
+  font-size: 0.72rem;
+  color: rgba(35,39,47,0.4);
+  margin-top: 4px;
+  line-height: 1.6;
+}
+
+/* ── Retry ── */
+.retry-wrap {
+  text-align: center;
+  margin-top: 24px;
+}
+.btn-retry {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  color: var(--navy);
+  background: none;
+  border: 1.5px solid var(--line);
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.btn-retry:hover {
+  border-color: var(--navy);
+}
+
+/* ── Footer ── */
+.page-footer {
+  text-align: center;
+  padding: 32px 20px;
+  border-top: 1px solid var(--line);
+  font-size: 0.75rem;
+  color: rgba(35,39,47,0.4);
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .page-header { padding: 36px 16px 32px; }
+  .question-card { padding: 24px 20px 22px; }
+  .option-label { padding: 14px 14px; font-size: 0.9rem; }
+  .result-card { padding: 32px 20px 28px; }
+  .optin-section { padding: 22px 18px; }
+  .nav-buttons { flex-wrap: wrap; }
+}
+</style>
+</head>
+<body>
+
+<div style="display:flex;gap:0;">
+  <a href="脱・情弱経営_ファネルハブ.html" class="back-link" style="flex:1;">← 脱・情弱経営トップへ戻る</a>
+  <a href="index.html" class="back-link" style="flex:0 0 auto;border-left:1px solid rgba(255,255,255,0.15);">ファネルハブ トップ</a>
+</div>
+
+<header class="page-header">
+  <span class="header-label">SELF DIAGNOSIS</span>
+  <h1 class="header-title">補助金、<em>もらい損ねて</em>いませんか？</h1>
+  <p class="header-sub">5つの質問で、あなたの会社の「取りこぼしリスク」を診断します。</p>
+</header>
+
+<main class="container">
+
+  <!-- Progress -->
+  <div class="progress-section" id="progressSection">
+    <div class="progress-label">
+      <span id="progressText">Q1 / 5</span>
+      <span id="progressPct">0%</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill" style="width:0%"></div>
+    </div>
+  </div>
+
+  <!-- Quiz -->
+  <div class="quiz-area" id="quizArea">
+
+    <!-- Q1 -->
+    <div class="question-card active" data-q="0">
+      <div class="q-number">QUESTION 01</div>
+      <p class="q-text">来期、従業員の賃上げを予定していますか？</p>
+      <div class="options-list">
+        <label class="option-item">
+          <input type="radio" name="q0" value="3">
+          <span class="option-label"><span class="option-radio"></span>はい、具体的に検討中</span>
+        </label>
+        <label class="option-item">
+          <input type="radio" name="q0" value="2">
+          <span class="option-label"><span class="option-radio"></span>まだ決まっていないが、する可能性がある</span>
+        </label>
+        <label class="option-item">
+          <input type="radio" name="q0" value="0">
+          <span class="option-label"><span class="option-radio"></span>今のところ予定はない</span>
+        </label>
+      </div>
+      <div class="nav-buttons">
+        <button class="btn-back hidden" onclick="goBack()">← 戻る</button>
+        <button class="btn-next" id="nextBtn0" onclick="goNext()">次へ →</button>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="question-card" data-q="1">
+      <div class="q-number">QUESTION 02</div>
+      <p class="q-text">今後1年以内に、設備や機械の購入・更新を予定していますか？</p>
+      <div class="options-list">
+        <label class="option-item">
+          <input type="radio" name="q1" value="3">
+          <span class="option-label"><span class="option-radio"></span>はい、具体的な機種まで決まっている</span>
+        </label>
+        <label class="option-item">
+          <input type="radio" name="q1" value="2">
+          <span class="option-label"><span class="option-radio"></span>検討中だが、まだ決まっていない</span>
+        </label>
+        <label class="option-item">
+          <input type="radio" name="q1" value="0">
+          <span class="option-label"><span class="option-radio"></span>予定はない</span>
+        </label>
+      </div>
+      <div class="nav-buttons">
+        <button class="btn-back" onclick="goBack()">← 戻る</button>
+        <button class="btn-next" id="nextBtn1" onclick="goNext()">次へ →</button>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="question-card" data-q="2">
+      <div class="q-number">QUESTION 03</div>
+      <p class="q-text">新しく人を採用する予定はありますか？</p>
+      <div class="options-list">
+        <label class="option-item">
+          <input type="radio" name="q2" value="3">
+          <span class="option-label"><span class="option-radio"></span>はい、すでに動き始めている</span>
+        </label>
+        <label class="option-item">
+          <input type="radio" name="q2" value="2">
+          <span class="option-label"><span class="option-radio"></span>いずれ採用したいと考えている</span>
+        </label>
+        <label class="option-item">
+          <input type="radio" name="q2" value="0">
+          <span class="option-label"><span class="option-radio"></span>今のところ予定はない</span>
+        </label>
+      </div>
+      <div class="nav-buttons">
+        <button class="btn-back" onclick="goBack()">← 戻る</button>
+        <button class="btn-next" id="nextBtn2" onclick="goNext()">次へ →</button>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="question-card" data-q="3">
+      <div class="q-number">QUESTION 04</div>
+      <p class="q-text">補助金・助成金を申請したことはありますか？</p>
+      <div class="options-list">
+        <label class="option-item">
+          <input type="radio" name="q3" value="1">
+          <span class="option-label"><span class="option-radio"></span>ある（採択された）</span>
+        </label>
+        <label class="option-item">
+          <input type="radio" name="q3" value="2">
+          <span class="option-label"><span class="option-radio"></span>ある（不採択だった）</span>
+        </label>
+        <label class="option-item">
+          <input type="radio" name="q3" value="2" data-alt="noapply">
+          <span class="option-label"><span class="option-radio"></span>申請したことはない</span>
+        </label>
+      </div>
+      <div class="nav-buttons">
+        <button class="btn-back" onclick="goBack()">← 戻る</button>
+        <button class="btn-next" id="nextBtn3" onclick="goNext()">次へ →</button>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="question-card" data-q="4">
+      <div class="q-number">QUESTION 05</div>
+      <p class="q-text">現在、補助金のことを相談できる専門家はいますか？</p>
+      <div class="options-list">
+        <label class="option-item">
+          <input type="radio" name="q4" value="2">
+          <span class="option-label"><span class="option-radio"></span>いない</span>
+        </label>
+        <label class="option-item">
+          <input type="radio" name="q4" value="1">
+          <span class="option-label"><span class="option-radio"></span>いるが、補助金専門ではない</span>
+        </label>
+        <label class="option-item">
+          <input type="radio" name="q4" value="0">
+          <span class="option-label"><span class="option-radio"></span>補助金専門の相談先がある</span>
+        </label>
+      </div>
+      <div class="nav-buttons">
+        <button class="btn-back" onclick="goBack()">← 戻る</button>
+        <button class="btn-next" id="nextBtn4" onclick="showResult()">診断結果を見る</button>
+      </div>
+    </div>
+
+  </div><!-- /quiz-area -->
+
+  <!-- Results -->
+  <div class="result-area" id="resultArea">
+    <div class="result-card">
+      <div class="score-circle-wrap">
+        <div class="score-circle">
+          <svg viewBox="0 0 120 120">
+            <circle class="track" cx="60" cy="60" r="52"/>
+            <circle class="fill-ring" id="scoreRing" cx="60" cy="60" r="52"/>
+          </svg>
+          <div class="score-value">
+            <span class="score-num" id="scoreNum">0</span>
+            <span class="score-max">/ 13点</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-zone" id="resultZone"></div>
+      <h2 class="result-title" id="resultTitle"></h2>
+      <p class="result-body" id="resultBody"></p>
+
+      <div class="optin-section">
+        <p class="optin-heading" id="optinHeading">次のステップへ</p>
+        <p class="optin-sub">メールアドレスをご登録いただくと、あなたに合った情報をお届けします。</p>
+        <form class="optin-form" id="optinForm" onsubmit="handleSubmit(event)">
+          <input type="email" class="optin-input" id="emailInput" placeholder="example@company.co.jp" autocomplete="email">
+          <p class="error-msg" id="emailError">有効なメールアドレスを入力してください。</p>
+          <button type="submit" class="btn-cta" id="ctaBtn"><span id="ctaText"></span><span class="arrow">→</span></button>
+        </form>
+        <p class="optin-privacy">ご入力いただいた情報は診断結果の送付のみに使用します。</p>
+      </div>
+    </div>
+
+    <div class="retry-wrap">
+      <button class="btn-retry" onclick="resetQuiz()">↻ もう一度診断する</button>
+    </div>
+  </div>
+
+</main>
+
+<footer class="page-footer">
+  &copy; 2026 行政書士 山本利安
+</footer>
+
+<script>
+(function() {
+  const TOTAL = 5;
+  let current = 0;
+  const answers = new Array(TOTAL).fill(null);
+  const cards = document.querySelectorAll('.question-card');
+  const progressText = document.getElementById('progressText');
+  const progressPct = document.getElementById('progressPct');
+  const progressFill = document.getElementById('progressFill');
+  const progressSection = document.getElementById('progressSection');
+  const quizArea = document.getElementById('quizArea');
+  const resultArea = document.getElementById('resultArea');
+
+  // Listen for radio changes
+  cards.forEach((card, qi) => {
+    const radios = card.querySelectorAll('input[type="radio"]');
+    radios.forEach(r => {
+      r.addEventListener('change', () => {
+        answers[qi] = parseInt(r.value);
+        const btn = document.getElementById('nextBtn' + qi);
+        btn.classList.add('enabled');
+      });
+    });
+  });
+
+  function updateProgress(step) {
+    const pct = Math.round((step / TOTAL) * 100);
+    progressText.textContent = 'Q' + (step + 1) + ' / ' + TOTAL;
+    progressPct.textContent = pct + '%';
+    progressFill.style.width = pct + '%';
+  }
+
+  function showCard(index, direction) {
+    cards.forEach((c, i) => {
+      if (i === index) {
+        c.classList.remove('exit-left');
+        // Reset transform based on direction
+        if (direction === 'forward') {
+          c.style.transform = 'translateX(40px)';
+        } else {
+          c.style.transform = 'translateX(-40px)';
+        }
+        c.style.opacity = '0';
+        // Force reflow
+        void c.offsetWidth;
+        c.classList.add('active');
+        c.style.transform = '';
+        c.style.opacity = '';
+      } else {
+        c.classList.remove('active');
+        if (direction === 'forward' && i === index - 1) {
+          c.classList.add('exit-left');
+        }
+      }
+    });
+    // Restore selected state
+    if (answers[index] !== null) {
+      document.getElementById('nextBtn' + index).classList.add('enabled');
+    }
+    updateProgress(index);
+  }
+
+  window.goNext = function() {
+    if (answers[current] === null) return;
+    if (current < TOTAL - 1) {
+      current++;
+      showCard(current, 'forward');
+    }
+  };
+
+  window.goBack = function() {
+    if (current > 0) {
+      current--;
+      showCard(current, 'backward');
+    }
+  };
+
+  window.showResult = function() {
+    if (answers[current] === null) return;
+    const total = answers.reduce((s, v) => s + (v || 0), 0);
+
+    // Hide quiz, show result
+    quizArea.style.display = 'none';
+    progressSection.style.display = 'none';
+    resultArea.classList.add('visible');
+
+    // Score ring animation
+    const ring = document.getElementById('scoreRing');
+    const circumference = 2 * Math.PI * 52; // ~326.7
+    const offset = circumference - (total / 13) * circumference;
+    requestAnimationFrame(() => {
+      ring.style.strokeDashoffset = offset;
+    });
+
+    document.getElementById('scoreNum').textContent = total;
+
+    const zone = document.getElementById('resultZone');
+    const title = document.getElementById('resultTitle');
+    const body = document.getElementById('resultBody');
+    const ctaText = document.getElementById('ctaText');
+
+    if (total >= 10) {
+      zone.textContent = '「今すぐ動くべき」ゾーン';
+      zone.className = 'result-zone zone-high';
+      title.textContent = 'あなたの会社は、いま補助金を「使える」タイミングにあります。';
+      body.textContent = '賃上げ・設備・採用のどれかが動こうとしている今こそ、相談すべき瞬間です。「決めてから」ではなく「決める前に」。この順番を守るだけで、同じ一手が、国の負担込みの一手に変わります。';
+      ctaText.textContent = '無料診断の詳細を受け取る';
+    } else if (total >= 5) {
+      zone.textContent = '「準備を始めるべき」ゾーン';
+      zone.className = 'result-zone zone-mid';
+      title.textContent = 'まだ間に合います。でも、「いつか」は禁物です。';
+      body.textContent = '経営が動く瞬間は、これから必ずやってきます。そのとき、すぐに動ける準備をしておくかどうかで、結果は大きく変わります。まずは情報だけでも、受け取っておいてください。';
+      ctaText.textContent = '補助金の最新情報を受け取る';
+    } else {
+      zone.textContent = '「まず知る」ゾーン';
+      zone.className = 'result-zone zone-low';
+      title.textContent = 'いまは、知ることから始めましょう。';
+      body.textContent = '補助金の世界は、知らないだけで見送っている会社がほとんどです。今すぐ必要なくても、「こういう仕組みがある」と知っておくだけで、いざというとき、取りこぼしを防げます。';
+      ctaText.textContent = '補助金ガイドを無料で読む';
+    }
+
+    // Scroll to top of results
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  window.handleSubmit = function(e) {
+    e.preventDefault();
+    const input = document.getElementById('emailInput');
+    const error = document.getElementById('emailError');
+    const email = input.value.trim();
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!re.test(email)) {
+      input.classList.add('error');
+      error.classList.add('show');
+      return;
+    }
+    input.classList.remove('error');
+    error.classList.remove('show');
+
+    fetch('https://formsubmit.co/ajax/sougyousoudan512@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:email,_subject:'【ファネルハブ】新規リード獲得',_template:'table',page:location.pathname})}).catch(function(){});
+    const form = document.getElementById('optinForm');
+    form.innerHTML = '<p style="padding:20px 0;color:var(--navy);font-weight:700;font-size:1rem;">ありがとうございます。<br>ご登録いただいたアドレスへ情報をお届けします。</p>';
+  };
+
+  window.resetQuiz = function() {
+    current = 0;
+    answers.fill(null);
+    // Reset all radios
+    document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+    // Reset next buttons
+    for (let i = 0; i < TOTAL; i++) {
+      document.getElementById('nextBtn' + i).classList.remove('enabled');
+    }
+    // Reset ring
+    document.getElementById('scoreRing').style.strokeDashoffset = 326.7;
+    // Show quiz, hide results
+    resultArea.classList.remove('visible');
+    quizArea.style.display = '';
+    progressSection.style.display = '';
+    // Show first card
+    cards.forEach((c, i) => {
+      c.classList.remove('active', 'exit-left');
+      c.style.transform = '';
+      c.style.opacity = '';
+    });
+    cards[0].classList.add('active');
+    updateProgress(0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Initial state
+  updateProgress(0);
+})();
+</script>
+
+</body>
+</html>

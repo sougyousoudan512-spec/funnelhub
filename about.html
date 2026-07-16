@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>わたしについて | 脱・情弱経営 / 行政書士 山本利安</title>
+<meta name="description" content="行政書士 山本利安のプロフィール。兵庫県加古川市。身内の開業で「わからない側」に立った原体験から、中小企業の伴走支援を始めました。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== Reset & Variables ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#1A2A4F;
+  --brass:#9E6F1C;
+  --paper:#FBFAF7;
+  --ink:#23272F;
+  --line:#E4E0D6;
+  --sans:'Noto Sans JP',sans-serif;
+  --serif:'Noto Serif JP',serif;
+  --max:1080px;
+  --gutter:clamp(1rem,4vw,2.5rem);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.8;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button,input{font-family:inherit;font-size:inherit;border:none;outline:none;background:none}
+
+/* ===== Utility ===== */
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.eyebrow{font-family:var(--sans);font-size:.8125rem;font-weight:700;letter-spacing:.12em;color:var(--brass);text-transform:uppercase;margin-bottom:.75rem}
+.section-title{font-family:var(--serif);font-size:clamp(1.5rem,3.5vw,2.25rem);font-weight:700;line-height:1.45;color:var(--navy);margin-bottom:1.25rem}
+.section-body{font-size:1rem;color:#555;max-width:680px;line-height:1.9}
+section{padding:clamp(3.5rem,8vw,6rem) 0}
+
+/* ===== Buttons ===== */
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:.9375rem;border-radius:6px;padding:.875rem 1.75rem;transition:all .25s ease;cursor:pointer}
+.btn-primary{background:var(--brass);color:#fff}
+.btn-primary:hover{background:#7d5816;transform:translateY(-1px)}
+.btn-ghost{color:var(--brass);font-weight:700;font-size:.9375rem;padding:0;background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem;transition:color .2s}
+.btn-ghost:hover{color:#7d5816}
+.btn-ghost svg{transition:transform .2s;display:inline-block}
+.btn-ghost:hover svg{transform:translateX(3px)}
+
+/* ===== Navigation ===== */
+.nav{position:sticky;top:0;z-index:1000;background:rgba(251,250,247,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.nav-brand{font-family:var(--serif);font-weight:700;font-size:1.05rem;color:var(--navy);line-height:1.3}
+.nav-brand small{display:block;font-family:var(--sans);font-size:.7rem;font-weight:500;color:var(--brass);letter-spacing:.06em}
+.nav-links{display:flex;gap:1.75rem;align-items:center}
+.nav-links a{font-size:.8125rem;font-weight:500;color:var(--ink);transition:color .2s;white-space:nowrap}
+.nav-links a:hover{color:var(--brass)}
+.nav-back{display:inline-flex;align-items:center;gap:.35rem;font-size:.8125rem;font-weight:500;color:var(--brass);transition:color .2s}
+.nav-back:hover{color:#7d5816}
+.nav-back svg{display:inline-block}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .3s}
+.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+@media(max-width:768px){
+  .nav-links{position:fixed;top:64px;left:0;right:0;background:var(--paper);flex-direction:column;gap:0;border-bottom:1px solid var(--line);transform:translateY(-120%);transition:transform .35s ease;opacity:0;pointer-events:none}
+  .nav-links.open{transform:translateY(0);opacity:1;pointer-events:auto}
+  .nav-links a{padding:1rem var(--gutter);border-top:1px solid var(--line);font-size:.9rem;width:100%;display:block}
+  .hamburger{display:flex}
+}
+
+/* ===== Hero ===== */
+.hero{padding:clamp(3rem,8vw,5.5rem) 0 clamp(2rem,5vw,3.5rem)}
+.hero h1{font-family:var(--serif);font-size:clamp(1.625rem,4vw,2.5rem);font-weight:700;line-height:1.5;color:var(--navy);margin-bottom:1rem;max-width:720px}
+.hero-sub{font-size:.9375rem;color:#555;line-height:1.9;margin-bottom:0;max-width:540px}
+
+/* ===== Story Section ===== */
+.story-section{max-width:720px}
+.story-section p{font-size:.9375rem;color:#555;line-height:2;margin-bottom:1.25rem}
+.pull-quote{border-left:3px solid var(--brass);padding-left:1.25rem;font-family:var(--serif);font-size:1.125rem;font-weight:600;color:var(--navy);line-height:1.7;margin:2rem 0}
+
+/* ===== Timeline ===== */
+.timeline{position:relative;padding-left:2.5rem;margin-top:2rem}
+.timeline::before{content:'';position:absolute;left:.6875rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line)}
+.timeline-item{position:relative;margin-bottom:2.25rem}
+.timeline-item:last-child{margin-bottom:0}
+.timeline-dot{position:absolute;left:-2.5rem;top:.35rem;width:1.375rem;height:1.375rem;border-radius:50%;background:var(--paper);border:2px solid var(--brass);display:flex;align-items:center;justify-content:center;z-index:1}
+.timeline-dot::after{content:'';width:.5rem;height:.5rem;border-radius:50%;background:var(--brass)}
+.timeline-item h4{font-family:var(--serif);font-size:1rem;font-weight:600;color:var(--navy);margin-bottom:.35rem;line-height:1.5}
+.timeline-item h4 .tl-role{color:var(--brass);font-weight:700;font-size:.8125rem;font-family:var(--sans);letter-spacing:.04em;display:block;margin-bottom:.15rem}
+.timeline-item p{font-size:.9rem;color:#666;line-height:1.8}
+
+/* ===== Value Cards ===== */
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
+.value-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:2rem 1.75rem;transition:box-shadow .3s,transform .3s}
+.value-card:hover{box-shadow:0 8px 30px rgba(0,0,0,.06);transform:translateY(-3px)}
+.value-icon{width:48px;height:48px;border-radius:10px;background:rgba(158,111,28,.08);display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
+.value-icon svg{color:var(--brass);display:inline-block}
+.value-card h3{font-family:var(--serif);font-size:1.125rem;font-weight:600;color:var(--navy);margin-bottom:.5rem;line-height:1.5}
+.value-card p{font-size:.875rem;color:#666;line-height:1.8}
+@media(max-width:768px){.values-grid{grid-template-columns:1fr}}
+
+/* ===== Final CTA ===== */
+.final-cta{background:var(--navy);color:#fff;text-align:center}
+.final-cta .eyebrow{color:rgba(255,255,255,.5)}
+.final-cta .section-title{color:#fff}
+.final-cta .section-body{color:rgba(255,255,255,.75);margin:0 auto 2.5rem}
+.final-cta .pull-quote{color:#fff;text-align:left;max-width:540px;margin:2.5rem auto 0}
+.optin-box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:2rem;max-width:440px}
+.optin-box h3{font-family:var(--serif);font-size:1.125rem;font-weight:600;color:var(--navy);margin-bottom:.5rem;line-height:1.5}
+.optin-box p{font-size:.85rem;color:#666;margin-bottom:1.25rem;line-height:1.7}
+.optin-row{display:flex;gap:.5rem}
+.optin-row input[type="email"]{flex:1;border:1px solid var(--line);border-radius:6px;padding:.75rem 1rem;font-size:.875rem;background:var(--paper);transition:border-color .2s}
+.optin-row input[type="email"]:focus{border-color:var(--brass)}
+.optin-row button{white-space:nowrap}
+.optin-note{font-size:.75rem;color:#999;margin-top:.75rem;line-height:1.6}
+.optin-success{display:none;padding:1.25rem;background:#f0f7f0;border-radius:8px;text-align:center;font-weight:500;color:#2d6a2d;font-size:.9rem}
+.optin-success.show{display:block}
+.optin-form.hidden{display:none}
+.final-cta .optin-box{margin:0 auto;border-color:rgba(255,255,255,.15);background:rgba(255,255,255,.05)}
+.final-cta .optin-box h3{color:#fff}
+.final-cta .optin-box p{color:rgba(255,255,255,.6)}
+.final-cta .optin-row input[type="email"]{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2);color:#fff}
+.final-cta .optin-row input[type="email"]::placeholder{color:rgba(255,255,255,.4)}
+.final-cta .optin-note{color:rgba(255,255,255,.4)}
+.final-cta .optin-success{background:rgba(255,255,255,.1);color:rgba(255,255,255,.9)}
+@media(max-width:768px){
+  .optin-box{max-width:100%}
+  .optin-row{flex-direction:column}
+}
+
+/* ===== Footer ===== */
+.footer{border-top:1px solid var(--line);padding:3rem 0 2rem}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2rem;margin-bottom:2rem}
+.footer-brand{font-family:var(--serif);font-weight:700;font-size:1rem;color:var(--navy);margin-bottom:.5rem;line-height:1.3}
+.footer-brand small{display:block;font-family:var(--sans);font-size:.7rem;font-weight:500;color:var(--brass)}
+.footer-about{font-size:.8125rem;color:#888;line-height:1.8;margin-top:.5rem}
+.footer h5{font-size:.75rem;font-weight:700;letter-spacing:.1em;color:var(--brass);margin-bottom:.75rem;text-transform:uppercase}
+.footer ul li{margin-bottom:.4rem}
+.footer ul a{font-size:.8125rem;color:#666;transition:color .2s}
+.footer ul a:hover{color:var(--brass)}
+.footer-copy{font-size:.75rem;color:#aaa;text-align:center;padding-top:1.5rem;border-top:1px solid var(--line)}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr}}
+
+/* ===== Decorative ===== */
+.img-placeholder{
+  background:var(--paper);border:2px dashed var(--line);border-radius:16px;
+  display:flex;align-items:center;justify-content:center;
+  color:#888;font-size:14px;text-align:center;padding:20px;font-weight:500;
+}
+.section-divider{
+  display:flex;align-items:center;justify-content:center;gap:16px;margin:48px auto;max-width:200px;
+}
+.section-divider::before,.section-divider::after{content:'';flex:1;height:1px;background:var(--line)}
+.section-divider span{width:8px;height:8px;background:var(--brass);border-radius:50%;flex-shrink:0}
+.tl-photo{
+  width:56px;height:56px;border-radius:50%;border:2px dashed var(--line);
+  display:flex;align-items:center;justify-content:center;
+  color:#aaa;font-size:10px;text-align:center;
+  background:var(--paper);margin-bottom:8px;
+}
+
+/* ===== Animations ===== */
+.fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- ===== Navigation ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">脱・情弱経営<small>行政書士 山本利安</small></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        トップへ戻る
+      </a>
+      <a href="movement.html">仲間になる</a>
+      <a href="products.html">サービス</a>
+      <a href="reviews.html">実績</a>
+      <a href="blog.html">ブログ</a>
+      <a href="mailto:sougyousoudan512@gmail.com">お問い合わせ</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">わたしについて</p>
+    <h1>「わからないまま進まない」。<br>それが、すべての原点です。</h1>
+    <p class="hero-sub">行政書士 山本利安。兵庫県加古川市。</p>
+    <div style="max-width:280px;margin:0 auto 30px;"><img src="images/hero_bridge.jpg" alt="行政書士 山本利安" style="width:100%;border-radius:16px;box-shadow:0 8px 24px rgba(26,42,79,.12);aspect-ratio:3/4;object-fit:cover;"></div>
+  </div>
+</section>
+
+<!-- ===== Section 1: 原体験 ===== -->
+<section style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="story-section fade-in">
+      <p class="eyebrow">原体験</p>
+      <h2 class="section-title">身内の開業で、自分が「わからない側」に立った。</h2>
+      <p>身内の飲食店開業時に、何も知らないまま補助金申請をし、政策金融公庫の事業計画書を作った。意味も分からず、相談した商工会議所は的外れなアドバイスばかり。こちらのコンセプトを理解してくれない。金融機関も具体的なアドバイスはなかった。とても苦しんだ。</p>
+      <p>逆に、なにか役に立てるものがないかと思い、伴走支援をはじめた。</p>
+      <div class="pull-quote">わからないまま進んでいくのが、いちばん怖い。<br>だから、わからないを残さない。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section 2: キャリアの道のり ===== -->
+<section>
+  <div class="wrap">
+    <div class="fade-in">
+      <p class="eyebrow">キャリアの道のり</p>
+      <h2 class="section-title">どの現場でも見てきたのは<br>「もったいない」だった。</h2>
+    </div>
+    <div class="timeline fade-in">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="tl-photo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#bbb" stroke-width="1.5"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M7 6V4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg>
+        </div>
+        <h4><span class="tl-role">ホテルマン</span></h4>
+        <p>ホテルの設備やサービスを、もっと使ったらいいのに使わないお客様を見てきた。「そこにあるのに、知らないから使わない」。</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="tl-photo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#bbb" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        </div>
+        <h4><span class="tl-role">人材派遣の営業</span></h4>
+        <p>同じ人が同じ仕事をしても、看板ひとつで単価がまるで変わる。高く売る会社が安く雇う現実。</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="tl-photo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#bbb" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h4><span class="tl-role">保険の営業</span></h4>
+        <p>必要なものなのに、伝え方ひとつでまったく届かないもどかしさ。</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="tl-photo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#bbb" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h4><span class="tl-role">介護施設の事務長</span></h4>
+        <p>制度を知っているかどうかで、受けられる支援がまるで変わる人たちを間近で見た。</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="tl-photo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#bbb" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </div>
+        <h4><span class="tl-role">司法書士事務所</span></h4>
+        <p>法律の世界で、手続きの重みと正確さを叩き込まれた。</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="tl-photo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#bbb" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <h4><span class="tl-role">行政書士として独立</span></h4>
+        <p>すべての経験が「補助金」という一点で結ばれた。もらえるのに、もらわない。使えるのに、使わない。その「もったいない」を減らすために。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"><span></span></div>
+
+<!-- ===== Section 3: 価値観 ===== -->
+<section style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="fade-in">
+      <p class="eyebrow">大切にしていること</p>
+      <h2 class="section-title">わたしが大切にしていること。</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card fade-in">
+        <div class="value-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>自分事で考える</h3>
+        <p>経営者の思いが入っていない計画は無意味。だから、あなた自身が腹落ちするまで、一緒に考える。</p>
+      </div>
+      <div class="value-card fade-in">
+        <div class="value-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>丸投げさせない</h3>
+        <p>いわれるがまま「課金」させるのではなく、なぜその制度を使うのか、納得した上で進める。</p>
+      </div>
+      <div class="value-card fade-in">
+        <div class="value-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        </div>
+        <h3>わからないを残さない</h3>
+        <p>専門用語を振り回さず、あなたの言葉で理解できるまで、説明を惜しまない。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section 4: CTA ===== -->
+<section class="final-cta">
+  <div class="wrap">
+    <p class="eyebrow">まずは、ここから</p>
+    <h2 class="section-title">まずは、知ることから始めませんか。</h2>
+    <p class="section-body">無料の資金調達ガイドでは、補助金・助成金の活用ポイントから融資との組み合わせ方まで、中小企業が「使える」制度を厳選してまとめています。</p>
+    <div class="optin-box" id="ctaOptinBox">
+      <div class="optin-form" id="ctaOptinForm">
+        <h3>最新・資金調達ガイドを無料で受け取る</h3>
+        <p>補助金・助成金の最新情報と活用方法をまとめたPDFガイドをお届けします。</p>
+        <form onsubmit="return handleOptin(event,'cta')">
+          <div class="optin-row">
+            <input type="email" placeholder="メールアドレス" required id="ctaEmail">
+            <button type="submit" class="btn btn-primary" style="padding:.75rem 1.25rem;font-size:.8125rem">無料で受け取る
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+          <p class="optin-note">※ 営業メールは送りません。いつでも解除できます。</p>
+        </form>
+      </div>
+      <div class="optin-success" id="ctaOptinSuccess">ありがとうございます。ガイドをメールでお送りしました。受信ボックスをご確認ください。</div>
+    </div>
+    <div class="pull-quote" style="color:#fff">資金調達、会社経営は自分次第。</div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">脱・情弱経営<small>行政書士 山本利安</small></div>
+        <p class="footer-about">中小企業・小規模事業者のための経営者支援。補助金・助成金・融資の活用で、本業に集中できる環境を。行政書士 山本利安／兵庫県加古川市。</p>
+      </div>
+      <div>
+        <h5>ページ</h5>
+        <ul>
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="movement.html">仲間になる</a></li>
+          <li><a href="products.html">サービス</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>もっと知る</h5>
+        <ul>
+          <li><a href="reviews.html">実績</a></li>
+          <li><a href="blog.html">ブログ</a></li>
+          <li><a href="mailto:sougyousoudan512@gmail.com">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; 2026 行政書士 山本利安</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* Mobile Nav Toggle */
+  var hamburger = document.getElementById('hamburger');
+  var navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', function(){
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('open');
+    });
+  });
+
+  /* Opt-in Form */
+  window.handleOptin = function(e, prefix){
+    e.preventDefault();
+    var emailInput = document.getElementById(prefix + 'Email');
+    var email = emailInput.value.trim();
+    var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!re.test(email)){
+      emailInput.style.borderColor = '#c0392b';
+      return false;
+    }
+    fetch('https://formsubmit.co/ajax/sougyousoudan512@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:email,_subject:'【ファネルハブ】新規リード獲得',_template:'table',page:location.pathname})}).catch(function(){});
+    document.getElementById(prefix + 'OptinForm').classList.add('hidden');
+    document.getElementById(prefix + 'OptinSuccess').classList.add('show');
+    return false;
+  };
+
+  /* Fade-in on Scroll */
+  var fadeEls = document.querySelectorAll('.fade-in');
+  var fadeObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.15});
+  fadeEls.forEach(function(el){ fadeObserver.observe(el); });
+})();
+</script>
+</body>
+</html>
